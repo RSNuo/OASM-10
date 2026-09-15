@@ -1,0 +1,177 @@
+{
+  "selection_protocol": "12 hash-ranked external sites with >=24 records, six time quantiles per depth; selection frozen before extraction",
+  "scope": "actual gridded predictor extraction and full paired upstream/downstream reference models at all three depths",
+  "reference_runs": {
+    "5": "ma_seed42",
+    "20": "ma_seed42",
+    "50": "ma_floor10_seed42"
+  },
+  "fold_exclusion": "all requested physical site IDs checked against gradient and epoch-selection manifests at every upstream and downstream outer fold",
+  "summaries": {
+    "5": {
+      "requested_records": 72,
+      "requested_sites": 12,
+      "extraction_completed_records": 72,
+      "valid_records": 72,
+      "valid_output_retention": 1.0,
+      "valid_sites": 12,
+      "map_pathway": {
+        "records": 72,
+        "sites": 12,
+        "rmse": 0.12691367601795817,
+        "mse": 0.01610708116039125,
+        "bias": -0.020256213677684883,
+        "ubrmse": 0.1252867389943374,
+        "r2": 0.28543604119882215,
+        "range_violation_fraction": 0.0
+      },
+      "station_table_pathway": {
+        "records": 72,
+        "sites": 12,
+        "rmse": 0.12683355401812058,
+        "mse": 0.016086750424867513,
+        "bias": -0.019456420179870395,
+        "ubrmse": 0.12533235072658552,
+        "r2": 0.2863379805829054,
+        "range_violation_fraction": 0.0
+      },
+      "pathway_agreement_rmse": 0.012469492928341031,
+      "pathway_agreement_mae": 0.008094119988123162,
+      "map_minus_station_error": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 12,
+        "per_seed_rmse_differences": [
+          8.012199983761792e-05
+        ],
+        "mean_rmse_difference": 8.012199983761792e-05,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.0031272171801779002,
+          0.0019219801885637408
+        ],
+        "site_equal_rmse_difference": -6.295623827083912e-05,
+        "site_equal_rmse_ci95": [
+          -0.003224701786123757,
+          0.0024967540954966344
+        ],
+        "anomaly_r_difference": 0.012261330136611931,
+        "anomaly_r_ci95": [
+          -0.01599160589217572,
+          0.05134005121577874
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      }
+    },
+    "20": {
+      "requested_records": 72,
+      "requested_sites": 12,
+      "extraction_completed_records": 72,
+      "valid_records": 72,
+      "valid_output_retention": 1.0,
+      "valid_sites": 12,
+      "map_pathway": {
+        "records": 72,
+        "sites": 12,
+        "rmse": 0.07544381409236986,
+        "mse": 0.005691769084804064,
+        "bias": 0.023375898344669903,
+        "ubrmse": 0.07173100069972344,
+        "r2": 0.5091354217988909,
+        "range_violation_fraction": 0.0
+      },
+      "station_table_pathway": {
+        "records": 72,
+        "sites": 12,
+        "rmse": 0.07682156528048466,
+        "mse": 0.005901552892143766,
+        "bias": 0.022332246664828727,
+        "ubrmse": 0.07350390228447067,
+        "r2": 0.4910434299121944,
+        "range_violation_fraction": 0.0
+      },
+      "pathway_agreement_rmse": 0.015474848266238744,
+      "pathway_agreement_mae": 0.010397844132967293,
+      "map_minus_station_error": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 12,
+        "per_seed_rmse_differences": [
+          -0.001377751188114798
+        ],
+        "mean_rmse_difference": -0.001377751188114798,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.00463152900273048,
+          0.0027925522817462164
+        ],
+        "site_equal_rmse_difference": -5.929470038116216e-05,
+        "site_equal_rmse_ci95": [
+          -0.003947963487636907,
+          0.004367052276427227
+        ],
+        "anomaly_r_difference": 0.012183998159825293,
+        "anomaly_r_ci95": [
+          -0.00602279833273692,
+          0.04301205013769448
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      }
+    },
+    "50": {
+      "requested_records": 72,
+      "requested_sites": 12,
+      "extraction_completed_records": 72,
+      "valid_records": 72,
+      "valid_output_retention": 1.0,
+      "valid_sites": 12,
+      "map_pathway": {
+        "records": 72,
+        "sites": 12,
+        "rmse": 0.09482460138782065,
+        "mse": 0.008991705028359076,
+        "bias": 0.0018772644574857411,
+        "ubrmse": 0.09480601724846234,
+        "r2": 0.28751721200114366,
+        "range_violation_fraction": 0.0
+      },
+      "station_table_pathway": {
+        "records": 72,
+        "sites": 12,
+        "rmse": 0.0949820723812218,
+        "mse": 0.009021594073831659,
+        "bias": 0.0032379166755411356,
+        "ubrmse": 0.09492686642586445,
+        "r2": 0.28514887024818736,
+        "range_violation_fraction": 0.0
+      },
+      "pathway_agreement_rmse": 0.010831085771042652,
+      "pathway_agreement_mae": 0.008510262058633897,
+      "map_minus_station_error": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 12,
+        "per_seed_rmse_differences": [
+          -0.00015747099340118753
+        ],
+        "mean_rmse_difference": -0.00015747099340118753,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.002679361215989262,
+          0.002443022705274041
+        ],
+        "site_equal_rmse_difference": 0.0013008297018389594,
+        "site_equal_rmse_ci95": [
+          -0.0025138217403038294,
+          0.004835187602060738
+        ],
+        "anomaly_r_difference": 0.00041525103205403147,
+        "anomaly_r_ci95": [
+          -0.023165871545022285,
+          0.03013314891739332
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      }
+    }
+  }
+}

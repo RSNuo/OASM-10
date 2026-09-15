@@ -1,0 +1,4823 @@
+{
+  "revision": "oasm10_public_release",
+  "resampling": {
+    "confidence": 0.95,
+    "method": "percentile",
+    "resamples": 2000,
+    "seed": 20260912
+  },
+  "temporal_centering": "Means removed within original source_station within physical site; spatial-site bootstrap retains all co-located series. Different sensor offsets are not counted as temporal variability.",
+  "depths": {
+    "5": {
+      "models": {
+        "concat_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08606911047408634,
+            "mse": 0.007407891777800479,
+            "bias": 0.006598681005765152,
+            "ubrmse": 0.08581578634950934,
+            "r2": 0.37656183332980964,
+            "range_violation_fraction": 0.0002849628657765535,
+            "site_equal_rmse": 0.07898820498424643,
+            "site_equal_ubrmse": 0.054134021606999955,
+            "site_equal_bias": -0.0033098174642074525,
+            "median_site_r": 0.6618798215630354,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7611223586994189,
+            "pooled_within_site_anomaly_r": 0.6095399411714773
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08077444607737994,
+            "mse": 0.006524511139107558,
+            "bias": -0.0007280960630035838,
+            "ubrmse": 0.08077116450337085,
+            "r2": 0.4586038677639621,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07377734246969905,
+            "site_equal_ubrmse": 0.0501727831413263,
+            "site_equal_bias": -0.005052596415237603,
+            "median_site_r": 0.6981649891509204,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7614929870424493,
+            "pooled_within_site_anomaly_r": 0.6808006425056994
+          }
+        },
+        "concat_seed555": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.0857824673680484,
+            "mse": 0.007358631707750287,
+            "bias": 0.003971055164291664,
+            "ubrmse": 0.08569050372493116,
+            "r2": 0.38070749429291506,
+            "range_violation_fraction": 0.0018166382693255284,
+            "site_equal_rmse": 0.07808295473573769,
+            "site_equal_ubrmse": 0.053641265773067735,
+            "site_equal_bias": -0.003897366549278768,
+            "median_site_r": 0.6704667086593662,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.791799021808169,
+            "pooled_within_site_anomaly_r": 0.6178451683006556
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08018367351955162,
+            "mse": 0.006429421499090043,
+            "bias": 0.00019210824764591966,
+            "ubrmse": 0.08018344338771707,
+            "r2": 0.4664942923833063,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07264654309760782,
+            "site_equal_ubrmse": 0.049280262646273915,
+            "site_equal_bias": -0.003394258007186842,
+            "median_site_r": 0.7101884818339793,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7735993254564291,
+            "pooled_within_site_anomaly_r": 0.6944292980024844
+          }
+        },
+        "concat_seed7": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.0869860002313316,
+            "mse": 0.007566564236245222,
+            "bias": 0.0019449961192798738,
+            "ubrmse": 0.08696425257737346,
+            "r2": 0.36320817353549584,
+            "range_violation_fraction": 0.0003562035822206919,
+            "site_equal_rmse": 0.07988244773158555,
+            "site_equal_ubrmse": 0.05393871431540448,
+            "site_equal_bias": -0.008208800487870094,
+            "median_site_r": 0.6736732389123371,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7444481815481596,
+            "pooled_within_site_anomaly_r": 0.6102227417040667
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08172062807944287,
+            "mse": 0.006678261053698627,
+            "bias": -0.002166026400955968,
+            "ubrmse": 0.0816919174908325,
+            "r2": 0.44584588370715017,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0752783770127355,
+            "site_equal_ubrmse": 0.05059948488576908,
+            "site_equal_bias": -0.007646954262372265,
+            "median_site_r": 0.6902076487019434,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7501258914545532,
+            "pooled_within_site_anomaly_r": 0.6773261503423993
+          }
+        },
+        "ft_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.0891809895413813,
+            "mse": 0.00795324889557996,
+            "bias": 0.0040627167291912404,
+            "ubrmse": 0.08908840119992227,
+            "r2": 0.33066531487527984,
+            "range_violation_fraction": 0.0010567372939213858,
+            "site_equal_rmse": 0.07911023747199487,
+            "site_equal_ubrmse": 0.051849024270012214,
+            "site_equal_bias": -0.0016914916823619185,
+            "median_site_r": 0.6969980161362338,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7183714487515273,
+            "pooled_within_site_anomaly_r": 0.6353207483179282
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.07936881079794834,
+            "mse": 0.006299408127480522,
+            "bias": 0.0009137697184838048,
+            "ubrmse": 0.07936355052782168,
+            "r2": 0.4772826464879464,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07140958971818569,
+            "site_equal_ubrmse": 0.048150586545064815,
+            "site_equal_bias": -0.001858700346081063,
+            "median_site_r": 0.7306180319884297,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7215209489210495,
+            "pooled_within_site_anomaly_r": 0.7026317633504189
+          }
+        },
+        "ft_seed555": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08350821334606309,
+            "mse": 0.0069736216962515895,
+            "bias": -0.003865566838520854,
+            "ubrmse": 0.08341869748005248,
+            "r2": 0.4131094168530858,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07866217725871756,
+            "site_equal_ubrmse": 0.05254854148146455,
+            "site_equal_bias": -0.01389452168232114,
+            "median_site_r": 0.6821838369287457,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.6741113224617019,
+            "pooled_within_site_anomaly_r": 0.6262976566842864
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08047290280335964,
+            "mse": 0.006475888085598968,
+            "bias": -0.007990033525166697,
+            "ubrmse": 0.0800752611601466,
+            "r2": 0.46263855060008596,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07605410428035221,
+            "site_equal_ubrmse": 0.05042311839471067,
+            "site_equal_bias": -0.015115926981100673,
+            "median_site_r": 0.6929255126094971,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.6901997705698378,
+            "pooled_within_site_anomaly_r": 0.6721015605219636
+          }
+        },
+        "ft_seed7": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08855632695290855,
+            "mse": 0.007842223043390436,
+            "bias": 0.008666243098269048,
+            "ubrmse": 0.08813126161557057,
+            "r2": 0.34000910064027445,
+            "range_violation_fraction": 0.0009854965774772474,
+            "site_equal_rmse": 0.0806431168474806,
+            "site_equal_ubrmse": 0.052884620700003084,
+            "site_equal_bias": -0.0022572814921872127,
+            "median_site_r": 0.6802727813001588,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7121475966749587,
+            "pooled_within_site_anomaly_r": 0.6210995295861785
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08091654653142114,
+            "mse": 0.0065474875025716426,
+            "bias": 0.0033898640897221926,
+            "ubrmse": 0.08084550899106797,
+            "r2": 0.45669731659911783,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07469362592629537,
+            "site_equal_ubrmse": 0.05011692854520782,
+            "site_equal_bias": -0.005035729858029441,
+            "median_site_r": 0.698627453098278,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7198063065713565,
+            "pooled_within_site_anomaly_r": 0.6760677838102288
+          }
+        },
+        "ma_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.0840719675253123,
+            "mse": 0.007068095723577167,
+            "bias": 0.00270913427703105,
+            "ubrmse": 0.08402830662964822,
+            "r2": 0.4051586103131858,
+            "range_violation_fraction": 9.498762192551783e-05,
+            "site_equal_rmse": 0.07811438049186853,
+            "site_equal_ubrmse": 0.05352809657868688,
+            "site_equal_bias": -0.006147721535357542,
+            "median_site_r": 0.6785644723512088,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7661172240158306,
+            "pooled_within_site_anomaly_r": 0.6189479396692941
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08045800099048164,
+            "mse": 0.006473489923384345,
+            "bias": -0.001984296806347044,
+            "ubrmse": 0.08043352839188808,
+            "r2": 0.4628375472329048,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0736837118129648,
+            "site_equal_ubrmse": 0.05052402428833963,
+            "site_equal_bias": -0.006272246541564905,
+            "median_site_r": 0.7135800005633349,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7791812938997086,
+            "pooled_within_site_anomaly_r": 0.6800126511453277
+          }
+        },
+        "ma_seed555": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08335301078516727,
+            "mse": 0.006947724406952212,
+            "bias": -0.00040337273548574857,
+            "ubrmse": 0.08335203475253906,
+            "r2": 0.41528889774276545,
+            "range_violation_fraction": 0.00019591197022138053,
+            "site_equal_rmse": 0.0774293595797517,
+            "site_equal_ubrmse": 0.05293324630273243,
+            "site_equal_bias": -0.008953554150720747,
+            "median_site_r": 0.6764559955515579,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7437725718021047,
+            "pooled_within_site_anomaly_r": 0.6221773541380413
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08061324941220821,
+            "mse": 0.006498495980794888,
+            "bias": -0.004918009369443923,
+            "ubrmse": 0.08046309194057205,
+            "r2": 0.46076257449151536,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07327164910055481,
+            "site_equal_ubrmse": 0.04952046232275314,
+            "site_equal_bias": -0.008795005555603008,
+            "median_site_r": 0.7089005496220755,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7398242897994899,
+            "pooled_within_site_anomaly_r": 0.6892049466414567
+          }
+        },
+        "ma_seed7": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08541591978630962,
+            "mse": 0.00729587935294128,
+            "bias": 0.002684128309360622,
+            "ubrmse": 0.0853737360560036,
+            "r2": 0.38598864771818564,
+            "range_violation_fraction": 0.0011457881894765588,
+            "site_equal_rmse": 0.07852148579722762,
+            "site_equal_ubrmse": 0.053114989837510396,
+            "site_equal_bias": -0.005872283069947422,
+            "median_site_r": 0.6745971214414063,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7256068571111247,
+            "pooled_within_site_anomaly_r": 0.618716401378043
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08030926898543785,
+            "mse": 0.006449578684975408,
+            "bias": -0.000443753324614749,
+            "ubrmse": 0.08030804298426343,
+            "r2": 0.4648216732027385,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07364580652720076,
+            "site_equal_ubrmse": 0.049925602770568324,
+            "site_equal_bias": -0.005463672121823604,
+            "median_site_r": 0.7046720770710746,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7512630407796583,
+            "pooled_within_site_anomaly_r": 0.685050325506397
+          }
+        },
+        "no_modality_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08390811323629904,
+            "mse": 0.007040571466875583,
+            "bias": 0.0058691004681317716,
+            "ubrmse": 0.08370259928204475,
+            "r2": 0.407475014581998,
+            "range_violation_fraction": 0.0002849628657765535,
+            "site_equal_rmse": 0.07753023958534797,
+            "site_equal_ubrmse": 0.053167178124719404,
+            "site_equal_bias": -0.0012080145910198137,
+            "median_site_r": 0.6668337922914529,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.763152190170272,
+            "pooled_within_site_anomaly_r": 0.6206332212974364
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.07992764449387314,
+            "mse": 0.0063884283543389694,
+            "bias": 0.0024308076762048396,
+            "ubrmse": 0.07989067234903129,
+            "r2": 0.4698958545146661,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07192254393963585,
+            "site_equal_ubrmse": 0.04954205906604132,
+            "site_equal_bias": -0.001192673089121085,
+            "median_site_r": 0.7186354619549955,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.759094350434426,
+            "pooled_within_site_anomaly_r": 0.6878761510689048
+          }
+        },
+        "no_modality_seed555": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08330828815919625,
+            "mse": 0.0069402708760156785,
+            "bias": -0.0015671148251012279,
+            "ubrmse": 0.083293547331955,
+            "r2": 0.41591617683939286,
+            "range_violation_fraction": 9.498762192551783e-05,
+            "site_equal_rmse": 0.07689153888957101,
+            "site_equal_ubrmse": 0.05299195265147369,
+            "site_equal_bias": -0.009256589138771169,
+            "median_site_r": 0.6703137744870918,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7328251145594872,
+            "pooled_within_site_anomaly_r": 0.6138133537401356
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.07906445964310894,
+            "mse": 0.006251188778656803,
+            "bias": -0.006407921048933237,
+            "ubrmse": 0.07880436108799715,
+            "r2": 0.48128383039207456,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07191639696786964,
+            "site_equal_ubrmse": 0.04933495708224114,
+            "site_equal_bias": -0.00959317179986021,
+            "median_site_r": 0.7117184424353332,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7342975812443117,
+            "pooled_within_site_anomaly_r": 0.6903056595588912
+          }
+        },
+        "no_modality_seed7": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08647490412666975,
+            "mse": 0.007477909043716726,
+            "bias": -0.003350102181217872,
+            "ubrmse": 0.08640998703328293,
+            "r2": 0.3706692747979887,
+            "range_violation_fraction": 0.00023153232844344972,
+            "site_equal_rmse": 0.07971364380131127,
+            "site_equal_ubrmse": 0.05262298307537717,
+            "site_equal_bias": -0.01482587411214805,
+            "median_site_r": 0.6785171702057438,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.6964834568315197,
+            "pooled_within_site_anomaly_r": 0.6228720920974852
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08178839118333016,
+            "mse": 0.006689340932357439,
+            "bias": -0.008372542363145824,
+            "ubrmse": 0.08135872090154053,
+            "r2": 0.4449264886254911,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07565325368762703,
+            "site_equal_ubrmse": 0.05034361304958012,
+            "site_equal_bias": -0.01478588255626682,
+            "median_site_r": 0.6881261251204661,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7174173183130302,
+            "pooled_within_site_anomaly_r": 0.677743621597043
+          }
+        },
+        "no_static_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08705303416081443,
+            "mse": 0.0075782307566039245,
+            "bias": 0.004891945065726365,
+            "ubrmse": 0.0869154740542663,
+            "r2": 0.3622263349393049,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08124838470263904,
+            "site_equal_ubrmse": 0.05564348359125157,
+            "site_equal_bias": -0.005856720699310113,
+            "median_site_r": 0.6434732201884724,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.7989765196513492,
+            "pooled_within_site_anomaly_r": 0.5938461727097949
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08384189702065156,
+            "mse": 0.007029463696021541,
+            "bias": -0.0005839193129408457,
+            "ubrmse": 0.08383986363453555,
+            "r2": 0.41670350841944226,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07892649626985615,
+            "site_equal_ubrmse": 0.05245981349997723,
+            "site_equal_bias": -0.005714312936882185,
+            "median_site_r": 0.6672441942495279,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7923952526392167,
+            "pooled_within_site_anomaly_r": 0.6615449404841387
+          }
+        },
+        "rf_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.07867126525940842,
+            "mse": 0.006189167977516201,
+            "bias": 0.006708540251612205,
+            "ubrmse": 0.07838471448700123,
+            "r2": 0.4791279823120985,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07123523308067668,
+            "site_equal_ubrmse": 0.048810203877760014,
+            "site_equal_bias": -0.0016679050814197404,
+            "median_site_r": 0.7429221408795986,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.6552296075613677,
+            "pooled_within_site_anomaly_r": 0.662020280589765
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.07619707519632787,
+            "mse": 0.005805994268474845,
+            "bias": 0.0012364437141681752,
+            "ubrmse": 0.07618704270029476,
+            "r2": 0.5182255384781455,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.06915897831144929,
+            "site_equal_ubrmse": 0.047061173656775944,
+            "site_equal_bias": -0.004317178782384156,
+            "median_site_r": 0.7309972882669484,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.6516418908656633,
+            "pooled_within_site_anomaly_r": 0.7103131672003422
+          }
+        },
+        "static_forcing_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08529697813254015,
+            "mse": 0.007275574478543034,
+            "bias": 0.0036834757246443,
+            "ubrmse": 0.08521740717206193,
+            "r2": 0.387697478523091,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07900430485428009,
+            "site_equal_ubrmse": 0.05257107811839273,
+            "site_equal_bias": -0.005913775367594899,
+            "median_site_r": 0.6829378475263906,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.6983295630105228,
+            "pooled_within_site_anomaly_r": 0.6289852442251411
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08071889174043419,
+            "mse": 0.006515539483803935,
+            "bias": -0.0007801520577420978,
+            "ubrmse": 0.08071512154838606,
+            "r2": 0.4593483249926458,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07458799056221516,
+            "site_equal_ubrmse": 0.04988292446373387,
+            "site_equal_bias": -0.0067723522739703826,
+            "median_site_r": 0.6989589047881138,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7062300467066115,
+            "pooled_within_site_anomaly_r": 0.6823220778923885
+          }
+        },
+        "static_forcing_seed555": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08447549897583434,
+            "mse": 0.007136109927216189,
+            "bias": 0.003191591065119013,
+            "ubrmse": 0.08441518627408959,
+            "r2": 0.3994346267972124,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07725695166026289,
+            "site_equal_ubrmse": 0.05206236405198021,
+            "site_equal_bias": -0.0036775824664752577,
+            "median_site_r": 0.6907925691232364,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.6898957690646412,
+            "pooled_within_site_anomaly_r": 0.6330846300804274
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.080293819677619,
+            "mse": 0.006447097478421997,
+            "bias": -0.0009669261444318716,
+            "ubrmse": 0.0802879974358136,
+            "r2": 0.46502756075548457,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07241296741073225,
+            "site_equal_ubrmse": 0.04894945103425861,
+            "site_equal_bias": -0.0037080114587766493,
+            "median_site_r": 0.7021093517443455,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7016060525655389,
+            "pooled_within_site_anomaly_r": 0.6918712770296374
+          }
+        },
+        "static_forcing_seed7": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08664853091444384,
+            "mse": 0.00750796790963133,
+            "bias": 0.000568117173624944,
+            "ubrmse": 0.08664666844436872,
+            "r2": 0.3681395612411379,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07841180387597518,
+            "site_equal_ubrmse": 0.05229092569008924,
+            "site_equal_bias": -0.006787800221288161,
+            "median_site_r": 0.6901517044768616,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.70532279818042,
+            "pooled_within_site_anomaly_r": 0.6260931174646259
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08051335916978185,
+            "mse": 0.0064824010048022945,
+            "bias": -0.0037959301832934432,
+            "ubrmse": 0.08042382681050347,
+            "r2": 0.4620981163528193,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07367140651850072,
+            "site_equal_ubrmse": 0.049741186230405514,
+            "site_equal_bias": -0.006504171284196522,
+            "median_site_r": 0.7006991524707602,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.7229115433038924,
+            "pooled_within_site_anomaly_r": 0.6851323910015081
+          }
+        },
+        "static_only_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.09814034014596357,
+            "mse": 0.009631526363965429,
+            "bias": 0.00689705804047211,
+            "ubrmse": 0.09789768615422832,
+            "r2": 0.1894237498743413,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09353133720961898,
+            "site_equal_ubrmse": 0.06737017898434756,
+            "site_equal_bias": -0.005853421322691771,
+            "median_site_r": 0.1250003839709812,
+            "site_r_count": 4,
+            "median_amplitude_ratio": 0.0,
+            "pooled_within_site_anomaly_r": null
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.09625085490719167,
+            "mse": 0.009264227070365262,
+            "bias": -0.0020054510323829246,
+            "ubrmse": 0.09622996018144232,
+            "r2": 0.23126551597271017,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09071320776701025,
+            "site_equal_ubrmse": 0.06671174725858561,
+            "site_equal_bias": -0.010994406040755116,
+            "median_site_r": null,
+            "site_r_count": 0,
+            "median_amplitude_ratio": 0.0,
+            "pooled_within_site_anomaly_r": null
+          }
+        },
+        "xgb_seed42": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08011059958696283,
+            "mse": 0.00641770816618269,
+            "bias": 0.0055382214953955235,
+            "ubrmse": 0.07991893560884447,
+            "r2": 0.459894348708045,
+            "range_violation_fraction": 0.0001662283383696562,
+            "site_equal_rmse": 0.0732347968558786,
+            "site_equal_ubrmse": 0.05003320894108709,
+            "site_equal_bias": -0.002818764900954766,
+            "median_site_r": 0.7173155548589442,
+            "site_r_count": 867,
+            "median_amplitude_ratio": 0.6410029659590137,
+            "pooled_within_site_anomaly_r": 0.650479302124172
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.07658811120725709,
+            "mse": 0.005865738778295179,
+            "bias": 0.0003327023522514135,
+            "ubrmse": 0.07658738856652567,
+            "r2": 0.5132680104964412,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07017905057500423,
+            "site_equal_ubrmse": 0.047747451821094515,
+            "site_equal_bias": -0.00507626095456932,
+            "median_site_r": 0.7251375769048036,
+            "site_r_count": 247,
+            "median_amplitude_ratio": 0.645334819790855,
+            "pooled_within_site_anomaly_r": 0.708958268820079
+          }
+        }
+      },
+      "paired_controls": {
+        "concat_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            0.001997142948774039,
+            0.001570080445021979,
+            0.002429456582881101
+          ],
+          "mean_rmse_difference": 0.0019988933255590396,
+          "sd_of_paired_seed_differences": 0.00042969074279600465,
+          "rmse_ci95": [
+            0.0010194106593558476,
+            0.0029646482163694253
+          ],
+          "site_equal_rmse_difference": 0.0009627938609072655,
+          "site_equal_rmse_ci95": [
+            0.0004214683848200905,
+            0.00150960338284029
+          ],
+          "anomaly_r_difference": -0.007411281336392905,
+          "anomaly_r_ci95": [
+            -0.012291468356179877,
+            -0.002590827306586125
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.001997142948774039
+              ],
+              "mean_rmse_difference": 0.001997142948774039,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0005620771735326627,
+                0.003550641520503533
+              ],
+              "site_equal_rmse_difference": 0.0008738244923778834,
+              "site_equal_rmse_ci95": [
+                7.149902073888273e-05,
+                0.0017493502002374885
+              ],
+              "anomaly_r_difference": -0.009407998497816816,
+              "anomaly_r_ci95": [
+                -0.018145105504950076,
+                -0.0017769215663058667
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.001570080445021979
+              ],
+              "mean_rmse_difference": 0.001570080445021979,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.00018472499996643847,
+                0.003261082943027604
+              ],
+              "site_equal_rmse_difference": 0.0013609619343579163,
+              "site_equal_rmse_ci95": [
+                0.0004577219089633768,
+                0.0023298755212116606
+              ],
+              "anomaly_r_difference": -0.008493659673976306,
+              "anomaly_r_ci95": [
+                -0.016991002728835754,
+                -0.00041803718427087217
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.002429456582881101
+              ],
+              "mean_rmse_difference": 0.002429456582881101,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0006143376766761663,
+                0.0042283806237246434
+              ],
+              "site_equal_rmse_difference": 0.0006535951559859966,
+              "site_equal_rmse_ci95": [
+                -0.0003368265340783001,
+                0.0016521803460849609
+              ],
+              "anomaly_r_difference": -0.004332185837385594,
+              "anomaly_r_ci95": [
+                -0.01000900790844091,
+                0.0015730358028864372
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "concat_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            0.00031644508689829265,
+            0.001411359094005027,
+            -0.000429575892656589
+          ],
+          "mean_rmse_difference": 0.00043274276274891016,
+          "sd_of_paired_seed_differences": 0.0009259612671893423,
+          "rmse_ci95": [
+            -0.00011256464777273136,
+            0.000998647136184751
+          ],
+          "site_equal_rmse_difference": 0.00036703171310732723,
+          "site_equal_rmse_ci95": [
+            -9.572246444835098e-05,
+            0.0008511086615064009
+          ],
+          "anomaly_r_difference": -0.0005706108141994385,
+          "anomaly_r_ci95": [
+            -0.003246659089797536,
+            0.002293617508618028
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                0.00031644508689829265
+              ],
+              "mean_rmse_difference": 0.00031644508689829265,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0002819583221241383,
+                0.0009453128480385282
+              ],
+              "site_equal_rmse_difference": 9.363065673425642e-05,
+              "site_equal_rmse_ci95": [
+                -0.0004755462347505782,
+                0.0006991220061790593
+              ],
+              "anomaly_r_difference": 0.0007879913603715538,
+              "anomaly_r_ci95": [
+                -0.0040237012579846495,
+                0.005715425229156077
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                0.001411359094005027
+              ],
+              "mean_rmse_difference": 0.001411359094005027,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0005751940492984466,
+                0.002244831694347576
+              ],
+              "site_equal_rmse_difference": 0.0016325704855347301,
+              "site_equal_rmse_ci95": [
+                0.0009749952055936824,
+                0.0022939826111712737
+              ],
+              "anomaly_r_difference": -0.007724175163997704,
+              "anomaly_r_ci95": [
+                -0.011742428514451037,
+                -0.0035444639812174205
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                -0.000429575892656589
+              ],
+              "mean_rmse_difference": -0.000429575892656589,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0015924497174673023,
+                0.0008149262574691451
+              ],
+              "site_equal_rmse_difference": -0.0006251060029470049,
+              "site_equal_rmse_ci95": [
+                -0.0013695573422837337,
+                0.00019551609424024374
+              ],
+              "anomaly_r_difference": 0.005224351361027835,
+              "anomaly_r_ci95": [
+                0.0007517198190330033,
+                0.010514631692054651
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ft_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            0.005109022016068998,
+            0.003140407166598927,
+            0.0001552025608957952
+          ],
+          "mean_rmse_difference": 0.00280154391452124,
+          "sd_of_paired_seed_differences": 0.002494233955810808,
+          "rmse_ci95": [
+            0.0010124342213802162,
+            0.0045799400114521225
+          ],
+          "site_equal_rmse_difference": 0.0014501019031150555,
+          "site_equal_rmse_ci95": [
+            0.000398302188873286,
+            0.0025045379749732977
+          ],
+          "anomaly_r_difference": 0.007625413134338362,
+          "anomaly_r_ci95": [
+            0.0014265840028791481,
+            0.014000300437794738
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.005109022016068998
+              ],
+              "mean_rmse_difference": 0.005109022016068998,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0022387566284936006,
+                0.007985582714665233
+              ],
+              "site_equal_rmse_difference": 0.0009958569801263326,
+              "site_equal_rmse_ci95": [
+                -0.0007438699130834161,
+                0.002712985793435529
+              ],
+              "anomaly_r_difference": 0.016372808648634107,
+              "anomaly_r_ci95": [
+                0.00540841283162054,
+                0.027770962127706238
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.003140407166598927
+              ],
+              "mean_rmse_difference": 0.003140407166598927,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.00022532796601865246,
+                0.00613876636113875
+              ],
+              "site_equal_rmse_difference": 0.002121631050252978,
+              "site_equal_rmse_ci95": [
+                0.0004552082878808491,
+                0.0038834470080267246
+              ],
+              "anomaly_r_difference": 0.0023831282081356875,
+              "anomaly_r_ci95": [
+                -0.0055810818723470625,
+                0.01063535002911304
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.0001552025608957952
+              ],
+              "mean_rmse_difference": 0.0001552025608957952,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.00205999892481367,
+                0.002371304515536341
+              ],
+              "site_equal_rmse_difference": 0.0012328176789658555,
+              "site_equal_rmse_ci95": [
+                -0.00016440368414635603,
+                0.0025690197098333493
+              ],
+              "anomaly_r_difference": 0.004120302546245291,
+              "anomaly_r_ci95": [
+                -0.003976529803570999,
+                0.011941770824604432
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ft_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            -0.0010891901925332986,
+            0.0006072775459832896,
+            -0.0001403466088485683
+          ],
+          "mean_rmse_difference": -0.00020741975179952576,
+          "sd_of_paired_seed_differences": 0.0008502204430827846,
+          "rmse_ci95": [
+            -0.0025083579943619675,
+            0.002019691284837318
+          ],
+          "site_equal_rmse_difference": 0.0005187174947042877,
+          "site_equal_rmse_ci95": [
+            -0.0007694843380644712,
+            0.0018588965286801427
+          ],
+          "anomaly_r_difference": -0.0011556052035233504,
+          "anomaly_r_ci95": [
+            -0.007709890979829467,
+            0.005336569128521053
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                -0.0010891901925332986
+              ],
+              "mean_rmse_difference": -0.0010891901925332986,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0038635690728914727,
+                0.001688288782256593
+              ],
+              "site_equal_rmse_difference": -0.0022741220947791263,
+              "site_equal_rmse_ci95": [
+                -0.0040561079797106015,
+                -0.00046168675840158925
+              ],
+              "anomaly_r_difference": 0.022619112205091163,
+              "anomaly_r_ci95": [
+                0.014615465862324161,
+                0.030678769396951886
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                0.0006072775459832896
+              ],
+              "mean_rmse_difference": 0.0006072775459832896,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.002256167192707756,
+                0.003347016357173294
+              ],
+              "site_equal_rmse_difference": 0.0010478193990946009,
+              "site_equal_rmse_ci95": [
+                -0.00044390419643383226,
+                0.0025039011074165416
+              ],
+              "anomaly_r_difference": -0.00898254169616819,
+              "anomaly_r_ci95": [
+                -0.01708264404401575,
+                -0.0010534292515074414
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                -0.0001403466088485683
+              ],
+              "mean_rmse_difference": -0.0001403466088485683,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0026268287135493085,
+                0.002236481709796135
+              ],
+              "site_equal_rmse_difference": 0.0027824551797973884,
+              "site_equal_rmse_ci95": [
+                0.0011275934339808852,
+                0.004421046365272493
+              ],
+              "anomaly_r_difference": -0.017103386119493025,
+              "anomaly_r_ci95": [
+                -0.025073048445552325,
+                -0.00978961250576288
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "no_modality_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            -0.0001638542890132627,
+            0.001058984340360128,
+            -4.4722625971035934e-05
+          ],
+          "mean_rmse_difference": 0.0002834691417919431,
+          "sd_of_paired_seed_differences": 0.0006742521454860118,
+          "rmse_ci95": [
+            -0.000366986493460565,
+            0.0009032544642190654
+          ],
+          "site_equal_rmse_difference": 2.3398802460793193e-05,
+          "site_equal_rmse_ci95": [
+            -0.0004780439839163732,
+            0.00048302792324865875
+          ],
+          "anomaly_r_difference": -0.0008410093501070396,
+          "anomaly_r_ci95": [
+            -0.004336262306393551,
+            0.00280961878963511
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                -0.0001638542890132627
+              ],
+              "mean_rmse_difference": -0.0001638542890132627,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0014255837818936588,
+                0.0011771785667997294
+              ],
+              "site_equal_rmse_difference": -0.000584140906520579,
+              "site_equal_rmse_ci95": [
+                -0.0015290947859054665,
+                0.00031406954163944525
+              ],
+              "anomaly_r_difference": 0.0016852816281421878,
+              "anomaly_r_ci95": [
+                -0.006832140659247898,
+                0.009795492015710635
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.001058984340360128
+              ],
+              "mean_rmse_difference": 0.001058984340360128,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0010989611646177427,
+                0.003172599633587082
+              ],
+              "site_equal_rmse_difference": 0.0011921580040836477,
+              "site_equal_rmse_ci95": [
+                -0.00017164678979534944,
+                0.0025620472778865493
+              ],
+              "anomaly_r_difference": 0.00415569071944244,
+              "anomaly_r_ci95": [
+                -0.0019010735891923564,
+                0.01048531341997438
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                -4.4722625971035934e-05
+              ],
+              "mean_rmse_difference": -4.4722625971035934e-05,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0014878925384640526,
+                0.001188420769408273
+              ],
+              "site_equal_rmse_difference": -0.0005378206901806891,
+              "site_equal_rmse_ci95": [
+                -0.0017106278935634417,
+                0.0004994173149744654
+              ],
+              "anomaly_r_difference": -0.008364000397905746,
+              "anomaly_r_ci95": [
+                -0.01665349515387538,
+                0.0001906803512351979
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "no_modality_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            -0.0005303564966085,
+            0.001479122197892313,
+            -0.0015487897690992652
+          ],
+          "mean_rmse_difference": -0.00020000802260515074,
+          "sd_of_paired_seed_differences": 0.0015407499166542112,
+          "rmse_ci95": [
+            -0.0006234206891756873,
+            0.0002468582525674349
+          ],
+          "site_equal_rmse_difference": -0.0003696576151959688,
+          "site_equal_rmse_ci95": [
+            -0.00077887484358254,
+            6.829645922516e-05
+          ],
+          "anomaly_r_difference": 0.0005525029772192047,
+          "anomaly_r_ci95": [
+            -0.0018284387140044876,
+            0.0028988919317885975
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                -0.0005303564966085
+              ],
+              "mean_rmse_difference": -0.0005303564966085,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.001422107323345155,
+                0.0004082215003566417
+              ],
+              "site_equal_rmse_difference": -0.001761167873328965,
+              "site_equal_rmse_ci95": [
+                -0.002452231217427757,
+                -0.001053923682094997
+              ],
+              "anomaly_r_difference": 0.007863499923577155,
+              "anomaly_r_ci95": [
+                0.0035559785145240163,
+                0.01245671060125637
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                0.001479122197892313
+              ],
+              "mean_rmse_difference": 0.001479122197892313,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                9.898345630229879e-05,
+                0.002930744160579355
+              ],
+              "site_equal_rmse_difference": 0.0020074471604262525,
+              "site_equal_rmse_ci95": [
+                0.0007190082646549062,
+                0.0033810150018239666
+              ],
+              "anomaly_r_difference": -0.007306703909353951,
+              "anomaly_r_ci95": [
+                -0.011932620728894136,
+                -0.0031556506829068555
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                -0.0015487897690992652
+              ],
+              "mean_rmse_difference": -0.0015487897690992652,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.002644775760973486,
+                -0.0005166143953440215
+              ],
+              "site_equal_rmse_difference": -0.0013552521326851937,
+              "site_equal_rmse_ci95": [
+                -0.0021696881081656534,
+                -0.0005588367152559194
+              ],
+              "anomaly_r_difference": 0.00110071291743441,
+              "anomaly_r_ci95": [
+                -0.004123895795488363,
+                0.006485082176037408
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "static_forcing_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            0.0012250106072278638,
+            0.00123261112813422,
+            0.0011224881906670564
+          ],
+          "mean_rmse_difference": 0.0011933699753430467,
+          "sd_of_paired_seed_differences": 6.150294731679194e-05,
+          "rmse_ci95": [
+            -0.0005424999508391952,
+            0.00285015213909955
+          ],
+          "site_equal_rmse_difference": 0.0002026115072234312,
+          "site_equal_rmse_ci95": [
+            -0.0008093768511939533,
+            0.0011387740532825211
+          ],
+          "anomaly_r_difference": 0.00944043219493873,
+          "anomaly_r_ci95": [
+            9.287327076300735e-06,
+            0.018662007622864987
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.0012250106072278638
+              ],
+              "mean_rmse_difference": 0.0012250106072278638,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0006529302572112861,
+                0.0031788302492018446
+              ],
+              "site_equal_rmse_difference": 0.0008899243624115421,
+              "site_equal_rmse_ci95": [
+                -0.0003452362310566812,
+                0.0021162399298107863
+              ],
+              "anomaly_r_difference": 0.01003730455584706,
+              "anomaly_r_ci95": [
+                -0.0013068759066253654,
+                0.02079513204990602
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.00123261112813422
+              ],
+              "mean_rmse_difference": 0.00123261112813422,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0013941375913375659,
+                0.003831052808136532
+              ],
+              "site_equal_rmse_difference": -0.00010968192125244153,
+              "site_equal_rmse_ci95": [
+                -0.0018447206212894483,
+                0.0014642809084892154
+              ],
+              "anomaly_r_difference": 0.007376716086582968,
+              "anomaly_r_ci95": [
+                -0.009325606762948824,
+                0.021922678470485644
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 921,
+              "per_seed_rmse_differences": [
+                0.0011224881906670564
+              ],
+              "mean_rmse_difference": 0.0011224881906670564,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0009163214469913798,
+                0.0033808341517565497
+              ],
+              "site_equal_rmse_difference": -0.00017240791948880694,
+              "site_equal_rmse_ci95": [
+                -0.0013650673326262917,
+                0.0010396202569508406
+              ],
+              "anomaly_r_difference": 0.010907275942386163,
+              "anomaly_r_ci95": [
+                0.0013416309690516882,
+                0.02089169541746807
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "static_forcing_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            0.00026089074995254424,
+            0.0002040901843440024,
+            -0.000319429734589205
+          ],
+          "mean_rmse_difference": 4.8517066569113885e-05,
+          "sd_of_paired_seed_differences": 0.0003199143829610387,
+          "rmse_ci95": [
+            -0.0015467354269106397,
+            0.001771332012675898
+          ],
+          "site_equal_rmse_difference": 2.3732350242579238e-05,
+          "site_equal_rmse_ci95": [
+            -0.0011446286624431483,
+            0.0012394424508647738
+          ],
+          "anomaly_r_difference": 0.0016859408767842716,
+          "anomaly_r_ci95": [
+            -0.006267008137958462,
+            0.009671720210058384
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                0.00026089074995254424
+              ],
+              "mean_rmse_difference": 0.00026089074995254424,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0014513281914303408,
+                0.0020586812307847565
+              ],
+              "site_equal_rmse_difference": 0.0009042787492503473,
+              "site_equal_rmse_ci95": [
+                -0.00035487774169447745,
+                0.0022566593276709757
+              ],
+              "anomaly_r_difference": 0.0023094267470608054,
+              "anomaly_r_ci95": [
+                -0.006849810654971819,
+                0.011187510104022432
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                0.0002040901843440024
+              ],
+              "mean_rmse_difference": 0.0002040901843440024,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.001663328502241224,
+                0.0022752061942262264
+              ],
+              "site_equal_rmse_difference": 2.559999129996374e-05,
+              "site_equal_rmse_ci95": [
+                -0.001483633586239766,
+                0.0016303681306673833
+              ],
+              "anomaly_r_difference": 8.206549511136085e-05,
+              "anomaly_r_ci95": [
+                -0.009331950999386534,
+                0.009485931704577557
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 259,
+              "per_seed_rmse_differences": [
+                -0.000319429734589205
+              ],
+              "mean_rmse_difference": -0.000319429734589205,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0023172739943402793,
+                0.0017779557275447954
+              ],
+              "site_equal_rmse_difference": -0.0008586816898225733,
+              "site_equal_rmse_ci95": [
+                -0.002295860376696371,
+                0.0006180308234534735
+              ],
+              "anomaly_r_difference": 0.002666330388180649,
+              "anomaly_r_ci95": [
+                -0.005435162575226466,
+                0.010743908256682914
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ma_minus_rf_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            0.0054007022659038895
+          ],
+          "mean_rmse_difference": 0.0054007022659038895,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.0032442959251381366,
+            0.007599693330591751
+          ],
+          "site_equal_rmse_difference": 0.00687914741119187,
+          "site_equal_rmse_ci95": [
+            0.005566995363025569,
+            0.008257942180093751
+          ],
+          "anomaly_r_difference": -0.043072340920470964,
+          "anomaly_r_ci95": [
+            -0.05587664420321315,
+            -0.030131301469414378
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_rf_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            0.004260925794153769
+          ],
+          "mean_rmse_difference": 0.004260925794153769,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.002382460202048822,
+            0.006165562537545851
+          ],
+          "site_equal_rmse_difference": 0.004524733501515509,
+          "site_equal_rmse_ci95": [
+            0.0026939786835355004,
+            0.006433681180708649
+          ],
+          "anomaly_r_difference": -0.030300516055014604,
+          "anomaly_r_ci95": [
+            -0.04220998892145787,
+            -0.019392015486867958
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.3552123552123552,
+          "fraction_sites_ubrmse_lower": 0.33204633204633205,
+          "valid_r_comparison_sites": 247,
+          "fraction_valid_sites_r_higher": 0.27530364372469635,
+          "mse_decomposition": {
+            "total_reduction": -0.0006674956549095005,
+            "bias_squared_reduction": -2.408640757373083e-06,
+            "centered_mse_reduction": -0.0006650870141521282,
+            "bias_share": 0.0036084740622014206
+          }
+        },
+        "ma_minus_xgb_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            0.003961367938349475
+          ],
+          "mean_rmse_difference": 0.003961367938349475,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.0019746702600808674,
+            0.0059231868335946234
+          ],
+          "site_equal_rmse_difference": 0.004879583635989947,
+          "site_equal_rmse_ci95": [
+            0.0036422475541218725,
+            0.00617207219359608
+          ],
+          "anomaly_r_difference": -0.03153136245487764,
+          "anomaly_r_ci95": [
+            -0.04332299349650989,
+            -0.02005798825695777
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_xgb_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            0.003869889783224556
+          ],
+          "mean_rmse_difference": 0.003869889783224556,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.0019069773870116422,
+            0.005833894417890598
+          ],
+          "site_equal_rmse_difference": 0.0035046612379605675,
+          "site_equal_rmse_ci95": [
+            0.0017416334147742254,
+            0.005266723804153444
+          ],
+          "anomaly_r_difference": -0.028945617674751456,
+          "anomaly_r_ci95": [
+            -0.0376804524966733,
+            -0.021161615512797407
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.3938223938223938,
+          "fraction_sites_ubrmse_lower": 0.3088803088803089,
+          "valid_r_comparison_sites": 247,
+          "fraction_valid_sites_r_higher": 0.20242914979757085,
+          "mse_decomposition": {
+            "total_reduction": -0.0006077511450891665,
+            "bias_squared_reduction": -3.826742960485453e-06,
+            "centered_mse_reduction": -0.0006039244021286798,
+            "bias_share": 0.00629656232062551
+          }
+        },
+        "ma_minus_no_static_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            -0.0029810666355021276
+          ],
+          "mean_rmse_difference": -0.0029810666355021276,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.004917484006376267,
+            -0.0011863672713317717
+          ],
+          "site_equal_rmse_difference": -0.0031340042107705014,
+          "site_equal_rmse_ci95": [
+            -0.004459903089462359,
+            -0.0018643605344997505
+          ],
+          "anomaly_r_difference": 0.02510176695949906,
+          "anomaly_r_ci95": [
+            0.01533644191438164,
+            0.0350888989797294
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_no_static_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            -0.0033838960301699195
+          ],
+          "mean_rmse_difference": -0.0033838960301699195,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005867654023551719,
+            -0.001067583495025826
+          ],
+          "site_equal_rmse_difference": -0.0052427844568913385,
+          "site_equal_rmse_ci95": [
+            -0.007222771791978288,
+            -0.0032542319167877497
+          ],
+          "anomaly_r_difference": 0.018467710661188907,
+          "anomaly_r_ci95": [
+            0.010774426734147047,
+            0.026296923906561853
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.6486486486486487,
+          "fraction_sites_ubrmse_lower": 0.7413127413127413,
+          "valid_r_comparison_sites": 247,
+          "fraction_valid_sites_r_higher": 0.757085020242915,
+          "mse_decomposition": {
+            "total_reduction": 0.000555973772637196,
+            "bias_squared_reduction": -3.5964720516537664e-06,
+            "centered_mse_reduction": 0.0005595702446888505,
+            "bias_share": -0.006468780055207147
+          }
+        },
+        "ma_minus_static_only_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 921,
+          "per_seed_rmse_differences": [
+            -0.014068372620651262
+          ],
+          "mean_rmse_difference": -0.014068372620651262,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0164910138048888,
+            -0.011570109251728786
+          ],
+          "site_equal_rmse_difference": -0.015416956717750448,
+          "site_equal_rmse_ci95": [
+            -0.017112786377511152,
+            -0.013583952418662046
+          ],
+          "anomaly_r_difference": null,
+          "anomaly_r_ci95": null,
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_static_only_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 259,
+          "per_seed_rmse_differences": [
+            -0.015792853916710023
+          ],
+          "mean_rmse_difference": -0.015792853916710023,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.018988593272028943,
+            -0.012831829989398778
+          ],
+          "site_equal_rmse_difference": -0.017029495954045435,
+          "site_equal_rmse_ci95": [
+            -0.01996976191578283,
+            -0.01420147438712104
+          ],
+          "anomaly_r_difference": null,
+          "anomaly_r_ci95": null,
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.7992277992277992,
+          "fraction_sites_ubrmse_lower": 0.8146718146718147,
+          "valid_r_comparison_sites": 0,
+          "fraction_valid_sites_r_higher": null,
+          "mse_decomposition": {
+            "total_reduction": 0.0027907371469809168,
+            "bias_squared_reduction": 8.440002760666594e-08,
+            "centered_mse_reduction": 0.0027906527469533085,
+            "bias_share": 3.024291545979951e-05
+          }
+        }
+      },
+      "ensemble": {
+        "candidate_seeds": [
+          42,
+          7,
+          555
+        ],
+        "selected_slots": [
+          555,
+          42
+        ],
+        "selection": "greedy development OOF RMSE only; improvement at least 1e-6; maximum 50 slots",
+        "metrics": {
+          "oof": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08204417447911196,
+            "mse": 0.006731246565958965,
+            "bias": 0.001152880682744634,
+            "ubrmse": 0.08203607396804359,
+            "r2": 0.4335073804584543,
+            "range_violation_fraction": 3.562035822206919e-05
+          },
+          "oof_equal": {
+            "records": 168443,
+            "sites": 921,
+            "rmse": 0.08229237184325942,
+            "mse": 0.006772034463589277,
+            "bias": 0.0016632966383200538,
+            "ubrmse": 0.08227556081779223,
+            "r2": 0.430074726083403,
+            "range_violation_fraction": 4.155708459241405e-05
+          },
+          "test": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08023763602567575,
+            "mse": 0.006438078234988819,
+            "bias": -0.0034511531379696103,
+            "ubrmse": 0.08016338177127448,
+            "r2": 0.46577596679025235,
+            "range_violation_fraction": 0.0
+          },
+          "test_equal": {
+            "records": 53044,
+            "sites": 259,
+            "rmse": 0.08009895948528072,
+            "mse": 0.006415843310624641,
+            "bias": -0.00244868646573415,
+            "ubrmse": 0.08006152162691621,
+            "r2": 0.467620994225208,
+            "range_violation_fraction": 0.0
+          }
+        }
+      },
+      "moisture_strata": {
+        "<0.1": {
+          "records": 15731,
+          "sites": 198,
+          "rmse": 0.08112165577572734,
+          "mse": 0.006580723035795597,
+          "bias": 0.05534748269571901,
+          "ubrmse": 0.05930749695479218,
+          "r2": -6.809266689864324,
+          "range_violation_fraction": 0.0
+        },
+        "0.1-0.2": {
+          "records": 16882,
+          "sites": 239,
+          "rmse": 0.062129602875971225,
+          "mse": 0.003860087553525892,
+          "bias": 0.014985200254604468,
+          "ubrmse": 0.0602953673747436,
+          "r2": -3.698120383043369,
+          "range_violation_fraction": 0.0
+        },
+        "0.2-0.3": {
+          "records": 12485,
+          "sites": 218,
+          "rmse": 0.06793199543907115,
+          "mse": 0.004614756004333984,
+          "bias": -0.032582900915316786,
+          "ubrmse": 0.05960797406619883,
+          "r2": -4.746051635815838,
+          "range_violation_fraction": 0.0
+        },
+        "0.3-0.4": {
+          "records": 6440,
+          "sites": 163,
+          "rmse": 0.10947204340785592,
+          "mse": 0.011984128287891492,
+          "bias": -0.09305309634145743,
+          "ubrmse": 0.05766497679839068,
+          "r2": -14.054619593892449,
+          "range_violation_fraction": 0.0
+        },
+        ">=0.4": {
+          "records": 1506,
+          "sites": 95,
+          "rmse": 0.1627686918520883,
+          "mse": 0.026493647047240075,
+          "bias": -0.1479727638869488,
+          "ubrmse": 0.0678064023149538,
+          "r2": -17.568595944377012,
+          "range_violation_fraction": 0.0
+        }
+      }
+    },
+    "20": {
+      "models": {
+        "concat_seed42": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09686077136089281,
+            "mse": 0.009382009028627155,
+            "bias": 0.009173040052269718,
+            "ubrmse": 0.09642543422161297,
+            "r2": 0.32859154666802604,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08672881839376237,
+            "site_equal_ubrmse": 0.049573083529943066,
+            "site_equal_bias": -0.00486377021600643,
+            "median_site_r": 0.45270422773474056,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.7999650145782085,
+            "pooled_within_site_anomaly_r": 0.4637204162201591
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08377487286963325,
+            "mse": 0.007018229324323213,
+            "bias": 0.0047696351297111875,
+            "ubrmse": 0.08363898555729045,
+            "r2": 0.3605781371711637,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07566757365385918,
+            "site_equal_ubrmse": 0.047429175642716134,
+            "site_equal_bias": -0.005277614993324375,
+            "median_site_r": 0.6150012805312126,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.7027339305093574,
+            "pooled_within_site_anomaly_r": 0.6195355213691124
+          }
+        },
+        "concat_seed555": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09804355849522745,
+            "mse": 0.009612539362407087,
+            "bias": 0.006016466917764967,
+            "ubrmse": 0.09785878339849995,
+            "r2": 0.31209401246431656,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08733076267221783,
+            "site_equal_ubrmse": 0.04849363668294588,
+            "site_equal_bias": -0.006364756429618948,
+            "median_site_r": 0.4408967541513576,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.7403495376424031,
+            "pooled_within_site_anomaly_r": 0.45546427550820967
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.0819960786022563,
+            "mse": 0.006723356906147393,
+            "bias": 0.0041250135205347415,
+            "ubrmse": 0.08189225341632014,
+            "r2": 0.38744358459582573,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07597136596369758,
+            "site_equal_ubrmse": 0.04727046913402948,
+            "site_equal_bias": -0.005503591605744604,
+            "median_site_r": 0.6153868353824175,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.646762578895312,
+            "pooled_within_site_anomaly_r": 0.6161095553607394
+          }
+        },
+        "concat_seed7": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09771497436235739,
+            "mse": 0.009548216214636161,
+            "bias": 0.005117271162557251,
+            "ubrmse": 0.09758088824398464,
+            "r2": 0.31669719553806386,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08863441924553513,
+            "site_equal_ubrmse": 0.04698975249487335,
+            "site_equal_bias": -0.0077311362062790845,
+            "median_site_r": 0.4624341388078343,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.7156847209764449,
+            "pooled_within_site_anomaly_r": 0.4777992609948986
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08690378932896849,
+            "mse": 0.0075522685997337375,
+            "bias": 0.00015396796179723815,
+            "ubrmse": 0.08690365293588341,
+            "r2": 0.31192250445718295,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07848351375378662,
+            "site_equal_ubrmse": 0.046099449287178365,
+            "site_equal_bias": -0.00689692215100441,
+            "median_site_r": 0.6248600537421032,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.6454425813485644,
+            "pooled_within_site_anomaly_r": 0.6423839202037921
+          }
+        },
+        "ft_seed42": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.0971963543993591,
+            "mse": 0.009447131308525812,
+            "bias": 0.01870354463687277,
+            "ubrmse": 0.09537981299280429,
+            "r2": 0.32393117498315604,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08871710134739037,
+            "site_equal_ubrmse": 0.04377046844964201,
+            "site_equal_bias": 0.009223964488428821,
+            "median_site_r": 0.505529887918913,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.5953911004913761,
+            "pooled_within_site_anomaly_r": 0.5330943500288271
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.09592385129750915,
+            "mse": 0.009201385247746647,
+            "bias": 0.02041326918654393,
+            "ubrmse": 0.09372664343112017,
+            "r2": 0.16167360400590747,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08217657002956244,
+            "site_equal_ubrmse": 0.04497776965971345,
+            "site_equal_bias": 0.01359488787791691,
+            "median_site_r": 0.6335741707853081,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.592481641826599,
+            "pooled_within_site_anomaly_r": 0.6500118547571822
+          }
+        },
+        "ft_seed555": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09096844182540449,
+            "mse": 0.008275257408142,
+            "bias": 0.0038558553940767517,
+            "ubrmse": 0.09088668652405571,
+            "r2": 0.407794454218556,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0853581629137896,
+            "site_equal_ubrmse": 0.04328898485773826,
+            "site_equal_bias": -0.0086494185743318,
+            "median_site_r": 0.5400069742994458,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.6022344264199035,
+            "pooled_within_site_anomaly_r": 0.5412300994095591
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.09166510341529883,
+            "mse": 0.00840249118413743,
+            "bias": 0.010314685372007653,
+            "ubrmse": 0.09108292073607391,
+            "r2": 0.23445981641784863,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07912404692003039,
+            "site_equal_ubrmse": 0.04481108528998852,
+            "site_equal_bias": 0.0022640518827494478,
+            "median_site_r": 0.6498432355229273,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.6183451269409239,
+            "pooled_within_site_anomaly_r": 0.6482843336766317
+          }
+        },
+        "ft_seed7": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09698281107502436,
+            "mse": 0.009405665644013867,
+            "bias": 0.024337005172004388,
+            "ubrmse": 0.09387958150349679,
+            "r2": 0.3268985988676777,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08909850604136721,
+            "site_equal_ubrmse": 0.04480659158603184,
+            "site_equal_bias": 0.007034868770653921,
+            "median_site_r": 0.47915033884940483,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.628653434274079,
+            "pooled_within_site_anomaly_r": 0.5098272024781342
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.09700493685214513,
+            "mse": 0.009409957773688664,
+            "bias": 0.029160889486690735,
+            "ubrmse": 0.09251810794668075,
+            "r2": 0.14267082895970729,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08446102526729451,
+            "site_equal_ubrmse": 0.046374971330030275,
+            "site_equal_bias": 0.017013421207256903,
+            "median_site_r": 0.6130342448568313,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.5745830385007364,
+            "pooled_within_site_anomaly_r": 0.6203635168378646
+          }
+        },
+        "ma_seed42": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.0931421938716023,
+            "mse": 0.00867546827921515,
+            "bias": 0.006209191658371366,
+            "ubrmse": 0.0929349999632257,
+            "r2": 0.3791540040618815,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08665855642151594,
+            "site_equal_ubrmse": 0.04929868900944501,
+            "site_equal_bias": -0.007593517300213355,
+            "median_site_r": 0.454705134728709,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.7794969813765147,
+            "pooled_within_site_anomaly_r": 0.4745875318575426
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08299230152714263,
+            "mse": 0.0068877221127721594,
+            "bias": 0.0008627803047025879,
+            "ubrmse": 0.08298781671376815,
+            "r2": 0.3724684816535476,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07539151206895454,
+            "site_equal_ubrmse": 0.04780578840398886,
+            "site_equal_bias": -0.008340862301301082,
+            "median_site_r": 0.6028533887150229,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.6785306687227719,
+            "pooled_within_site_anomaly_r": 0.6124011702866459
+          }
+        },
+        "ma_seed555": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.10710441854620867,
+            "mse": 0.011471356472121446,
+            "bias": 0.02379406469200712,
+            "ubrmse": 0.10442796061186882,
+            "r2": 0.1790707424107224,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09728847655086893,
+            "site_equal_ubrmse": 0.04707952689151176,
+            "site_equal_bias": 0.013629643442995757,
+            "median_site_r": 0.4084591252102934,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.6027022135561568,
+            "pooled_within_site_anomaly_r": 0.40775228252010676
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08658890189160755,
+            "mse": 0.007497637930794436,
+            "bias": 0.021480352993187846,
+            "ubrmse": 0.0838822529864481,
+            "r2": 0.3168998345623263,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08138793757019956,
+            "site_equal_ubrmse": 0.04716761625231921,
+            "site_equal_bias": 0.011982635122125893,
+            "median_site_r": 0.5962156293966736,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.4997149545497609,
+            "pooled_within_site_anomaly_r": 0.6043105671878999
+          }
+        },
+        "ma_seed7": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09773084407863249,
+            "mse": 0.009551317884321975,
+            "bias": 0.014871537067855864,
+            "ubrmse": 0.09659272886486521,
+            "r2": 0.3164752295135008,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08918878659979464,
+            "site_equal_ubrmse": 0.04850466780234684,
+            "site_equal_bias": 0.0016417802461838815,
+            "median_site_r": 0.4435290292064572,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.7655823785145066,
+            "pooled_within_site_anomaly_r": 0.471976981516417
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08879811320966027,
+            "mse": 0.007885104909595642,
+            "bias": 0.00668402982194607,
+            "ubrmse": 0.08854619503363755,
+            "r2": 0.2815982156039545,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07922820993662777,
+            "site_equal_ubrmse": 0.0470352869739891,
+            "site_equal_bias": 0.0010499888888958493,
+            "median_site_r": 0.6351392775022702,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.6762859493775308,
+            "pooled_within_site_anomaly_r": 0.6283567379723864
+          }
+        },
+        "no_cascade_seed42": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09291981000252203,
+            "mse": 0.008634091090904794,
+            "bias": 0.008843244603231649,
+            "ubrmse": 0.09249804384846314,
+            "r2": 0.38211509628870777,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08698416547160004,
+            "site_equal_ubrmse": 0.05066260409996219,
+            "site_equal_bias": -0.008310604237942632,
+            "median_site_r": 0.4163283681105109,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.714744566802564,
+            "pooled_within_site_anomaly_r": 0.41642621388996015
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08564449567896136,
+            "mse": 0.007334979640103632,
+            "bias": 0.0008849564382006353,
+            "ubrmse": 0.08563992347151017,
+            "r2": 0.3317194225854204,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07856835525267528,
+            "site_equal_ubrmse": 0.05114536748049613,
+            "site_equal_bias": -0.008801138107931723,
+            "median_site_r": 0.5470875563788242,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.6104162922244365,
+            "pooled_within_site_anomaly_r": 0.5367635276369863
+          }
+        },
+        "no_cascade_seed555": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09716623381290407,
+            "mse": 0.009441276993383941,
+            "bias": 0.007597771526853822,
+            "ubrmse": 0.0968687300485026,
+            "r2": 0.3243501296721494,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09259493228375668,
+            "site_equal_ubrmse": 0.05010267970412373,
+            "site_equal_bias": -0.0029334488936212824,
+            "median_site_r": 0.3254385003833035,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.5570125006442297,
+            "pooled_within_site_anomaly_r": 0.34361781440164463
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08609163623097266,
+            "mse": 0.007411769828926124,
+            "bias": 0.005532239849444829,
+            "ubrmse": 0.0859137017662162,
+            "r2": 0.3247231670749764,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08127896096746615,
+            "site_equal_ubrmse": 0.049849045346605024,
+            "site_equal_bias": -0.004806360061985399,
+            "median_site_r": 0.5142148762116185,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.459615269720305,
+            "pooled_within_site_anomaly_r": 0.5418764784032569
+          }
+        },
+        "no_cascade_seed7": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09832984654024554,
+            "mse": 0.009668758720628239,
+            "bias": 0.022991464283746675,
+            "ubrmse": 0.09560413846020181,
+            "r2": 0.3080707641136269,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09498358924663262,
+            "site_equal_ubrmse": 0.049655011473407965,
+            "site_equal_bias": 0.011698138998061648,
+            "median_site_r": 0.36183982750265176,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.5664351968210039,
+            "pooled_within_site_anomaly_r": 0.3734328135134488
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.09200214085598882,
+            "mse": 0.008464393922085207,
+            "bias": 0.02031825193258266,
+            "ubrmse": 0.08973049961127659,
+            "r2": 0.22881993744216567,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.08644137512633632,
+            "site_equal_ubrmse": 0.04981030290785264,
+            "site_equal_bias": 0.013112924956239742,
+            "median_site_r": 0.5162463645188415,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.4922328669494136,
+            "pooled_within_site_anomaly_r": 0.5516875810703546
+          }
+        },
+        "rf_seed42": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.08425801934781792,
+            "mse": 0.007099413824417257,
+            "bias": 0.008748471160839282,
+            "ubrmse": 0.08380261378241863,
+            "r2": 0.4919418174858535,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07503012680541248,
+            "site_equal_ubrmse": 0.03942997111184839,
+            "site_equal_bias": 0.0023827585505819585,
+            "median_site_r": 0.617401641769175,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.5212680599216917,
+            "pooled_within_site_anomaly_r": 0.5908122854348702
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.0843543690054195,
+            "mse": 0.007115659570302478,
+            "bias": 0.006590031453725347,
+            "ubrmse": 0.08409655793040159,
+            "r2": 0.35170139255354027,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07540231026577279,
+            "site_equal_ubrmse": 0.04351984905345492,
+            "site_equal_bias": 0.0012989339044146512,
+            "median_site_r": 0.6898595166871615,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.5140819043070397,
+            "pooled_within_site_anomaly_r": 0.6570055193017361
+          }
+        },
+        "xgb_seed42": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.08615417053848956,
+            "mse": 0.0074225411011751416,
+            "bias": 0.006459225523330451,
+            "ubrmse": 0.08591169598380594,
+            "r2": 0.4688177313273978,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07741721618035932,
+            "site_equal_ubrmse": 0.04096032745492083,
+            "site_equal_bias": 0.0002310626319198939,
+            "median_site_r": 0.5835432406674118,
+            "site_r_count": 259,
+            "median_amplitude_ratio": 0.5606283044326575,
+            "pooled_within_site_anomaly_r": 0.5659597838724086
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08463525170566166,
+            "mse": 0.007163125831280706,
+            "bias": 0.005582162842634162,
+            "ubrmse": 0.08445096381497975,
+            "r2": 0.34737680245913705,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.07635194070636962,
+            "site_equal_ubrmse": 0.04400369052408901,
+            "site_equal_bias": 0.00034431907263979825,
+            "median_site_r": 0.6751110039762989,
+            "site_r_count": 132,
+            "median_amplitude_ratio": 0.5340422348586098,
+            "pooled_within_site_anomaly_r": 0.6551883292296662
+          }
+        }
+      },
+      "paired_controls": {
+        "concat_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 278,
+          "per_seed_rmse_differences": [
+            0.0037185774892905116,
+            -1.586971627509648e-05,
+            -0.00906086005098121
+          ],
+          "mean_rmse_difference": -0.0017860507593219315,
+          "sd_of_paired_seed_differences": 0.006571047226682998,
+          "rmse_ci95": [
+            -0.004084000344467303,
+            0.0006726645893170485
+          ],
+          "site_equal_rmse_difference": -0.0034806064202213965,
+          "site_equal_rmse_ci95": [
+            -0.005325529883279018,
+            -0.001771978438015259
+          ],
+          "anomaly_r_difference": 0.014222385609733693,
+          "anomaly_r_ci95": [
+            0.003079257395046648,
+            0.02575215666612006
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                0.0037185774892905116
+              ],
+              "mean_rmse_difference": 0.0037185774892905116,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0009587386536997165,
+                0.006528421318692259
+              ],
+              "site_equal_rmse_difference": 7.026197224642078e-05,
+              "site_equal_rmse_ci95": [
+                -0.001915021067572111,
+                0.0021191426822926847
+              ],
+              "anomaly_r_difference": -0.010867115637383518,
+              "anomaly_r_ci95": [
+                -0.03052520199157633,
+                0.006796628477730292
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                -1.586971627509648e-05
+              ],
+              "mean_rmse_difference": -1.586971627509648e-05,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.00323310746683123,
+                0.003261560939777871
+              ],
+              "site_equal_rmse_difference": -0.0005543673542595048,
+              "site_equal_rmse_ci95": [
+                -0.0024369317147662174,
+                0.0013882715545011006
+              ],
+              "anomaly_r_difference": 0.005822279478481629,
+              "anomaly_r_ci95": [
+                -0.012128752860953185,
+                0.02529604841545366
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                -0.00906086005098121
+              ],
+              "mean_rmse_difference": -0.00906086005098121,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.013971117800098,
+                -0.003851664009395884
+              ],
+              "site_equal_rmse_difference": -0.009957713878651105,
+              "site_equal_rmse_ci95": [
+                -0.014502856190886242,
+                -0.005527571036335933
+              ],
+              "anomaly_r_difference": 0.04771199298810297,
+              "anomaly_r_ci95": [
+                0.0199561106464109,
+                0.07621451798490905
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "concat_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 134,
+          "per_seed_rmse_differences": [
+            0.0007825713424906289,
+            -0.0018943238806917867,
+            -0.004592823289351247
+          ],
+          "mean_rmse_difference": -0.0019015252758508017,
+          "sd_of_paired_seed_differences": 0.002687704551671889,
+          "rmse_ci95": [
+            -0.0031319210680059565,
+            -0.0006812205486889467
+          ],
+          "site_equal_rmse_difference": -0.001961735401479494,
+          "site_equal_rmse_ci95": [
+            -0.003025086343392646,
+            -0.0008245318758662014
+          ],
+          "anomaly_r_difference": 0.010986840495570638,
+          "anomaly_r_ci95": [
+            0.005735736272931554,
+            0.016320300016839692
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                0.0007825713424906289
+              ],
+              "mean_rmse_difference": 0.0007825713424906289,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0010796654863028418,
+                0.0029004382111132813
+              ],
+              "site_equal_rmse_difference": 0.00027606158490464867,
+              "site_equal_rmse_ci95": [
+                -0.0009474490044388428,
+                0.001528119851668228
+              ],
+              "anomaly_r_difference": 0.007134351082466517,
+              "anomaly_r_ci95": [
+                -7.732036101680259e-05,
+                0.01476882447583937
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                -0.0018943238806917867
+              ],
+              "mean_rmse_difference": -0.0018943238806917867,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.005132811987049582,
+                0.001620316999497912
+              ],
+              "site_equal_rmse_difference": -0.0007446961828411596,
+              "site_equal_rmse_ci95": [
+                -0.0024489067360426876,
+                0.0010718987456105947
+              ],
+              "anomaly_r_difference": 0.014027182231405866,
+              "anomaly_r_ci95": [
+                0.007433338868115563,
+                0.021294582647378258
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                -0.004592823289351247
+              ],
+              "mean_rmse_difference": -0.004592823289351247,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.007484275562893699,
+                -0.001594325724328877
+              ],
+              "site_equal_rmse_difference": -0.00541657160650197,
+              "site_equal_rmse_ci95": [
+                -0.0081871769735404,
+                -0.0026694132132483745
+              ],
+              "anomaly_r_difference": 0.01179898817283953,
+              "anomaly_r_ci95": [
+                0.0016297341600161777,
+                0.022228465042131256
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ft_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 278,
+          "per_seed_rmse_differences": [
+            0.004054160527756798,
+            -0.0007480330036081367,
+            -0.016135976720804177
+          ],
+          "mean_rmse_difference": -0.004276616398885172,
+          "sd_of_paired_seed_differences": 0.010547444529932401,
+          "rmse_ci95": [
+            -0.008429807509883338,
+            -9.868251608108492e-05
+          ],
+          "site_equal_rmse_difference": -0.003320683089877443,
+          "site_equal_rmse_ci95": [
+            -0.007069364742359333,
+            0.0003228837822928812
+          ],
+          "anomaly_r_difference": 0.07661161867415145,
+          "anomaly_r_ci95": [
+            0.05531292332765405,
+            0.09868452185397479
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                0.004054160527756798
+              ],
+              "mean_rmse_difference": 0.004054160527756798,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0014598841884186304,
+                0.009333030414021051
+              ],
+              "site_equal_rmse_difference": 0.0020585449258744073,
+              "site_equal_rmse_ci95": [
+                -0.0033539737617455908,
+                0.007159310349650473
+              ],
+              "anomaly_r_difference": 0.05850681817128439,
+              "anomaly_r_ci95": [
+                0.0348224142485956,
+                0.08165592721403485
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                -0.0007480330036081367
+              ],
+              "mean_rmse_difference": -0.0007480330036081367,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.008235002774969075,
+                0.006880751106791802
+              ],
+              "site_equal_rmse_difference": -9.028055842741516e-05,
+              "site_equal_rmse_ci95": [
+                -0.004734012864676416,
+                0.004239211017367607
+              ],
+              "anomaly_r_difference": 0.03785022096171742,
+              "anomaly_r_ci95": [
+                0.010176044240529331,
+                0.06400287648739249
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                -0.016135976720804177
+              ],
+              "mean_rmse_difference": -0.016135976720804177,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.022956113397202375,
+                -0.009145298962117443
+              ],
+              "site_equal_rmse_difference": -0.011930313637079321,
+              "site_equal_rmse_ci95": [
+                -0.018607788772695144,
+                -0.00513458044108216
+              ],
+              "anomaly_r_difference": 0.13347781688945254,
+              "anomaly_r_ci95": [
+                0.09729180209578696,
+                0.1748251368031086
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ft_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 134,
+          "per_seed_rmse_differences": [
+            0.012931549770366507,
+            0.008206823642484859,
+            0.005076201523691287
+          ],
+          "mean_rmse_difference": 0.008738191645514218,
+          "sd_of_paired_seed_differences": 0.003954540173663484,
+          "rmse_ci95": [
+            0.0028789569956530203,
+            0.014083869451630381
+          ],
+          "site_equal_rmse_difference": 0.0032513275470351685,
+          "site_equal_rmse_ci95": [
+            -0.00010289896162061245,
+            0.006815085575992314
+          ],
+          "anomaly_r_difference": 0.024530409941582065,
+          "anomaly_r_ci95": [
+            0.01235299483937388,
+            0.03782771846416821
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                0.012931549770366507
+              ],
+              "mean_rmse_difference": 0.012931549770366507,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.006045505643485591,
+                0.019363006104733033
+              ],
+              "site_equal_rmse_difference": 0.006785057960607929,
+              "site_equal_rmse_ci95": [
+                0.0019088717809473599,
+                0.011498833944605527
+              ],
+              "anomaly_r_difference": 0.03761068447053639,
+              "anomaly_r_ci95": [
+                0.020390450979667383,
+                0.05466676184460825
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                0.008206823642484859
+              ],
+              "mean_rmse_difference": 0.008206823642484859,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0016690987383624766,
+                0.014480923437811792
+              ],
+              "site_equal_rmse_difference": 0.005232815330666746,
+              "site_equal_rmse_ci95": [
+                0.0014034869807710401,
+                0.009127720622126476
+              ],
+              "anomaly_r_difference": -0.007993221134521611,
+              "anomaly_r_ci95": [
+                -0.02207595110131521,
+                0.006468389596657203
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                0.005076201523691287
+              ],
+              "mean_rmse_difference": 0.005076201523691287,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0017849855628193866,
+                0.01138702823159735
+              ],
+              "site_equal_rmse_difference": -0.002263890650169169,
+              "site_equal_rmse_ci95": [
+                -0.00663894715941142,
+                0.0023030899350063943
+              ],
+              "anomaly_r_difference": 0.043973766488731414,
+              "anomaly_r_ci95": [
+                0.029521185521828704,
+                0.05996319557071523
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "no_cascade_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 278,
+          "per_seed_rmse_differences": [
+            -0.00022238386908025876,
+            0.0005990024616130546,
+            -0.0099381847333046
+          ],
+          "mean_rmse_difference": -0.0031871887135906016,
+          "sd_of_paired_seed_differences": 0.0058609409926826716,
+          "rmse_ci95": [
+            -0.007729088312122719,
+            0.0008232458346801409
+          ],
+          "site_equal_rmse_difference": 0.00047562247660326633,
+          "site_equal_rmse_ci95": [
+            -0.0022738166643935117,
+            0.002958574894781362
+          ],
+          "anomaly_r_difference": -0.07361331802967107,
+          "anomaly_r_ci95": [
+            -0.09400649289884182,
+            -0.05475471314304477
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                -0.00022238386908025876
+              ],
+              "mean_rmse_difference": -0.00022238386908025876,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.004463006109583222,
+                0.0035996468990471464
+              ],
+              "site_equal_rmse_difference": 0.00032560905008408025,
+              "site_equal_rmse_ci95": [
+                -0.0022642087704805723,
+                0.002712557726448023
+              ],
+              "anomaly_r_difference": -0.05816131796758239,
+              "anomaly_r_ci95": [
+                -0.07456017312013767,
+                -0.04049025489128187
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                0.0005990024616130546
+              ],
+              "mean_rmse_difference": 0.0005990024616130546,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.005155344874472066,
+                0.006093070954167528
+              ],
+              "site_equal_rmse_difference": 0.005794802646837973,
+              "site_equal_rmse_ci95": [
+                0.001271807061624786,
+                0.010253984944722
+              ],
+              "anomaly_r_difference": -0.09854416800296811,
+              "anomaly_r_ci95": [
+                -0.1323190016884126,
+                -0.06760942867497742
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 278,
+              "per_seed_rmse_differences": [
+                -0.0099381847333046
+              ],
+              "mean_rmse_difference": -0.0099381847333046,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.016979552500109824,
+                -0.0033685471671069445
+              ],
+              "site_equal_rmse_difference": -0.004693544267112254,
+              "site_equal_rmse_ci95": [
+                -0.009590317548719071,
+                -0.00014696966366249624
+              ],
+              "anomaly_r_difference": -0.06413446811846268,
+              "anomaly_r_ci95": [
+                -0.09271259134334832,
+                -0.03603491520348158
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "no_cascade_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 134,
+          "per_seed_rmse_differences": [
+            0.0026521941518187347,
+            0.0032040276463285444,
+            -0.0004972656606348907
+          ],
+          "mean_rmse_difference": 0.0017863187125041295,
+          "sd_of_paired_seed_differences": 0.001996796996028709,
+          "rmse_ci95": [
+            -0.00015254828084473786,
+            0.0037348999892079806
+          ],
+          "site_equal_rmse_difference": 0.003427010590231968,
+          "site_equal_rmse_ci95": [
+            0.0021979436763814187,
+            0.004695611327446364
+          ],
+          "anomaly_r_difference": -0.07158029611211136,
+          "anomaly_r_ci95": [
+            -0.09040640308315043,
+            -0.05226147104891697
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                0.0026521941518187347
+              ],
+              "mean_rmse_difference": 0.0026521941518187347,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.0009957750414355004,
+                0.004159802078553871
+              ],
+              "site_equal_rmse_difference": 0.0031768431837207534,
+              "site_equal_rmse_ci95": [
+                0.0019461265119292022,
+                0.004361196157036562
+              ],
+              "anomaly_r_difference": -0.07563764264965966,
+              "anomaly_r_ci95": [
+                -0.09729597924633168,
+                -0.05443243849896732
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                0.0032040276463285444
+              ],
+              "mean_rmse_difference": 0.0032040276463285444,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.00029819161326648106,
+                0.007142464942843395
+              ],
+              "site_equal_rmse_difference": 0.007213165189708558,
+              "site_equal_rmse_ci95": [
+                0.0044361758727493195,
+                0.009978435504067117
+              ],
+              "anomaly_r_difference": -0.07666915690203135,
+              "anomaly_r_ci95": [
+                -0.09571321006305465,
+                -0.057765815074357796
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 134,
+              "per_seed_rmse_differences": [
+                -0.0004972656606348907
+              ],
+              "mean_rmse_difference": -0.0004972656606348907,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0036252337980194546,
+                0.0030483221323955975
+              ],
+              "site_equal_rmse_difference": -0.00010897660273340615,
+              "site_equal_rmse_ci95": [
+                -0.0028598410219957144,
+                0.0026590565075285243
+              ],
+              "anomaly_r_difference": -0.06243408878464307,
+              "anomaly_r_ci95": [
+                -0.08269500948762548,
+                -0.04241235823909507
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ma_minus_rf_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 278,
+          "per_seed_rmse_differences": [
+            0.008884174523784386
+          ],
+          "mean_rmse_difference": 0.008884174523784386,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.0033474844138211605,
+            0.014723876099318309
+          ],
+          "site_equal_rmse_difference": 0.011628429616103473,
+          "site_equal_rmse_ci95": [
+            0.007850169401605043,
+            0.015545258597893533
+          ],
+          "anomaly_r_difference": -0.1162247535773277,
+          "anomaly_r_ci95": [
+            -0.13958115374351038,
+            -0.09119890824011297
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_rf_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 134,
+          "per_seed_rmse_differences": [
+            -0.001362067478276871
+          ],
+          "mean_rmse_difference": -0.001362067478276871,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005677758000372195,
+            0.0031054449418358586
+          ],
+          "site_equal_rmse_difference": -1.0798196818269689e-05,
+          "site_equal_rmse_ci95": [
+            -0.0038133584792453368,
+            0.0037578008845018974
+          ],
+          "anomaly_r_difference": -0.04460434901509014,
+          "anomaly_r_ci95": [
+            -0.06484195821324559,
+            -0.024051466297418653
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.47761194029850745,
+          "fraction_sites_ubrmse_lower": 0.27611940298507465,
+          "valid_r_comparison_sites": 132,
+          "fraction_valid_sites_r_higher": 0.17424242424242425,
+          "mse_decomposition": {
+            "total_reduction": 0.00022793745753031756,
+            "bias_squared_reduction": 4.2684124706906714e-05,
+            "centered_mse_reduction": 0.00018525333282341187,
+            "bias_share": 0.18726244106337536
+          }
+        },
+        "ma_minus_xgb_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 278,
+          "per_seed_rmse_differences": [
+            0.006988023333112742
+          ],
+          "mean_rmse_difference": 0.006988023333112742,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.00117240887412742,
+            0.012717666243451121
+          ],
+          "site_equal_rmse_difference": 0.009241340241156637,
+          "site_equal_rmse_ci95": [
+            0.005205841204545775,
+            0.01312482814259321
+          ],
+          "anomaly_r_difference": -0.09137225201486615,
+          "anomaly_r_ci95": [
+            -0.11831343900514547,
+            -0.06287902636957923
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_xgb_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 134,
+          "per_seed_rmse_differences": [
+            -0.001642950178519037
+          ],
+          "mean_rmse_difference": -0.001642950178519037,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0055817562871327085,
+            0.002421093137221338
+          ],
+          "site_equal_rmse_difference": -0.0009604286374151015,
+          "site_equal_rmse_ci95": [
+            -0.00452677180562876,
+            0.0026696809790646148
+          ],
+          "anomaly_r_difference": -0.04278715894302032,
+          "anomaly_r_ci95": [
+            -0.06485579462545585,
+            -0.02065703327662778
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.5522388059701493,
+          "fraction_sites_ubrmse_lower": 0.34328358208955223,
+          "valid_r_comparison_sites": 132,
+          "fraction_valid_sites_r_higher": 0.25,
+          "mse_decomposition": {
+            "total_reduction": 0.00027540371850854565,
+            "bias_squared_reduction": 3.0416152147502796e-05,
+            "centered_mse_reduction": 0.00024498756636104606,
+            "bias_share": 0.11044205325992719
+          }
+        }
+      },
+      "ensemble": {
+        "candidate_seeds": [
+          42,
+          7,
+          555
+        ],
+        "selected_slots": [
+          42,
+          7,
+          42,
+          42
+        ],
+        "selection": "greedy development OOF RMSE only; improvement at least 1e-6; maximum 50 slots",
+        "metrics": {
+          "oof": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09232181614230207,
+            "mse": 0.008523317735813028,
+            "bias": 0.008374777912789394,
+            "ubrmse": 0.09194118136463378,
+            "r2": 0.39004241407167095,
+            "range_violation_fraction": 0.0
+          },
+          "oof_equal": {
+            "records": 75169,
+            "sites": 278,
+            "rmse": 0.09422172368652977,
+            "mse": 0.008877733214460766,
+            "bias": 0.014958264471208458,
+            "ubrmse": 0.09302678935914185,
+            "r2": 0.36467923784473344,
+            "range_violation_fraction": 0.0
+          },
+          "test": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.083797956386973,
+            "mse": 0.007022097494633029,
+            "bias": 0.0023180926007640157,
+            "ubrmse": 0.08376588769497588,
+            "r2": 0.3602257131406936,
+            "range_violation_fraction": 0.0
+          },
+          "test_equal": {
+            "records": 38081,
+            "sites": 134,
+            "rmse": 0.08423825859742856,
+            "mse": 0.007096084211527247,
+            "bias": 0.00967572096220689,
+            "ubrmse": 0.08368073037078941,
+            "r2": 0.35348487835817477,
+            "range_violation_fraction": 0.0
+          }
+        }
+      },
+      "moisture_strata": {
+        "<0.1": {
+          "records": 6844,
+          "sites": 68,
+          "rmse": 0.10863079472766793,
+          "mse": 0.011800649563164727,
+          "bias": 0.08266969011222965,
+          "ubrmse": 0.07047249037683179,
+          "r2": -22.248450985345166,
+          "range_violation_fraction": 0.0
+        },
+        "0.1-0.2": {
+          "records": 12285,
+          "sites": 108,
+          "rmse": 0.06697614277843214,
+          "mse": 0.004485803701476929,
+          "bias": 0.0301755247803796,
+          "ubrmse": 0.059793322417353814,
+          "r2": -4.013612699093472,
+          "range_violation_fraction": 0.0
+        },
+        "0.2-0.3": {
+          "records": 10813,
+          "sites": 110,
+          "rmse": 0.06016810976897076,
+          "mse": 0.003620201433170915,
+          "bias": -0.020161780555575916,
+          "ubrmse": 0.05668954081662432,
+          "r2": -3.5078511261946677,
+          "range_violation_fraction": 0.0
+        },
+        "0.3-0.4": {
+          "records": 6384,
+          "sites": 91,
+          "rmse": 0.09232662949053914,
+          "mse": 0.008524206513083292,
+          "bias": -0.07350490215918923,
+          "ubrmse": 0.05586802190566005,
+          "r2": -9.078384445905176,
+          "range_violation_fraction": 0.0
+        },
+        ">=0.4": {
+          "records": 1755,
+          "sites": 58,
+          "rmse": 0.1368256927963173,
+          "mse": 0.018721270209192196,
+          "bias": -0.12329203176067086,
+          "ubrmse": 0.059332496269059204,
+          "r2": -19.06848964323184,
+          "range_violation_fraction": 0.0
+        }
+      }
+    },
+    "50": {
+      "models": {
+        "concat_seed42": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10716453340221428,
+            "mse": 0.0114842372193143,
+            "bias": 0.00881752206157624,
+            "ubrmse": 0.10680116349557207,
+            "r2": 0.1268155887244713,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09628558687192398,
+            "site_equal_ubrmse": 0.05568900821496958,
+            "site_equal_bias": 0.0009138972087521696,
+            "median_site_r": 0.33094779138360864,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.6681957550552662,
+            "pooled_within_site_anomaly_r": 0.3216310145337423
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10439623380203053,
+            "mse": 0.010898573632048221,
+            "bias": 0.007544032108172839,
+            "ubrmse": 0.1041232981210213,
+            "r2": 0.20367384619772522,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09213238635181197,
+            "site_equal_ubrmse": 0.04934096332681463,
+            "site_equal_bias": -0.010301296474882543,
+            "median_site_r": 0.44643409610539303,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.60856279984533,
+            "pooled_within_site_anomaly_r": 0.45643223532163063
+          }
+        },
+        "concat_seed555": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10378858168496997,
+            "mse": 0.010772069688177685,
+            "bias": 0.006139434022959739,
+            "ubrmse": 0.10360683876103648,
+            "r2": 0.18096403363461588,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09504901427705034,
+            "site_equal_ubrmse": 0.05468477202640914,
+            "site_equal_bias": -0.0036559279326889194,
+            "median_site_r": 0.23884934977703665,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.45727256266033356,
+            "pooled_within_site_anomaly_r": 0.2702535476462791
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10507620069655964,
+            "mse": 0.011041007952823681,
+            "bias": 0.004441422738522841,
+            "ubrmse": 0.1049822923967724,
+            "r2": 0.19326659671151447,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09246127653252241,
+            "site_equal_ubrmse": 0.04917752284193707,
+            "site_equal_bias": -0.017457717078239152,
+            "median_site_r": 0.43468647141286587,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.4132174276423781,
+            "pooled_within_site_anomaly_r": 0.44525692996617344
+          }
+        },
+        "concat_seed7": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.11991579694898767,
+            "mse": 0.01437979835791084,
+            "bias": 0.03338093825816328,
+            "ubrmse": 0.11517600148865878,
+            "r2": -0.09334346928118364,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10558173663238332,
+            "site_equal_ubrmse": 0.055496440066152355,
+            "site_equal_bias": 0.01938428944864525,
+            "median_site_r": 0.192628472013576,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.43702801779740946,
+            "pooled_within_site_anomaly_r": 0.26451067596798206
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10915580088559838,
+            "mse": 0.011914988866976402,
+            "bias": 0.03402558109157645,
+            "ubrmse": 0.10371715720341045,
+            "r2": 0.12940742730449606,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0947121402818874,
+            "site_equal_ubrmse": 0.04956861119498469,
+            "site_equal_bias": 0.011443370609835508,
+            "median_site_r": 0.41605638761567765,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.4535497236849031,
+            "pooled_within_site_anomaly_r": 0.4290850929401076
+          }
+        },
+        "ft_seed42": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.12139137449365314,
+            "mse": 0.014735865801458343,
+            "bias": 0.03558534184733152,
+            "ubrmse": 0.11605838723274979,
+            "r2": -0.12041645071921181,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10041674455855004,
+            "site_equal_ubrmse": 0.052371190535005135,
+            "site_equal_bias": 0.017845357187248646,
+            "median_site_r": 0.28278567753837364,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.4613867310940987,
+            "pooled_within_site_anomaly_r": 0.328314278168647
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.11312068643973024,
+            "mse": 0.012796289700595768,
+            "bias": 0.03786697534028287,
+            "ubrmse": 0.10659447396171239,
+            "r2": 0.06501341329195276,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09375316048520968,
+            "site_equal_ubrmse": 0.04859786161434091,
+            "site_equal_bias": 0.011894148133138526,
+            "median_site_r": 0.4327903784079386,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.43816897813152006,
+            "pooled_within_site_anomaly_r": 0.43795623162338465
+          }
+        },
+        "ft_seed555": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.11962246617810308,
+            "mse": 0.014309534414531415,
+            "bias": 0.012151958822540757,
+            "ubrmse": 0.11900363150470111,
+            "r2": -0.08800107005500979,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10015684216714124,
+            "site_equal_ubrmse": 0.05171018917693533,
+            "site_equal_bias": 0.002328388613387166,
+            "median_site_r": 0.39810239482798426,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.5595332518162207,
+            "pooled_within_site_anomaly_r": 0.4027109175492798
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.11285508770595688,
+            "mse": 0.01273627082111922,
+            "bias": 0.0364485197382981,
+            "ubrmse": 0.10680719184589638,
+            "r2": 0.06939881316745,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09129705207609436,
+            "site_equal_ubrmse": 0.04683906671464636,
+            "site_equal_bias": 0.010290447380860332,
+            "median_site_r": 0.5444143093167371,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.5233768588390508,
+            "pooled_within_site_anomaly_r": 0.49452103604404785
+          }
+        },
+        "ft_seed7": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.1214082986632359,
+            "mse": 0.014739974984301485,
+            "bias": 0.03869349476553583,
+            "ubrmse": 0.11507731508481997,
+            "r2": -0.12072888543587523,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10857246581816085,
+            "site_equal_ubrmse": 0.05320470709839108,
+            "site_equal_bias": 0.01970593648094411,
+            "median_site_r": 0.20008920853116355,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.4330403705479794,
+            "pooled_within_site_anomaly_r": 0.3043438176326174
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.11332704274108961,
+            "mse": 0.012843018616440752,
+            "bias": 0.03753497857807329,
+            "ubrmse": 0.1069305569029935,
+            "r2": 0.06159907127963993,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09838137892862303,
+            "site_equal_ubrmse": 0.04944713888913894,
+            "site_equal_bias": 0.0095466134362723,
+            "median_site_r": 0.38970868688840304,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.36877923543990465,
+            "pooled_within_site_anomaly_r": 0.4140151404259156
+          }
+        },
+        "ma_seed42": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.12580573736588835,
+            "mse": 0.015827083554174875,
+            "bias": 0.030624785613870754,
+            "ubrmse": 0.12202133444721595,
+            "r2": -0.20338533343932008,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10680162066282896,
+            "site_equal_ubrmse": 0.05442377498105413,
+            "site_equal_bias": 0.020506900706178437,
+            "median_site_r": 0.26750113300146916,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.5606343546037263,
+            "pooled_within_site_anomaly_r": 0.3367265033034915
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10744398304043574,
+            "mse": 0.011544209491593443,
+            "bias": 0.026353591124963292,
+            "ubrmse": 0.10416188231023717,
+            "r2": 0.15649916645095463,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09421817877897413,
+            "site_equal_ubrmse": 0.04869904506945883,
+            "site_equal_bias": 0.00781983519599817,
+            "median_site_r": 0.4514901327849775,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.542204492145093,
+            "pooled_within_site_anomaly_r": 0.46378106311229933
+          }
+        },
+        "ma_seed555": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.11969342313779442,
+            "mse": 0.0143265155424431,
+            "bias": 0.04493394346728589,
+            "ubrmse": 0.11093897541856902,
+            "r2": -0.08929220118502723,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.1014362680708403,
+            "site_equal_ubrmse": 0.05501101060182767,
+            "site_equal_bias": 0.03740178775129991,
+            "median_site_r": 0.21108871712093835,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.5794597053937627,
+            "pooled_within_site_anomaly_r": 0.2840514448674096
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.11970335619089602,
+            "mse": 0.014328893483364524,
+            "bias": 0.0548908300615377,
+            "ubrmse": 0.10637617335907469,
+            "r2": -0.0469693577420669,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09687027422888836,
+            "site_equal_ubrmse": 0.048018651683994745,
+            "site_equal_bias": 0.029971561470554048,
+            "median_site_r": 0.4866149421267699,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.4694284274898672,
+            "pooled_within_site_anomaly_r": 0.4754110495180107
+          }
+        },
+        "ma_seed7": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.11019193719074605,
+            "mse": 0.012142263021849321,
+            "bias": 0.028089851645335586,
+            "ubrmse": 0.10655150518126132,
+            "r2": 0.07678371790728566,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0963429080139459,
+            "site_equal_ubrmse": 0.05294615487603745,
+            "site_equal_bias": 0.012322390519487457,
+            "median_site_r": 0.3184396894466651,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.404940728809484,
+            "pooled_within_site_anomaly_r": 0.3272308196677162
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.1057297998599544,
+            "mse": 0.011178790578426015,
+            "bias": 0.023350635166065514,
+            "ubrmse": 0.10311904972296496,
+            "r2": 0.18319923266820126,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09118227941327559,
+            "site_equal_ubrmse": 0.04757627960744818,
+            "site_equal_bias": 0.002197152184924901,
+            "median_site_r": 0.4830614704083948,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.45644029529722596,
+            "pooled_within_site_anomaly_r": 0.4729749516691909
+          }
+        },
+        "no_cascade_seed42": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10825559432625617,
+            "mse": 0.011719273702930947,
+            "bias": 0.005310281412805834,
+            "ubrmse": 0.1081252727823045,
+            "r2": 0.10894499012433845,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0999236390439853,
+            "site_equal_ubrmse": 0.056265287567493875,
+            "site_equal_bias": -0.005288481357340891,
+            "median_site_r": 0.26258525821151524,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.49580968778471946,
+            "pooled_within_site_anomaly_r": 0.25166067005937093
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10388576525085008,
+            "mse": 0.010792252221754731,
+            "bias": 0.0022939770396697996,
+            "ubrmse": 0.10386043467604109,
+            "r2": 0.21144243340778712,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09374513938389814,
+            "site_equal_ubrmse": 0.05111828477444123,
+            "site_equal_bias": -0.018362681627349914,
+            "median_site_r": 0.3513573125515,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.47143161177685516,
+            "pooled_within_site_anomaly_r": 0.3767936698097279
+          }
+        },
+        "no_cascade_seed555": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10914840545882472,
+            "mse": 0.011913374414203997,
+            "bias": 0.015482374599590763,
+            "ubrmse": 0.10804476151559567,
+            "r2": 0.09418687323207542,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09526849839025263,
+            "site_equal_ubrmse": 0.05565496788538512,
+            "site_equal_bias": 0.002888564704723691,
+            "median_site_r": 0.3419773234560234,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.6729389394258739,
+            "pooled_within_site_anomaly_r": 0.3456629397567746
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10819094799818778,
+            "mse": 0.011705281228746573,
+            "bias": 0.01788926372496608,
+            "ubrmse": 0.10670171260165034,
+            "r2": 0.14473013673533874,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09017565284905063,
+            "site_equal_ubrmse": 0.052160306866141176,
+            "site_equal_bias": -0.0022504538137988277,
+            "median_site_r": 0.44044046489616534,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.6442656058680137,
+            "pooled_within_site_anomaly_r": 0.39517430207707127
+          }
+        },
+        "no_cascade_seed7": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.12390568145920028,
+            "mse": 0.015352617897868806,
+            "bias": 0.026032526314608957,
+            "ubrmse": 0.1211401067836247,
+            "r2": -0.1673101456092303,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.11091840997587252,
+            "site_equal_ubrmse": 0.05454762891883234,
+            "site_equal_bias": 0.004794259451022873,
+            "median_site_r": 0.19821775602129146,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.44587137124946613,
+            "pooled_within_site_anomaly_r": 0.27090036942417084
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10640620386493187,
+            "mse": 0.011322280220945441,
+            "bias": 0.024611214503331466,
+            "ubrmse": 0.10352085945168948,
+            "r2": 0.17271487398093666,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.094724866538136,
+            "site_equal_ubrmse": 0.04972738644172001,
+            "site_equal_bias": 0.00025758634601463575,
+            "median_site_r": 0.3761120938089951,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.43194094035369657,
+            "pooled_within_site_anomaly_r": 0.40075096947975614
+          }
+        },
+        "rf_seed42": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10802636582839398,
+            "mse": 0.011669695714090007,
+            "bias": 0.01702442680890375,
+            "ubrmse": 0.10667644822508053,
+            "r2": 0.11271456803983937,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.09114605871338981,
+            "site_equal_ubrmse": 0.04673435978716514,
+            "site_equal_bias": 0.0027197131338602574,
+            "median_site_r": 0.5327808441439822,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.4395827790621932,
+            "pooled_within_site_anomaly_r": 0.5015834254907137
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.11299119028336489,
+            "mse": 0.012767009081651574,
+            "bias": 0.02127117541258682,
+            "ubrmse": 0.11097092492278568,
+            "r2": 0.0671528604757764,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.0932861218926911,
+            "site_equal_ubrmse": 0.04635889510645985,
+            "site_equal_bias": -0.005733335222324702,
+            "median_site_r": 0.5794564625495128,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.4256600091250209,
+            "pooled_within_site_anomaly_r": 0.5077999487300447
+          }
+        },
+        "xgb_seed42": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10809443978821408,
+            "mse": 0.01168440791312784,
+            "bias": 0.009780186506844982,
+            "ubrmse": 0.10765108390080969,
+            "r2": 0.11159595105117137,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10074971334879279,
+            "site_equal_ubrmse": 0.04990882621840874,
+            "site_equal_bias": -0.007746747842670174,
+            "median_site_r": 0.39431071928500294,
+            "site_r_count": 129,
+            "median_amplitude_ratio": 0.21889184004026968,
+            "pooled_within_site_anomaly_r": 0.3747720809109987
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.11253458587838942,
+            "mse": 0.012664033018820605,
+            "bias": 0.005718167060993748,
+            "ubrmse": 0.11238921471512812,
+            "r2": 0.07467701316000941,
+            "range_violation_fraction": 0.0,
+            "site_equal_rmse": 0.10395110895621333,
+            "site_equal_ubrmse": 0.04837620051350698,
+            "site_equal_bias": -0.022037950595965833,
+            "median_site_r": 0.5330574543952775,
+            "site_r_count": 96,
+            "median_amplitude_ratio": 0.22062888201153022,
+            "pooled_within_site_anomaly_r": 0.48313634596992455
+          }
+        }
+      },
+      "paired_controls": {
+        "concat_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.01864120396367408,
+            0.009723859758241638,
+            -0.015904841452824448
+          ],
+          "mean_rmse_difference": -0.00827406188608563,
+          "sd_of_paired_seed_differences": 0.015646590925316728,
+          "rmse_ci95": [
+            -0.014008016737300557,
+            -0.0022065093072664316
+          ],
+          "site_equal_rmse_difference": -0.0025548196554191728,
+          "site_equal_rmse_ci95": [
+            -0.006335940832897328,
+            0.0009504777188897862
+          ],
+          "anomaly_r_difference": -0.030537843230204642,
+          "anomaly_r_ci95": [
+            -0.046672330631712174,
+            -0.01423901166412164
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                -0.01864120396367408
+              ],
+              "mean_rmse_difference": -0.01864120396367408,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.032248094485656124,
+                -0.005601854075159346
+              ],
+              "site_equal_rmse_difference": -0.010516033790904997,
+              "site_equal_rmse_ci95": [
+                -0.01887844996197416,
+                -0.0032725606356116253
+              ],
+              "anomaly_r_difference": -0.015095488769749199,
+              "anomaly_r_ci95": [
+                -0.06353168447692807,
+                0.041109071563860726
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                0.009723859758241638
+              ],
+              "mean_rmse_difference": 0.009723859758241638,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.002128496024794329,
+                0.016925022183137677
+              ],
+              "site_equal_rmse_difference": 0.009238828618437446,
+              "site_equal_rmse_ci95": [
+                0.0037987536196003595,
+                0.01446109629178262
+              ],
+              "anomaly_r_difference": -0.06272014369973417,
+              "anomaly_r_ci95": [
+                -0.09551916115460468,
+                -0.030209620939564228
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                -0.015904841452824448
+              ],
+              "mean_rmse_difference": -0.015904841452824448,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0266038200400854,
+                -0.006330855994847504
+              ],
+              "site_equal_rmse_difference": -0.006387253793789968,
+              "site_equal_rmse_ci95": [
+                -0.013021355889097384,
+                -1.772531769741867e-05
+              ],
+              "anomaly_r_difference": -0.013797897221130562,
+              "anomaly_r_ci95": [
+                -0.05711454000569852,
+                0.03278803834964313
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "concat_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 99,
+          "per_seed_rmse_differences": [
+            -0.0030477492384052007,
+            0.003426001025643985,
+            -0.014627155494336352
+          ],
+          "mean_rmse_difference": -0.0047496345690325225,
+          "sd_of_paired_seed_differences": 0.009146115314311344,
+          "rmse_ci95": [
+            -0.009233105139922662,
+            0.0007020428862620731
+          ],
+          "site_equal_rmse_difference": -0.0009883097516387841,
+          "site_equal_rmse_ci95": [
+            -0.0041230111309648685,
+            0.001966946403082586
+          ],
+          "anomaly_r_difference": -0.02713093535719661,
+          "anomaly_r_ci95": [
+            -0.0372108821578219,
+            -0.016684756492362847
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                -0.0030477492384052007
+              ],
+              "mean_rmse_difference": -0.0030477492384052007,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.007898250705705028,
+                0.0017537809205616485
+              ],
+              "site_equal_rmse_difference": -0.002085792427162193,
+              "site_equal_rmse_ci95": [
+                -0.005092853601569979,
+                0.0009833739917793271
+              ],
+              "anomaly_r_difference": -0.007348827790668755,
+              "anomaly_r_ci95": [
+                -0.024811592075269305,
+                0.010663191860343464
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                0.003426001025643985
+              ],
+              "mean_rmse_difference": 0.003426001025643985,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.0011491304969576798,
+                0.008080656688654871
+              ],
+              "site_equal_rmse_difference": 0.0035298608686118067,
+              "site_equal_rmse_ci95": [
+                8.935971608918778e-05,
+                0.006940692714903647
+              ],
+              "anomaly_r_difference": -0.04388985872908324,
+              "anomaly_r_ci95": [
+                -0.07480069947624637,
+                -0.014394532128786169
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                -0.014627155494336352
+              ],
+              "mean_rmse_difference": -0.014627155494336352,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.026511044035783166,
+                -3.417429669484314e-05
+              ],
+              "site_equal_rmse_difference": -0.004408997696365966,
+              "site_equal_rmse_ci95": [
+                -0.011457789804462434,
+                0.0030211040759046885
+              ],
+              "anomaly_r_difference": -0.030154119551837832,
+              "anomaly_r_ci95": [
+                -0.04707129252484668,
+                -0.01570094007245607
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ft_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.004414362872235206,
+            0.011216361472489847,
+            -7.095695969133731e-05
+          ],
+          "mean_rmse_difference": 0.0022436805468544346,
+          "sd_of_paired_seed_differences": 0.008068336010307604,
+          "rmse_ci95": [
+            -0.006797441907558787,
+            0.011405395829865139
+          ],
+          "site_equal_rmse_difference": 0.0015217519320789843,
+          "site_equal_rmse_ci95": [
+            -0.003680191760137374,
+            0.006857404541229318
+          ],
+          "anomaly_r_difference": 0.02912008183730856,
+          "anomaly_r_ci95": [
+            -0.009103175956484803,
+            0.06605871690646954
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                -0.004414362872235206
+              ],
+              "mean_rmse_difference": -0.004414362872235206,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.023140991389460682,
+                0.014533413767141262
+              ],
+              "site_equal_rmse_difference": -0.006384876104278948,
+              "site_equal_rmse_ci95": [
+                -0.016513289487630686,
+                0.0032724328880933823
+              ],
+              "anomaly_r_difference": -0.008412225134844797,
+              "anomaly_r_ci95": [
+                -0.07008669810048125,
+                0.05255471229554315
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                0.011216361472489847
+              ],
+              "mean_rmse_difference": 0.011216361472489847,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.005424983041563548,
+                0.017344774758490084
+              ],
+              "site_equal_rmse_difference": 0.012229557804214967,
+              "site_equal_rmse_ci95": [
+                0.006383428476815133,
+                0.01829466875556317
+              ],
+              "anomaly_r_difference": -0.02288700203509947,
+              "anomaly_r_ci95": [
+                -0.0635759267896793,
+                0.0162165499657656
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                -7.095695969133731e-05
+              ],
+              "mean_rmse_difference": -7.095695969133731e-05,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.014817206729760739,
+                0.014418305044832748
+              ],
+              "site_equal_rmse_difference": -0.0012794259036990666,
+              "site_equal_rmse_ci95": [
+                -0.009384339616431427,
+                0.006701006843416923
+              ],
+              "anomaly_r_difference": 0.11865947268186994,
+              "anomaly_r_ci95": [
+                0.045661939440425146,
+                0.20101016742569844
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ft_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 99,
+          "per_seed_rmse_differences": [
+            0.005676703399294519,
+            0.007597242881135197,
+            -0.006848268484939149
+          ],
+          "mean_rmse_difference": 0.0021418925984968556,
+          "sd_of_paired_seed_differences": 0.0078447030029774,
+          "rmse_ci95": [
+            -0.0029072748190690427,
+            0.0070221689946195695
+          ],
+          "site_equal_rmse_difference": 0.00038695302292963914,
+          "site_equal_rmse_ci95": [
+            -0.002454329966981506,
+            0.0032741846142871267
+          ],
+          "anomaly_r_difference": -0.02189155206871764,
+          "anomaly_r_ci95": [
+            -0.041667532690541596,
+            0.0011290478672371744
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                0.005676703399294519
+              ],
+              "mean_rmse_difference": 0.005676703399294519,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.002570919166562105,
+                0.014442763400097152
+              ],
+              "site_equal_rmse_difference": -0.0004650182937644806,
+              "site_equal_rmse_ci95": [
+                -0.0039862588435248675,
+                0.0031887580693205487
+              ],
+              "anomaly_r_difference": -0.02582483148891468,
+              "anomaly_r_ci95": [
+                -0.07018031452931159,
+                0.016136493549799024
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                0.007597242881135197
+              ],
+              "mean_rmse_difference": 0.007597242881135197,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.00011334924005628438,
+                0.014842555558068791
+              ],
+              "site_equal_rmse_difference": 0.007199099515347425,
+              "site_equal_rmse_ci95": [
+                0.002720866242738096,
+                0.011514649765178152
+              ],
+              "anomaly_r_difference": -0.05895981124327526,
+              "anomaly_r_ci95": [
+                -0.0825809920179313,
+                -0.03408000179493502
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                -0.006848268484939149
+              ],
+              "mean_rmse_difference": -0.006848268484939149,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.013700150592111974,
+                -0.00030746578896631766
+              ],
+              "site_equal_rmse_difference": -0.005573222152794027,
+              "site_equal_rmse_ci95": [
+                -0.010564620269454043,
+                -0.00027283163739114634
+              ],
+              "anomaly_r_difference": 0.019109986526037015,
+              "anomaly_r_ci95": [
+                0.001966463927766533,
+                0.04107515484416332
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "no_cascade_minus_ma_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.017550143039632177,
+            0.013713744268454231,
+            -0.010545017678969718
+          ],
+          "mean_rmse_difference": -0.004793805483382554,
+          "sd_of_paired_seed_differences": 0.016406248617285565,
+          "rmse_ci95": [
+            -0.009581133771806537,
+            0.0005910991328877164
+          ],
+          "site_equal_rmse_difference": 0.0005099168874984237,
+          "site_equal_rmse_ci95": [
+            -0.0034738351512838108,
+            0.004339119366611192
+          ],
+          "anomaly_r_difference": -0.026594929532767004,
+          "anomaly_r_ci95": [
+            -0.05535816589377988,
+            -0.0017698188830663408
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                -0.017550143039632177
+              ],
+              "mean_rmse_difference": -0.017550143039632177,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.02968628317344997,
+                -0.005605283498990628
+              ],
+              "site_equal_rmse_difference": -0.006877981618843679,
+              "site_equal_rmse_ci95": [
+                -0.014524106988234049,
+                -2.4409722771862613e-05
+              ],
+              "anomaly_r_difference": -0.08506583324412059,
+              "anomaly_r_ci95": [
+                -0.13081764428656578,
+                -0.04316874908009623
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                0.013713744268454231
+              ],
+              "mean_rmse_difference": 0.013713744268454231,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                0.00699405494695345,
+                0.020555607356297034
+              ],
+              "site_equal_rmse_difference": 0.014575501961926633,
+              "site_equal_rmse_ci95": [
+                0.009220426912317092,
+                0.020592412695629912
+              ],
+              "anomaly_r_difference": -0.05633045024354538,
+              "anomaly_r_ci95": [
+                -0.09000324878264357,
+                -0.023560124414161842
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 132,
+              "per_seed_rmse_differences": [
+                -0.010545017678969718
+              ],
+              "mean_rmse_difference": -0.010545017678969718,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.019874000398291958,
+                -0.001912289318669204
+              ],
+              "site_equal_rmse_difference": -0.0061677696805876835,
+              "site_equal_rmse_ci95": [
+                -0.013337542650139316,
+                0.0009320253000052373
+              ],
+              "anomaly_r_difference": 0.06161149488936496,
+              "anomaly_r_ci95": [
+                -0.01850181915549996,
+                0.15065977262648655
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "no_cascade_minus_ma_test": {
+          "difference_direction": "first minus second",
+          "seeds": 3,
+          "clusters": 99,
+          "per_seed_rmse_differences": [
+            -0.0035582177895856493,
+            0.0006764040049774545,
+            -0.01151240819270824
+          ],
+          "mean_rmse_difference": -0.004798073992438812,
+          "sd_of_paired_seed_differences": 0.006188272638663231,
+          "rmse_ci95": [
+            -0.009008860179418139,
+            -0.00011222653081333404
+          ],
+          "site_equal_rmse_difference": -0.0012083578833511108,
+          "site_equal_rmse_ci95": [
+            -0.004492637573942572,
+            0.002066422319360496
+          ],
+          "anomaly_r_difference": -0.07981604097764879,
+          "anomaly_r_ci95": [
+            -0.10223580825014311,
+            -0.056571706947934286
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "per_seed_details": {
+            "42": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                -0.0035582177895856493
+              ],
+              "mean_rmse_difference": -0.0035582177895856493,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.008931467209963854,
+                0.0025494296743449863
+              ],
+              "site_equal_rmse_difference": -0.0004730393950760093,
+              "site_equal_rmse_ci95": [
+                -0.00486574420713072,
+                0.003751398782094068
+              ],
+              "anomaly_r_difference": -0.08698739330257144,
+              "anomaly_r_ci95": [
+                -0.10829698747254374,
+                -0.0640963467130127
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "7": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                0.0006764040049774545
+              ],
+              "mean_rmse_difference": 0.0006764040049774545,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.003951014959715581,
+                0.0049948505773145324
+              ],
+              "site_equal_rmse_difference": 0.0035425871248604066,
+              "site_equal_rmse_ci95": [
+                0.00017482200051331255,
+                0.006856401416743234
+              ],
+              "anomaly_r_difference": -0.07222398218943549,
+              "anomaly_r_ci95": [
+                -0.10197732132835757,
+                -0.04344038780662154
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            },
+            "555": {
+              "difference_direction": "first minus second",
+              "seeds": 1,
+              "clusters": 99,
+              "per_seed_rmse_differences": [
+                -0.01151240819270824
+              ],
+              "mean_rmse_difference": -0.01151240819270824,
+              "sd_of_paired_seed_differences": null,
+              "rmse_ci95": [
+                -0.021810284767933383,
+                0.00020621367886979118
+              ],
+              "site_equal_rmse_difference": -0.006694621379837729,
+              "site_equal_rmse_ci95": [
+                -0.012281495308719493,
+                -0.0008933589785986803
+              ],
+              "anomaly_r_difference": -0.08023674744093945,
+              "anomaly_r_ci95": [
+                -0.10749915730438535,
+                -0.05107362351239127
+              ],
+              "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+            }
+          }
+        },
+        "ma_minus_rf_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            0.01777937153749437
+          ],
+          "mean_rmse_difference": 0.01777937153749437,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.0006976888578430832,
+            0.03515230482080776
+          ],
+          "site_equal_rmse_difference": 0.01565556194943916,
+          "site_equal_rmse_ci95": [
+            0.006308851890839997,
+            0.025267163979463155
+          ],
+          "anomaly_r_difference": -0.16485692218722214,
+          "anomaly_r_ci95": [
+            -0.21404437848656724,
+            -0.11789161859284243
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_rf_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 99,
+          "per_seed_rmse_differences": [
+            -0.005547207242929161
+          ],
+          "mean_rmse_difference": -0.005547207242929161,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.012847705939908314,
+            0.0020945392551843358
+          ],
+          "site_equal_rmse_difference": 0.00093205688628304,
+          "site_equal_rmse_ci95": [
+            -0.005508908638725611,
+            0.007558843830582549
+          ],
+          "anomaly_r_difference": -0.04401888561774542,
+          "anomaly_r_ci95": [
+            -0.10069370496982785,
+            0.0224700853079616
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.46464646464646464,
+          "fraction_sites_ubrmse_lower": 0.2828282828282828,
+          "valid_r_comparison_sites": 96,
+          "fraction_valid_sites_r_higher": 0.1875,
+          "mse_decomposition": {
+            "total_reduction": 0.0012227995900581327,
+            "bias_squared_reduction": -0.00024204886174870616,
+            "centered_mse_reduction": 0.001464848451806838,
+            "bias_share": -0.19794646949235484
+          }
+        },
+        "ma_minus_xgb_oof": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            0.01771129757767427
+          ],
+          "mean_rmse_difference": 0.01771129757767427,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            0.001283224734584802,
+            0.03390255381527423
+          ],
+          "site_equal_rmse_difference": 0.006051907314036166,
+          "site_equal_rmse_ci95": [
+            -0.0031994160495625082,
+            0.01573029042581151
+          ],
+          "anomaly_r_difference": -0.03804557760750715,
+          "anomaly_r_ci95": [
+            -0.10021951929472193,
+            0.034535230567901774
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "ma_minus_xgb_test": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 99,
+          "per_seed_rmse_differences": [
+            -0.005090602837953692
+          ],
+          "mean_rmse_difference": -0.005090602837953692,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.011257288728137315,
+            0.0010532604766955716
+          ],
+          "site_equal_rmse_difference": -0.009732930177239172,
+          "site_equal_rmse_ci95": [
+            -0.01616240603307881,
+            -0.0033958191766463777
+          ],
+          "anomaly_r_difference": -0.019355282857628497,
+          "anomaly_r_ci95": [
+            -0.08510746458839884,
+            0.05929531977495275
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+          "fraction_sites_rmse_lower": 0.5858585858585859,
+          "fraction_sites_ubrmse_lower": 0.42424242424242425,
+          "valid_r_comparison_sites": 96,
+          "fraction_valid_sites_r_higher": 0.28125,
+          "mse_decomposition": {
+            "total_reduction": 0.0011198235272271637,
+            "bias_squared_reduction": -0.0006618143306443102,
+            "centered_mse_reduction": 0.0017816378578714744,
+            "bias_share": -0.590998773068336
+          }
+        }
+      },
+      "ensemble": {
+        "candidate_seeds": [
+          42,
+          7,
+          555
+        ],
+        "selected_slots": [
+          7,
+          555,
+          7,
+          7
+        ],
+        "selection": "greedy development OOF RMSE only; improvement at least 1e-6; maximum 50 slots",
+        "metrics": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.10883588786601366,
+            "mse": 0.0118452504875835,
+            "bias": 0.03230087462767913,
+            "ubrmse": 0.1039322086067185,
+            "r2": 0.0993665599299306,
+            "range_violation_fraction": 0.0
+          },
+          "oof_equal": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.1110062047076469,
+            "mse": 0.01232237748359601,
+            "bias": 0.03454952705517805,
+            "ubrmse": 0.1054926900968002,
+            "r2": 0.06308902166938601,
+            "range_violation_fraction": 0.0
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10803884439945573,
+            "mse": 0.011672391899169807,
+            "bias": 0.031235683927785852,
+            "ubrmse": 0.10342496772411036,
+            "r2": 0.14713326160353113,
+            "range_violation_fraction": 0.0
+          },
+          "test_equal": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10930233136164416,
+            "mse": 0.01194699964109066,
+            "bias": 0.03486501886431603,
+            "ubrmse": 0.1035926160528903,
+            "r2": 0.1270684958542665,
+            "range_violation_fraction": 0.0
+          }
+        }
+      },
+      "moisture_strata": {
+        "<0.1": {
+          "records": 4530,
+          "sites": 39,
+          "rmse": 0.1526808439754594,
+          "mse": 0.023311440117058574,
+          "bias": 0.14137382341768043,
+          "ubrmse": 0.057661791242772625,
+          "r2": -40.10749702722725,
+          "range_violation_fraction": 0.0
+        },
+        "0.1-0.2": {
+          "records": 6278,
+          "sites": 68,
+          "rmse": 0.09710673198545215,
+          "mse": 0.009429717396894436,
+          "bias": 0.08368857531354243,
+          "ubrmse": 0.04925382989051684,
+          "r2": -10.708455495761037,
+          "range_violation_fraction": 0.0
+        },
+        "0.2-0.3": {
+          "records": 6430,
+          "sites": 76,
+          "rmse": 0.05490782668401964,
+          "mse": 0.003014869431162339,
+          "bias": 0.009049965560328721,
+          "ubrmse": 0.05415687910615976,
+          "r2": -2.5554699447591482,
+          "range_violation_fraction": 0.0
+        },
+        "0.3-0.4": {
+          "records": 4578,
+          "sites": 66,
+          "rmse": 0.09375517277279997,
+          "mse": 0.008790032421657575,
+          "bias": -0.06684212235802904,
+          "ubrmse": 0.06574316010302403,
+          "r2": -8.498559084770886,
+          "range_violation_fraction": 0.0
+        },
+        ">=0.4": {
+          "records": 2050,
+          "sites": 56,
+          "rmse": 0.1578624521841539,
+          "mse": 0.024920553809594275,
+          "bias": -0.14100172317560708,
+          "ubrmse": 0.07098639215443862,
+          "r2": -37.84516738245836,
+          "range_violation_fraction": 0.0
+        }
+      },
+      "product_reference": {
+        "run": "ma_floor10_seed42",
+        "policy": "warmup_floor10 refit (max(selected_epochs,10))",
+        "decision": "development OOF only; see models/product_reference.json",
+        "models": {
+          "oof": {
+            "records": 31488,
+            "sites": 132,
+            "rmse": 0.1057902083500937,
+            "mse": 0.011191568182756236,
+            "bias": 0.007042699593094906,
+            "ubrmse": 0.10555552361291974,
+            "r2": 0.149068180298924,
+            "range_violation_fraction": 0.0
+          },
+          "test": {
+            "records": 23866,
+            "sites": 99,
+            "rmse": 0.10568847639734857,
+            "mse": 0.011170054043192906,
+            "bias": 0.01004792653997486,
+            "ubrmse": 0.1052097581759419,
+            "r2": 0.18383758514758275,
+            "range_violation_fraction": 0.0
+          }
+        },
+        "folds": [
+          {
+            "fold": 0,
+            "selected_epochs": 22,
+            "tried_epochs": 42,
+            "refit_epochs": 22,
+            "identity_reuse": true,
+            "records": 5007,
+            "sites": 22,
+            "rmse": 0.09233534223227889,
+            "bias": 0.023605431533516918,
+            "r2": 0.29884889881811594,
+            "selected_duration_rmse": 0.09233534223227889,
+            "selected_duration_bias": 0.023605431533516918,
+            "selected_duration_r2": 0.29884889881811594,
+            "gradient_sites": 110,
+            "training_seconds": 86.24382560000231
+          },
+          {
+            "fold": 1,
+            "selected_epochs": 15,
+            "tried_epochs": 35,
+            "refit_epochs": 15,
+            "identity_reuse": true,
+            "records": 5221,
+            "sites": 25,
+            "rmse": 0.12144748480106782,
+            "bias": -0.004309315907017886,
+            "r2": -0.10137072476114439,
+            "selected_duration_rmse": 0.12144748480106782,
+            "selected_duration_bias": -0.004309315907017886,
+            "selected_duration_r2": -0.10137072476114439,
+            "gradient_sites": 107,
+            "training_seconds": 67.44954880001023
+          },
+          {
+            "fold": 2,
+            "selected_epochs": 2,
+            "tried_epochs": 22,
+            "refit_epochs": 10,
+            "identity_reuse": false,
+            "records": 7510,
+            "sites": 30,
+            "rmse": 0.10986339064480422,
+            "bias": 0.035527144940907404,
+            "r2": 0.12724032082050873,
+            "selected_duration_rmse": 0.177138104846082,
+            "selected_duration_bias": 0.12708643633577382,
+            "selected_duration_r2": -1.2688859480889674,
+            "gradient_sites": 102,
+            "training_seconds": 38.4012341999769
+          },
+          {
+            "fold": 3,
+            "selected_epochs": 7,
+            "tried_epochs": 27,
+            "refit_epochs": 10,
+            "identity_reuse": false,
+            "records": 5195,
+            "sites": 27,
+            "rmse": 0.09509414994113853,
+            "bias": 8.156453296470345e-05,
+            "r2": 0.27031042713757836,
+            "selected_duration_rmse": 0.0960613208916739,
+            "selected_duration_bias": 0.010657588834551462,
+            "selected_duration_r2": 0.2553920866534346,
+            "gradient_sites": 105,
+            "training_seconds": 56.83814219999476
+          },
+          {
+            "fold": 4,
+            "selected_epochs": 27,
+            "tried_epochs": 47,
+            "refit_epochs": 27,
+            "identity_reuse": true,
+            "records": 8555,
+            "sites": 28,
+            "rmse": 0.1054233400251963,
+            "bias": -0.016500937323830824,
+            "r2": 0.12466475961796752,
+            "selected_duration_rmse": 0.1054233400251963,
+            "selected_duration_bias": -0.016500937323830824,
+            "selected_duration_r2": 0.12466475961796752,
+            "gradient_sites": 104,
+            "training_seconds": 85.33187939999334
+          }
+        ],
+        "seed42_paired_floor10_minus_selected": {
+          "oof": {
+            "difference_direction": "first minus second",
+            "seeds": 1,
+            "clusters": 132,
+            "per_seed_rmse_differences": [
+              -0.020015529015794634
+            ],
+            "mean_rmse_difference": -0.020015529015794634,
+            "sd_of_paired_seed_differences": null,
+            "rmse_ci95": [
+              -0.033165276291384084,
+              -0.007867898390822204
+            ],
+            "site_equal_rmse_difference": -0.01308491971720122,
+            "site_equal_rmse_ci95": [
+              -0.02078832339315113,
+              -0.006270271496399949
+            ],
+            "anomaly_r_difference": 0.06319940975948662,
+            "anomaly_r_ci95": [
+              0.028953787426662318,
+              0.1083574721283189
+            ],
+            "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+          },
+          "test": {
+            "difference_direction": "first minus second",
+            "seeds": 1,
+            "clusters": 99,
+            "per_seed_rmse_differences": [
+              -0.0017555066430871569
+            ],
+            "mean_rmse_difference": -0.0017555066430871569,
+            "sd_of_paired_seed_differences": null,
+            "rmse_ci95": [
+              -0.006640065935014684,
+              0.0030824521792576073
+            ],
+            "site_equal_rmse_difference": -0.002504305649678666,
+            "site_equal_rmse_ci95": [
+              -0.005615309173817148,
+              0.0008459614427145327
+            ],
+            "anomaly_r_difference": 0.017112514101345455,
+            "anomaly_r_ci95": [
+              0.0103342826929383,
+              0.02555685152714679
+            ],
+            "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+          }
+        },
+        "note": "paired_controls and models entries above keep the common selected-duration policy for every architecture"
+      }
+    }
+  },
+  "lag": {
+    "unadjusted_bins": {
+      "0-3": {
+        "records": 34460,
+        "sites": 259,
+        "rmse": 0.07762808247051772,
+        "mse": 0.0060261191880495,
+        "bias": -0.003532037169100048,
+        "ubrmse": 0.07754768791837444,
+        "r2": 0.4621142841597722,
+        "range_violation_fraction": 0.0
+      },
+      ">3-7": {
+        "records": 12565,
+        "sites": 256,
+        "rmse": 0.08426726731146664,
+        "mse": 0.007100972340142174,
+        "bias": 0.0002688622785212269,
+        "ubrmse": 0.08426683839576136,
+        "r2": 0.41614875446110056,
+        "range_violation_fraction": 0.0
+      },
+      ">7-14": {
+        "records": 6019,
+        "sites": 243,
+        "rmse": 0.08789126067814208,
+        "mse": 0.007724873703593124,
+        "bias": 0.0021732358401222547,
+        "ubrmse": 0.08786438840381428,
+        "r2": 0.39868353823930625,
+        "range_violation_fraction": 0.0
+      }
+    },
+    "abs_error": {
+      "site_year_month_slope": 0.0003469001073260737,
+      "ci95": [
+        0.00011214108622705873,
+        0.0005808278391185929
+      ],
+      "contributing_sites": 257,
+      "eligible_records": 51510
+    },
+    "squared_error": {
+      "site_year_month_slope": 6.480267533762033e-05,
+      "ci95": [
+        7.779694800487919e-06,
+        0.00012061870332041146
+      ],
+      "contributing_sites": 257,
+      "eligible_records": 51510
+    },
+    "interpretation": "Association within site and calendar year-month; not a causal acquisition-lag effect; no lag-selection or error-driven exclusions."
+  },
+  "product_reference_runs": {
+    "5": "ma_seed42",
+    "20": "ma_seed42",
+    "50": "ma_floor10_seed42"
+  }
+}

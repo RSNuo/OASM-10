@@ -1,0 +1,432 @@
+{
+  "surface": {
+    "smap_hb": {
+      "oasm": {
+        "records": 3401,
+        "sites": 91,
+        "rmse": 0.07340067540996276,
+        "mse": 0.005387659150638711,
+        "bias": 0.013006378232554737,
+        "ubrmse": 0.07223913950145334,
+        "r2": 0.5140506376132639,
+        "range_violation_fraction": 0.0,
+        "site_equal_rmse": 0.06926079340503118,
+        "site_equal_ubrmse": 0.04594382362852913,
+        "site_equal_bias": 0.012620958794782077,
+        "median_site_r": 0.739261007718995,
+        "site_r_count": 75,
+        "median_amplitude_ratio": 0.728476651225781,
+        "pooled_within_site_anomaly_r": 0.6686628978544232
+      },
+      "benchmark": {
+        "records": 3401,
+        "sites": 91,
+        "rmse": 0.08099212033300039,
+        "mse": 0.006559723556035215,
+        "bias": -0.004869840393941676,
+        "ubrmse": 0.08084558250499992,
+        "r2": 0.40833423378116573,
+        "range_violation_fraction": 0.0
+      },
+      "oasm_minus_benchmark": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 91,
+        "per_seed_rmse_differences": [
+          -0.007591444923037635
+        ],
+        "mean_rmse_difference": -0.007591444923037635,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.0178928051291026,
+          0.0016688988710274978
+        ],
+        "site_equal_rmse_difference": -0.004751188791815121,
+        "site_equal_rmse_ci95": [
+          -0.011229202394950965,
+          0.0013977347704145651
+        ],
+        "anomaly_r_difference": 0.043344352107619666,
+        "anomaly_r_ci95": [
+          -0.01659930320066897,
+          0.09555110065043063
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      },
+      "eligibility": "same satellite/land-cover output mask as public predictor; missing forcing or soil retains training-fitted imputation",
+      "support": "nearest archived 30m SMAP-HydroBlocks pixel; daily-date match"
+    },
+    "s2mp": {
+      "oasm": {
+        "records": 184,
+        "sites": 2,
+        "rmse": 0.07408230396602751,
+        "mse": 0.005488187760914895,
+        "bias": -0.05219165766465923,
+        "ubrmse": 0.052575836951302184,
+        "r2": -0.19342049557034935,
+        "range_violation_fraction": 0.0,
+        "site_equal_rmse": 0.08835350228801091,
+        "site_equal_ubrmse": 0.04166454534584865,
+        "site_equal_bias": -0.07520761772890096,
+        "median_site_r": 0.8035910106581323,
+        "site_r_count": 2,
+        "median_amplitude_ratio": 1.1602464788485478,
+        "pooled_within_site_anomaly_r": 0.8251361666380682
+      },
+      "benchmark": {
+        "records": 184,
+        "sites": 2,
+        "rmse": 0.07657920736074514,
+        "mse": 0.0058643750000000015,
+        "bias": -0.03753804347826088,
+        "ubrmse": 0.0667478111388246,
+        "r2": -0.2752233749276234,
+        "range_violation_fraction": 0.0
+      },
+      "oasm_minus_benchmark": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 2,
+        "per_seed_rmse_differences": [
+          -0.0024969033947176283
+        ],
+        "mean_rmse_difference": -0.0024969033947176283,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.006287358134955713,
+          0.0037020400111209273
+        ],
+        "site_equal_rmse_difference": -0.001292659061917393,
+        "site_equal_rmse_ci95": [
+          -0.006287358134955713,
+          0.0037020400111209273
+        ],
+        "anomaly_r_difference": 0.2774369143522427,
+        "anomaly_r_ci95": [
+          0.22160485908729266,
+          0.43047623544833913
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      },
+      "eligibility": "same satellite/land-cover output mask as public predictor; missing forcing or soil retains training-fitted imputation",
+      "support": "MV_S1A/S1B moisture products only; zeros excluded per provider README; nearest acquisition within24h; timestamp parsed from source filename",
+      "filter_counts": {
+        "all_csv_rows": 321,
+        "moisture_product_rows": 283,
+        "valid_positive_moisture_rows": 203
+      },
+      "provider_readme": "https://www.theia-land.fr/wp-content/uploads/2019/12/readme_soil_moisture_general_20122019.pdf",
+      "median_time_difference_hours": 0.41125
+    }
+  },
+  "depth": {
+    "20": {
+      "oasm": {
+        "records": 37633,
+        "sites": 132,
+        "rmse": 0.08310809932997495,
+        "mse": 0.0069069561742409824,
+        "bias": 0.0007392396999101393,
+        "ubrmse": 0.08310481152681269,
+        "r2": 0.3696017685344286,
+        "range_violation_fraction": 0.0,
+        "site_equal_rmse": 0.07534453078366429,
+        "site_equal_ubrmse": 0.04782529230030609,
+        "site_equal_bias": -0.008239907792077426,
+        "median_site_r": 0.602853388715024,
+        "site_r_count": 130,
+        "median_amplitude_ratio": 0.6693221573944395,
+        "pooled_within_site_anomaly_r": 0.5937451300629032
+      },
+      "benchmark": {
+        "records": 37633,
+        "sites": 132,
+        "rmse": 0.12339047513622303,
+        "mse": 0.015225209354342874,
+        "bias": 0.0710272782941077,
+        "ubrmse": 0.10089764661514287,
+        "r2": -0.38960561042296704,
+        "range_violation_fraction": 0.0
+      },
+      "oasm_minus_benchmark": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 132,
+        "per_seed_rmse_differences": [
+          -0.04028237580624808
+        ],
+        "mean_rmse_difference": -0.04028237580624808,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.05515815041856475,
+          -0.0246225193901131
+        ],
+        "site_equal_rmse_difference": -0.036069319296215055,
+        "site_equal_rmse_ci95": [
+          -0.04739163980510813,
+          -0.024194068087765253
+        ],
+        "anomaly_r_difference": -0.07908043776402307,
+        "anomaly_r_ci95": [
+          -0.1039203338386013,
+          -0.057354777792040575
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      },
+      "eligibility": "same satellite/land-cover output mask as public predictor; missing forcing or soil retains training-fitted imputation",
+      "support": "ERA5-Land native0.1-degree grid daily mean; layer2 7-28cm or layer3 28-100cm versus nominal-depth point observation",
+      "interpretation": "paired empirical benchmark across unequal vertical/spatial support; does not validate10m effective resolution or layer equivalence"
+    },
+    "50": {
+      "oasm": {
+        "records": 23549,
+        "sites": 98,
+        "rmse": 0.10565365636078741,
+        "mse": 0.011162695102403355,
+        "bias": 0.00886679215849299,
+        "ubrmse": 0.10528093416768983,
+        "r2": 0.18688044235392154,
+        "range_violation_fraction": 0.0,
+        "site_equal_rmse": 0.09154520003250295,
+        "site_equal_ubrmse": 0.049330455451740286,
+        "site_equal_bias": -0.008143258703449313,
+        "median_site_r": 0.4427790684159904,
+        "site_r_count": 95,
+        "median_amplitude_ratio": 0.725008183252545,
+        "pooled_within_site_anomaly_r": 0.4548326388775623
+      },
+      "benchmark": {
+        "records": 23549,
+        "sites": 98,
+        "rmse": 0.1341912007018013,
+        "mse": 0.018007278345791116,
+        "bias": 0.057066211573234285,
+        "ubrmse": 0.12145256622430824,
+        "r2": -0.31169668871337386,
+        "range_violation_fraction": 0.0
+      },
+      "oasm_minus_benchmark": {
+        "difference_direction": "first minus second",
+        "seeds": 1,
+        "clusters": 98,
+        "per_seed_rmse_differences": [
+          -0.028537544341013882
+        ],
+        "mean_rmse_difference": -0.028537544341013882,
+        "sd_of_paired_seed_differences": null,
+        "rmse_ci95": [
+          -0.04742783284630701,
+          -0.006502104518769612
+        ],
+        "site_equal_rmse_difference": -0.018443521845008706,
+        "site_equal_rmse_ci95": [
+          -0.03076472935908189,
+          -0.005319373783105084
+        ],
+        "anomaly_r_difference": -0.10702409370277399,
+        "anomaly_r_ci95": [
+          -0.14625688762601502,
+          -0.06899535302690328
+        ],
+        "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+      },
+      "eligibility": "same satellite/land-cover output mask as public predictor; missing forcing or soil retains training-fitted imputation",
+      "support": "ERA5-Land native0.1-degree grid daily mean; layer2 7-28cm or layer3 28-100cm versus nominal-depth point observation",
+      "interpretation": "paired empirical benchmark across unequal vertical/spatial support; does not validate10m effective resolution or layer equivalence"
+    }
+  },
+  "product_reference": {
+    "5": {
+      "oof": {
+        "all_retained_records": {
+          "records": 168443,
+          "sites": 921,
+          "rmse": 0.0840719675253123,
+          "mse": 0.007068095723577167,
+          "bias": 0.00270913427703105,
+          "ubrmse": 0.08402830662964822,
+          "r2": 0.4051586103131858,
+          "range_violation_fraction": 9.498762192551783e-05
+        },
+        "output_eligible": {
+          "records": 164349,
+          "sites": 900,
+          "rmse": 0.08401227990824454,
+          "mse": 0.00705806317538123,
+          "bias": 0.002503100613835073,
+          "ubrmse": 0.08397498236200023,
+          "r2": 0.40450920511764343,
+          "range_violation_fraction": 9.735380197019757e-05,
+          "site_equal_rmse": 0.07802908294638727,
+          "site_equal_ubrmse": 0.05316190200529797,
+          "site_equal_bias": -0.006258695511451796,
+          "median_site_r": 0.676940861384906,
+          "site_r_count": 846,
+          "median_amplitude_ratio": 0.7648118576669332,
+          "pooled_within_site_anomaly_r": 0.6180757070116313
+        },
+        "output_eligible_fraction": 0.9756950422398081
+      },
+      "test": {
+        "all_retained_records": {
+          "records": 53044,
+          "sites": 259,
+          "rmse": 0.08045800099048164,
+          "mse": 0.006473489923384345,
+          "bias": -0.001984296806347044,
+          "ubrmse": 0.08043352839188808,
+          "r2": 0.4628375472329048,
+          "range_violation_fraction": 0.0
+        },
+        "output_eligible": {
+          "records": 52817,
+          "sites": 256,
+          "rmse": 0.08045595697084243,
+          "mse": 0.006473161012094049,
+          "bias": -0.0017810663916248328,
+          "ubrmse": 0.08043624067920302,
+          "r2": 0.4605958582199272,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.07365262769781775,
+          "site_equal_ubrmse": 0.050508402632943566,
+          "site_equal_bias": -0.0057280040646737595,
+          "median_site_r": 0.71332372462788,
+          "site_r_count": 244,
+          "median_amplitude_ratio": 0.777884047533636,
+          "pooled_within_site_anomaly_r": 0.6800230113163203
+        },
+        "output_eligible_fraction": 0.9957205338963879
+      }
+    },
+    "20": {
+      "oof": {
+        "all_retained_records": {
+          "records": 75169,
+          "sites": 278,
+          "rmse": 0.0931421938716023,
+          "mse": 0.00867546827921515,
+          "bias": 0.006209191658371366,
+          "ubrmse": 0.0929349999632257,
+          "r2": 0.3791540040618815,
+          "range_violation_fraction": 0.0
+        },
+        "output_eligible": {
+          "records": 75123,
+          "sites": 271,
+          "rmse": 0.09315294395047995,
+          "mse": 0.00867747096664126,
+          "bias": 0.006210128418583347,
+          "ubrmse": 0.09294571142159255,
+          "r2": 0.3792691866746529,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.08682866520829907,
+          "site_equal_ubrmse": 0.049524118994751676,
+          "site_equal_bias": -0.008051815832982877,
+          "median_site_r": 0.4570737422958867,
+          "site_r_count": 258,
+          "median_amplitude_ratio": 0.7806330465726758,
+          "pooled_within_site_anomaly_r": 0.47471991756148885
+        },
+        "output_eligible_fraction": 0.9993880456039058
+      },
+      "test": {
+        "all_retained_records": {
+          "records": 38081,
+          "sites": 134,
+          "rmse": 0.08299230152714263,
+          "mse": 0.0068877221127721594,
+          "bias": 0.0008627803047025879,
+          "ubrmse": 0.08298781671376815,
+          "r2": 0.3724684816535476,
+          "range_violation_fraction": 0.0
+        },
+        "output_eligible": {
+          "records": 38081,
+          "sites": 134,
+          "rmse": 0.08299230152714263,
+          "mse": 0.0068877221127721594,
+          "bias": 0.0008627803047025879,
+          "ubrmse": 0.08298781671376815,
+          "r2": 0.3724684816535476,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.07539151206895454,
+          "site_equal_ubrmse": 0.04780578840398886,
+          "site_equal_bias": -0.008340862301301082,
+          "median_site_r": 0.6028533887150229,
+          "site_r_count": 132,
+          "median_amplitude_ratio": 0.6785306687227719,
+          "pooled_within_site_anomaly_r": 0.6124011702866459
+        },
+        "output_eligible_fraction": 1.0
+      }
+    },
+    "50": {
+      "oof": {
+        "all_retained_records": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.1057902083500937,
+          "mse": 0.011191568182756236,
+          "bias": 0.007042699593094906,
+          "ubrmse": 0.10555552361291974,
+          "r2": 0.149068180298924,
+          "range_violation_fraction": 0.0
+        },
+        "output_eligible": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.1057902083500937,
+          "mse": 0.011191568182756236,
+          "bias": 0.007042699593094906,
+          "ubrmse": 0.10555552361291974,
+          "r2": 0.149068180298924,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09371670094562774,
+          "site_equal_ubrmse": 0.053903537723213074,
+          "site_equal_bias": 0.0021667553629270623,
+          "median_site_r": 0.3906908167348706,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6551085507515405,
+          "pooled_within_site_anomaly_r": 0.39992591306297814
+        },
+        "output_eligible_fraction": 1.0
+      },
+      "test": {
+        "all_retained_records": {
+          "records": 23866,
+          "sites": 99,
+          "rmse": 0.10568847639734857,
+          "mse": 0.011170054043192906,
+          "bias": 0.01004792653997486,
+          "ubrmse": 0.1052097581759419,
+          "r2": 0.18383758514758275,
+          "range_violation_fraction": 0.0
+        },
+        "output_eligible": {
+          "records": 23866,
+          "sites": 99,
+          "rmse": 0.10568847639734857,
+          "mse": 0.011170054043192906,
+          "bias": 0.01004792653997486,
+          "ubrmse": 0.1052097581759419,
+          "r2": 0.18383758514758275,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.0917138731292955,
+          "site_equal_ubrmse": 0.04930093121754134,
+          "site_equal_bias": -0.0070732163470244285,
+          "median_site_r": 0.47799730750680497,
+          "site_r_count": 96,
+          "median_amplitude_ratio": 0.7253223386448715,
+          "pooled_within_site_anomaly_r": 0.480893577213645
+        },
+        "output_eligible_fraction": 1.0
+      }
+    }
+  },
+  "reference_runs": {
+    "5": "ma_seed42",
+    "20": "ma_seed42",
+    "50": "ma_floor10_seed42"
+  }
+}

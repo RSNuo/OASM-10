@@ -1,0 +1,240 @@
+{
+  "reference": "Beck et al. (2018), https://doi.org/10.1038/sdata.2018.214",
+  "source": "https://doi.org/10.6084/m9.figshare.6396959.v2",
+  "legend_sha256": "568b2f9a27fa46afaf0ee01bfe394792c6632940ca60285d9ed318174b46a42e",
+  "group_codes": {
+    "A": [
+      1,
+      3
+    ],
+    "B": [
+      4,
+      7
+    ],
+    "C": [
+      8,
+      16
+    ],
+    "D": [
+      17,
+      28
+    ],
+    "E": [
+      29,
+      30
+    ]
+  },
+  "assignment": "Modal broad class among eligible rows at each held-out physical site; alphabetical tie break. No assignment uses observed moisture or errors.",
+  "summary": "Descriptive. Site-equal RMSE is the arithmetic mean of individual-site RMSE values; pooled RMSE combines squared errors by record. Temporal moments are the existing within-original-series centered diagnostics. Correlation denominator counts are reported.",
+  "audit": {
+    "5": {
+      "eligible_records": 52817,
+      "sites": 256,
+      "sites_with_multiple_broad_groups": 0,
+      "source_sha256": {
+        "data/tables/test_5cm.parquet": "9c48d366e56f83b6fd838d7e42c70b3571cdba84f58f6bfa479ff064659692e3",
+        "analysis/product_5cm_site_quality.csv": "a37f2988afcc975c41b6be4a07ec581f7b047793419e027765dc66ec8f6591b3"
+      }
+    },
+    "20": {
+      "eligible_records": 38081,
+      "sites": 134,
+      "sites_with_multiple_broad_groups": 0,
+      "source_sha256": {
+        "data/tables/test_20cm.parquet": "ff83413e5fbe42a296120dcc1ca9f19ea5e8b50fd024ebac8e08a0aad91da4e1",
+        "analysis/product_20cm_site_quality.csv": "16e029d446ab62fddfe62ada9fa359f1182b7d0917ee5b23c8b87da8c68fbdf3"
+      }
+    },
+    "50": {
+      "eligible_records": 23866,
+      "sites": 99,
+      "sites_with_multiple_broad_groups": 0,
+      "source_sha256": {
+        "data/tables/test_50cm.parquet": "29bc524c644aa6b44edbbbc7404361b6e6d99bed0060b777a73f9eb5de994ea9",
+        "analysis/product_50cm_site_quality.csv": "01cc108d26a9cc16ce6d94c2279655d807daee7a322dd6142f309f56c3d8b1e0"
+      }
+    }
+  },
+  "rows": [
+    {
+      "depth_cm": 5,
+      "group": "A",
+      "sites": 4,
+      "records": 189,
+      "pooled_rmse": 0.07674983321666848,
+      "site_equal_rmse": 0.07017494358320002,
+      "site_median_bias": 0.01031807914104885,
+      "site_median_centered_ubrmse": 0.047130369308282655,
+      "defined_r_sites": 4,
+      "site_median_r": 0.6667343488798732
+    },
+    {
+      "depth_cm": 5,
+      "group": "B",
+      "sites": 80,
+      "records": 15558,
+      "pooled_rmse": 0.06895549384214904,
+      "site_equal_rmse": 0.05935709388168096,
+      "site_median_bias": -0.0078543629987503,
+      "site_median_centered_ubrmse": 0.04003784260447925,
+      "defined_r_sites": 75,
+      "site_median_r": 0.7135800005633349
+    },
+    {
+      "depth_cm": 5,
+      "group": "C",
+      "sites": 92,
+      "records": 24215,
+      "pooled_rmse": 0.08416556973676105,
+      "site_equal_rmse": 0.07950597016921704,
+      "site_median_bias": -0.00186016331241875,
+      "site_median_centered_ubrmse": 0.047251268796593957,
+      "defined_r_sites": 85,
+      "site_median_r": 0.7516357253201458
+    },
+    {
+      "depth_cm": 5,
+      "group": "D",
+      "sites": 79,
+      "records": 12830,
+      "pooled_rmse": 0.08616450094491805,
+      "site_equal_rmse": 0.08211910173758322,
+      "site_median_bias": -0.0144264774386926,
+      "site_median_centered_ubrmse": 0.0510620878130289,
+      "defined_r_sites": 79,
+      "site_median_r": 0.5980551247707886
+    },
+    {
+      "depth_cm": 5,
+      "group": "E",
+      "sites": 1,
+      "records": 25,
+      "pooled_rmse": 0.023847112937011136,
+      "site_equal_rmse": 0.0238471129370111,
+      "site_median_bias": -0.0164098925132751,
+      "site_median_centered_ubrmse": 0.0173031853464419,
+      "defined_r_sites": 1,
+      "site_median_r": 0.6552762274897205
+    },
+    {
+      "depth_cm": 20,
+      "group": "A",
+      "sites": 3,
+      "records": 146,
+      "pooled_rmse": 0.07341588949268474,
+      "site_equal_rmse": 0.0655318231800016,
+      "site_median_bias": 0.0153599560339604,
+      "site_median_centered_ubrmse": 0.0283484394217104,
+      "defined_r_sites": 3,
+      "site_median_r": 0.814214391040042
+    },
+    {
+      "depth_cm": 20,
+      "group": "B",
+      "sites": 23,
+      "records": 6583,
+      "pooled_rmse": 0.05909632962669199,
+      "site_equal_rmse": 0.046746146431562566,
+      "site_median_bias": -0.0015928067927903,
+      "site_median_centered_ubrmse": 0.0246220961556127,
+      "defined_r_sites": 22,
+      "site_median_r": 0.40852911950517157
+    },
+    {
+      "depth_cm": 20,
+      "group": "C",
+      "sites": 55,
+      "records": 23692,
+      "pooled_rmse": 0.08548468540403155,
+      "site_equal_rmse": 0.07776204981737342,
+      "site_median_bias": -0.001363552977898,
+      "site_median_centered_ubrmse": 0.046875859688282,
+      "defined_r_sites": 55,
+      "site_median_r": 0.7077826392180208
+    },
+    {
+      "depth_cm": 20,
+      "group": "D",
+      "sites": 52,
+      "records": 7641,
+      "pooled_rmse": 0.09249748737049852,
+      "site_equal_rmse": 0.08720512848714719,
+      "site_median_bias": -0.0145256930326746,
+      "site_median_centered_ubrmse": 0.047780765146628254,
+      "defined_r_sites": 51,
+      "site_median_r": 0.5115712790435266
+    },
+    {
+      "depth_cm": 20,
+      "group": "E",
+      "sites": 1,
+      "records": 19,
+      "pooled_rmse": 0.019126358486765683,
+      "site_equal_rmse": 0.0191263584867657,
+      "site_median_bias": 0.0065834325050052,
+      "site_median_centered_ubrmse": 0.0179576169191885,
+      "defined_r_sites": 1,
+      "site_median_r": 0.1574538584783448
+    },
+    {
+      "depth_cm": 50,
+      "group": "A",
+      "sites": 0,
+      "records": 0,
+      "pooled_rmse": null,
+      "site_equal_rmse": null,
+      "site_median_bias": null,
+      "site_median_centered_ubrmse": null,
+      "defined_r_sites": 0,
+      "site_median_r": null
+    },
+    {
+      "depth_cm": 50,
+      "group": "B",
+      "sites": 11,
+      "records": 4849,
+      "pooled_rmse": 0.09023807639434607,
+      "site_equal_rmse": 0.08643365837558062,
+      "site_median_bias": 0.030113798216383,
+      "site_median_centered_ubrmse": 0.0571555836025447,
+      "defined_r_sites": 11,
+      "site_median_r": 0.370942435727387
+    },
+    {
+      "depth_cm": 50,
+      "group": "C",
+      "sites": 42,
+      "records": 12751,
+      "pooled_rmse": 0.11506515770321867,
+      "site_equal_rmse": 0.10055650413709086,
+      "site_median_bias": 0.016209671720394,
+      "site_median_centered_ubrmse": 0.0528165404832799,
+      "defined_r_sites": 42,
+      "site_median_r": 0.5155796286055836
+    },
+    {
+      "depth_cm": 50,
+      "group": "D",
+      "sites": 46,
+      "records": 6266,
+      "pooled_rmse": 0.09643867385443564,
+      "site_equal_rmse": 0.08490282660676188,
+      "site_median_bias": -0.0106027633404197,
+      "site_median_centered_ubrmse": 0.03464228361680755,
+      "defined_r_sites": 43,
+      "site_median_r": 0.4040065208664116
+    },
+    {
+      "depth_cm": 50,
+      "group": "E",
+      "sites": 0,
+      "records": 0,
+      "pooled_rmse": null,
+      "site_equal_rmse": null,
+      "site_median_bias": null,
+      "site_median_centered_ubrmse": null,
+      "defined_r_sites": 0,
+      "site_median_r": null
+    }
+  ]
+}

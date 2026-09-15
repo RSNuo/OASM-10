@@ -1,0 +1,954 @@
+{
+  "configurations": {
+    "A": {
+      "inputs": {
+        "cascade": true,
+        "precip": false
+      },
+      "per_seed": {
+        "42": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10579020835009371,
+          "mse": 0.011191568182756238,
+          "bias": 0.007042699593094904,
+          "ubrmse": 0.10555552361291975,
+          "r2": 0.14906818029892388,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09371670094562774,
+          "site_equal_ubrmse": 0.053903537723213074,
+          "site_equal_bias": 0.002166755362927061,
+          "median_site_r": 0.3906908167348833,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6551085507515021,
+          "pooled_within_site_anomaly_r": 0.3999259130629862,
+          "site_bias_mse_share": 0.7017179906028767
+        },
+        "7": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10665761596100284,
+          "mse": 0.011375847042484769,
+          "bias": 0.0148513249112967,
+          "ubrmse": 0.10561858354884271,
+          "r2": 0.1350568511553597,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09385161008399971,
+          "site_equal_ubrmse": 0.05446030516707245,
+          "site_equal_bias": 0.003993632659818015,
+          "median_site_r": 0.38303753183869593,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.7273054092697101,
+          "pooled_within_site_anomaly_r": 0.3905939139970184,
+          "site_bias_mse_share": 0.6978853156140656
+        },
+        "555": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10733620137116907,
+          "mse": 0.011521060124792157,
+          "bias": 0.018228431084044882,
+          "ubrmse": 0.10577705055921338,
+          "r2": 0.12401582184164683,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.0949255555142726,
+          "site_equal_ubrmse": 0.054206758120187354,
+          "site_equal_bias": 0.009301065023362165,
+          "median_site_r": 0.3785753746551564,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.7470186932028399,
+          "pooled_within_site_anomaly_r": 0.39525146976666214,
+          "site_bias_mse_share": 0.7041194473963803
+        }
+      },
+      "mean_of_seed_metrics": {
+        "rmse": 0.10659467522742187,
+        "ubrmse": 0.10565038590699194,
+        "bias": 0.013374151862812161,
+        "r2": 0.13604695109864348,
+        "site_equal_rmse": 0.09416462218130002,
+        "site_equal_ubrmse": 0.05419020033682429,
+        "pooled_within_site_anomaly_r": 0.3952570989422222,
+        "site_bias_mse_share": 0.7012409178711075,
+        "seed_sd_rmse": 0.0007749159678708471
+      }
+    },
+    "B": {
+      "inputs": {
+        "cascade": false,
+        "precip": false
+      },
+      "per_seed": {
+        "42": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10635205450950123,
+          "mse": 0.011310759498391922,
+          "bias": -0.00033258178331245627,
+          "ubrmse": 0.10635153448704597,
+          "r2": 0.14000567168081002,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09816948432898993,
+          "site_equal_ubrmse": 0.056562355357405676,
+          "site_equal_bias": -0.009369013028551764,
+          "median_site_r": 0.3237638047312191,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6947846386041875,
+          "pooled_within_site_anomaly_r": 0.31636652387281217,
+          "site_bias_mse_share": 0.6626894351657695
+        },
+        "7": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10717765901928426,
+          "mse": 0.011487050592853966,
+          "bias": 0.0032522644380074393,
+          "ubrmse": 0.10712830330439868,
+          "r2": 0.1266016786605274,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09593573413719125,
+          "site_equal_ubrmse": 0.054645583248266405,
+          "site_equal_bias": -0.00802878730460912,
+          "median_site_r": 0.32152461167955,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6443762748330291,
+          "pooled_within_site_anomaly_r": 0.3184377155937578,
+          "site_bias_mse_share": 0.6862071141518972
+        },
+        "555": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10914920509424764,
+          "mse": 0.011913548972706136,
+          "bias": 0.014484082721208972,
+          "ubrmse": 0.10818391895485813,
+          "r2": 0.0941736009737606,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.0951760669232388,
+          "site_equal_ubrmse": 0.055763969861993265,
+          "site_equal_bias": 0.0022358878440006573,
+          "median_site_r": 0.34064871587075746,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6694273694339362,
+          "pooled_within_site_anomaly_r": 0.3412426978039266,
+          "site_bias_mse_share": 0.6956840341264926
+        }
+      },
+      "mean_of_seed_metrics": {
+        "rmse": 0.10755963954101104,
+        "ubrmse": 0.10722125224876759,
+        "bias": 0.005801255125301319,
+        "r2": 0.12026031710503267,
+        "site_equal_rmse": 0.09642709512980667,
+        "site_equal_ubrmse": 0.05565730282255512,
+        "pooled_within_site_anomaly_r": 0.3253489790901655,
+        "site_bias_mse_share": 0.6815268611480532,
+        "seed_sd_rmse": 0.0014371655046203908
+      }
+    },
+    "C": {
+      "inputs": {
+        "cascade": true,
+        "precip": true
+      },
+      "per_seed": {
+        "42": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.1058194657426583,
+          "mse": 0.011197759330061634,
+          "bias": 0.0011947112995915386,
+          "ubrmse": 0.10581272132863923,
+          "r2": 0.14859744696141575,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.0949042508254998,
+          "site_equal_ubrmse": 0.054073556041945664,
+          "site_equal_bias": -0.005232574280609137,
+          "median_site_r": 0.4099829879944084,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.7442385075453013,
+          "pooled_within_site_anomaly_r": 0.41202168724691685,
+          "site_bias_mse_share": 0.6948788148170125
+        },
+        "7": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10680382414954218,
+          "mse": 0.011407056852966328,
+          "bias": 0.010675572885928403,
+          "ubrmse": 0.10626894652965917,
+          "r2": 0.1326838663875487,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09201812037728019,
+          "site_equal_ubrmse": 0.05398395137424482,
+          "site_equal_bias": 0.001563183792807954,
+          "median_site_r": 0.41375268638119156,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.7305975732152503,
+          "pooled_within_site_anomaly_r": 0.4084657039576116,
+          "site_bias_mse_share": 0.7013138398679374
+        },
+        "555": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10727713575885717,
+          "mse": 0.01150838385662427,
+          "bias": 0.0026160247740687845,
+          "ubrmse": 0.10724523425777822,
+          "r2": 0.1249796402952339,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09654909295499918,
+          "site_equal_ubrmse": 0.053763905107869436,
+          "site_equal_bias": -0.006349964713530174,
+          "median_site_r": 0.38727685542135537,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6011282442422594,
+          "pooled_within_site_anomaly_r": 0.37273963485639827,
+          "site_bias_mse_share": 0.7051417549963778
+        }
+      },
+      "mean_of_seed_metrics": {
+        "rmse": 0.10663347521701921,
+        "ubrmse": 0.10644230070535887,
+        "bias": 0.004828769653196242,
+        "r2": 0.13542031788139944,
+        "site_equal_rmse": 0.09449048805259307,
+        "site_equal_ubrmse": 0.053940470841353304,
+        "pooled_within_site_anomaly_r": 0.39774234202030895,
+        "site_bias_mse_share": 0.7004448032271092,
+        "seed_sd_rmse": 0.0007436158538789285
+      }
+    },
+    "D": {
+      "inputs": {
+        "cascade": false,
+        "precip": true
+      },
+      "per_seed": {
+        "42": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10491401336342424,
+          "mse": 0.011006950200020758,
+          "bias": 0.004230143855752923,
+          "ubrmse": 0.10482869875649699,
+          "r2": 0.16310529408255747,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09487370150057432,
+          "site_equal_ubrmse": 0.05259409120442169,
+          "site_equal_bias": -0.002890661505317715,
+          "median_site_r": 0.3884517012636613,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6354009365468469,
+          "pooled_within_site_anomaly_r": 0.40100923644402303,
+          "site_bias_mse_share": 0.6980855024283305
+        },
+        "7": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.10590526725446206,
+          "mse": 0.011215925632239035,
+          "bias": 0.017132374156813696,
+          "ubrmse": 0.10451032192080348,
+          "r2": 0.14721620312528638,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09346329431617796,
+          "site_equal_ubrmse": 0.05177345514694743,
+          "site_equal_bias": 0.002676976362150569,
+          "median_site_r": 0.4346845233533014,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.6792322431393659,
+          "pooled_within_site_anomaly_r": 0.4381251858907737,
+          "site_bias_mse_share": 0.7258049317873434
+        },
+        "555": {
+          "records": 31488,
+          "sites": 132,
+          "rmse": 0.1066760968070623,
+          "mse": 0.011379789629989728,
+          "bias": 0.00875534697335679,
+          "ubrmse": 0.10631619598803307,
+          "r2": 0.13475708323140656,
+          "range_violation_fraction": 0.0,
+          "site_equal_rmse": 0.09477351174898153,
+          "site_equal_ubrmse": 0.05332112490199174,
+          "site_equal_bias": -0.00036737293704123885,
+          "median_site_r": 0.38918499436061493,
+          "site_r_count": 129,
+          "median_amplitude_ratio": 0.7117741486596447,
+          "pooled_within_site_anomaly_r": 0.4156526436515023,
+          "site_bias_mse_share": 0.7051291231134913
+        }
+      },
+      "mean_of_seed_metrics": {
+        "rmse": 0.10583179247498287,
+        "ubrmse": 0.1052184055551112,
+        "bias": 0.010039288328641136,
+        "r2": 0.14835952681308348,
+        "site_equal_rmse": 0.09437016918857793,
+        "site_equal_ubrmse": 0.05256289041778695,
+        "pooled_within_site_anomaly_r": 0.4182623553287663,
+        "site_bias_mse_share": 0.7096731857763884,
+        "seed_sd_rmse": 0.0008833365287366336
+      }
+    }
+  },
+  "contrasts": {
+    "B-A": {
+      "difference_direction": "first minus second",
+      "seeds": 3,
+      "clusters": 132,
+      "per_seed_rmse_differences": [
+        0.0005618461594075197,
+        0.0005200430582814192,
+        0.0018130037230785628
+      ],
+      "mean_rmse_difference": 0.0009649643135891672,
+      "sd_of_paired_seed_differences": 0.0007347210387972306,
+      "rmse_ci95": [
+        -0.00242649251994066,
+        0.004170253202097823
+      ],
+      "site_equal_rmse_difference": 0.002262472948506637,
+      "site_equal_rmse_ci95": [
+        -0.0004412992904582223,
+        0.00471334583538303
+      ],
+      "anomaly_r_difference": -0.06990811985205675,
+      "anomaly_r_ci95": [
+        -0.09333283544170982,
+        -0.04682416074625796
+      ],
+      "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+      "per_seed": {
+        "42": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            0.0005618461594075197
+          ],
+          "mean_rmse_difference": 0.0005618461594075197,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0038292383738612705,
+            0.00514975442668587
+          ],
+          "site_equal_rmse_difference": 0.004452783383362177,
+          "site_equal_rmse_ci95": [
+            0.0009660980826888646,
+            0.00809112812017645
+          ],
+          "anomaly_r_difference": -0.08355938919017403,
+          "anomaly_r_ci95": [
+            -0.11700901684548268,
+            -0.04989292795172632
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "7": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            0.0005200430582814192
+          ],
+          "mean_rmse_difference": 0.0005200430582814192,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0035267273966359423,
+            0.004277787075721509
+          ],
+          "site_equal_rmse_difference": 0.0020841240531915455,
+          "site_equal_rmse_ci95": [
+            -0.0008698979775867136,
+            0.005076720852704338
+          ],
+          "anomaly_r_difference": -0.07215619840326065,
+          "anomaly_r_ci95": [
+            -0.09730514979925146,
+            -0.04645223896175396
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "555": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            0.0018130037230785628
+          ],
+          "mean_rmse_difference": 0.0018130037230785628,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.004034907732232775,
+            0.0077931944286998385
+          ],
+          "site_equal_rmse_difference": 0.00025051140896618945,
+          "site_equal_rmse_ci95": [
+            -0.003987011595600021,
+            0.004155129689291836
+          ],
+          "anomaly_r_difference": -0.05400877196273557,
+          "anomaly_r_ci95": [
+            -0.09346219387822581,
+            -0.014533828115742263
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        }
+      },
+      "fraction_sites_with_lower_rmse_mean_across_seeds": 0.43686868686868685,
+      "fraction_sites_with_lower_ubrmse_mean_across_seeds": 0.41414141414141414
+    },
+    "C-A": {
+      "difference_direction": "first minus second",
+      "seeds": 3,
+      "clusters": 132,
+      "per_seed_rmse_differences": [
+        2.9257392564582818e-05,
+        0.00014620818853933182,
+        -5.9065612311906546e-05
+      ],
+      "mean_rmse_difference": 3.879998959733603e-05,
+      "sd_of_paired_seed_differences": 0.00010296906913037332,
+      "rmse_ci95": [
+        -0.0033150671417405022,
+        0.00321885369271128
+      ],
+      "site_equal_rmse_difference": 0.00032586587129303197,
+      "site_equal_rmse_ci95": [
+        -0.0019894746624661646,
+        0.002669050154830984
+      ],
+      "anomaly_r_difference": 0.0024852430780866555,
+      "anomaly_r_ci95": [
+        -0.012754215116530526,
+        0.01869281449276395
+      ],
+      "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+      "per_seed": {
+        "42": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            2.9257392564582818e-05
+          ],
+          "mean_rmse_difference": 2.9257392564582818e-05,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005228808796187701,
+            0.004950525072106527
+          ],
+          "site_equal_rmse_difference": 0.0011875498798720509,
+          "site_equal_rmse_ci95": [
+            -0.0022335281217358365,
+            0.004556678786907394
+          ],
+          "anomaly_r_difference": 0.012095774183930652,
+          "anomaly_r_ci95": [
+            -0.015794413612577215,
+            0.040019352779500236
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "7": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            0.00014620818853933182
+          ],
+          "mean_rmse_difference": 0.00014620818853933182,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0046178475542337765,
+            0.005341366401548468
+          ],
+          "site_equal_rmse_difference": -0.0018334897067195327,
+          "site_equal_rmse_ci95": [
+            -0.00476128101140938,
+            0.0014175182315419386
+          ],
+          "anomaly_r_difference": 0.017871789960593187,
+          "anomaly_r_ci95": [
+            -0.005061226401381322,
+            0.037458514302405
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "555": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -5.9065612311906546e-05
+          ],
+          "mean_rmse_difference": -5.9065612311906546e-05,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005316304569331168,
+            0.004858704055410015
+          ],
+          "site_equal_rmse_difference": 0.0016235374407265778,
+          "site_equal_rmse_ci95": [
+            -0.0021596879070537637,
+            0.005346300286667023
+          ],
+          "anomaly_r_difference": -0.022511834910263873,
+          "anomaly_r_ci95": [
+            -0.047241485153938736,
+            0.005649495703027527
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        }
+      },
+      "fraction_sites_with_lower_rmse_mean_across_seeds": 0.5252525252525253,
+      "fraction_sites_with_lower_ubrmse_mean_across_seeds": 0.553030303030303
+    },
+    "D-A": {
+      "difference_direction": "first minus second",
+      "seeds": 3,
+      "clusters": 132,
+      "per_seed_rmse_differences": [
+        -0.000876194986669479,
+        -0.0007523487065407841,
+        -0.0006601045641067699
+      ],
+      "mean_rmse_difference": -0.000762882752439011,
+      "sd_of_paired_seed_differences": 0.00010842966509711268,
+      "rmse_ci95": [
+        -0.004103051151914336,
+        0.0022718249104094292
+      ],
+      "site_equal_rmse_difference": 0.0002055470072779128,
+      "site_equal_rmse_ci95": [
+        -0.0023778203341876594,
+        0.002908236710007481
+      ],
+      "anomaly_r_difference": 0.023005256386544087,
+      "anomaly_r_ci95": [
+        0.0047241910810400835,
+        0.04118801841470647
+      ],
+      "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+      "per_seed": {
+        "42": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.000876194986669479
+          ],
+          "mean_rmse_difference": -0.000876194986669479,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.00506154176248072,
+            0.003310481927205475
+          ],
+          "site_equal_rmse_difference": 0.0011570005549465644,
+          "site_equal_rmse_ci95": [
+            -0.0021413079026602077,
+            0.004789386533117116
+          ],
+          "anomaly_r_difference": 0.0010833233810368381,
+          "anomaly_r_ci95": [
+            -0.02451010215210886,
+            0.02807975687240978
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "7": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0007523487065407841
+          ],
+          "mean_rmse_difference": -0.0007523487065407841,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005537927282671051,
+            0.0037626574089765523
+          ],
+          "site_equal_rmse_difference": -0.0003883157678217527,
+          "site_equal_rmse_ci95": [
+            -0.0039523487981785845,
+            0.003350137274091422
+          ],
+          "anomaly_r_difference": 0.04753127189375528,
+          "anomaly_r_ci95": [
+            0.02183944241417616,
+            0.0721183467515206
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "555": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0006601045641067699
+          ],
+          "mean_rmse_difference": -0.0006601045641067699,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.004295806612775198,
+            0.0027288355409421064
+          ],
+          "site_equal_rmse_difference": -0.00015204376529107322,
+          "site_equal_rmse_ci95": [
+            -0.0030827746524257067,
+            0.002735875116837721
+          ],
+          "anomaly_r_difference": 0.02040117388484014,
+          "anomaly_r_ci95": [
+            -0.009131449681895297,
+            0.04978602033910464
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        }
+      },
+      "fraction_sites_with_lower_rmse_mean_across_seeds": 0.537878787878788,
+      "fraction_sites_with_lower_ubrmse_mean_across_seeds": 0.6641414141414143
+    },
+    "C-B": {
+      "difference_direction": "first minus second",
+      "seeds": 3,
+      "clusters": 132,
+      "per_seed_rmse_differences": [
+        -0.0005325887668429369,
+        -0.00037383486974208735,
+        -0.0018720693353904694
+      ],
+      "mean_rmse_difference": -0.0009261643239918312,
+      "sd_of_paired_seed_differences": 0.0008230145307969783,
+      "rmse_ci95": [
+        -0.003920958655648963,
+        0.0020753488243640296
+      ],
+      "site_equal_rmse_difference": -0.0019366070772136054,
+      "site_equal_rmse_ci95": [
+        -0.003883076367473186,
+        -4.0909640684064276e-06
+      ],
+      "anomaly_r_difference": 0.07239336293014341,
+      "anomaly_r_ci95": [
+        0.046405584045660704,
+        0.09969500949024485
+      ],
+      "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+      "per_seed": {
+        "42": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0005325887668429369
+          ],
+          "mean_rmse_difference": -0.0005325887668429369,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005311472177226372,
+            0.003829091140810347
+          ],
+          "site_equal_rmse_difference": -0.003265233503490126,
+          "site_equal_rmse_ci95": [
+            -0.006452946093257275,
+            -9.640762797298146e-05
+          ],
+          "anomaly_r_difference": 0.09565516337410468,
+          "anomaly_r_ci95": [
+            0.05610060424076316,
+            0.13479064720528908
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "7": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.00037383486974208735
+          ],
+          "mean_rmse_difference": -0.00037383486974208735,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005062700612638535,
+            0.004789390593335196
+          ],
+          "site_equal_rmse_difference": -0.003917613759911078,
+          "site_equal_rmse_ci95": [
+            -0.007141022476629272,
+            -0.0007423792847268295
+          ],
+          "anomaly_r_difference": 0.09002798836385384,
+          "anomaly_r_ci95": [
+            0.047802888054392534,
+            0.12755765546387426
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "555": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0018720693353904694
+          ],
+          "mean_rmse_difference": -0.0018720693353904694,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.00865791679242968,
+            0.005008345625242943
+          ],
+          "site_equal_rmse_difference": 0.0013730260317603882,
+          "site_equal_rmse_ci95": [
+            -0.002694212305567792,
+            0.005477216654442537
+          ],
+          "anomaly_r_difference": 0.031496937052471696,
+          "anomaly_r_ci95": [
+            -0.0031023215577231948,
+            0.06777163540260027
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        }
+      },
+      "fraction_sites_with_lower_rmse_mean_across_seeds": 0.5505050505050505,
+      "fraction_sites_with_lower_ubrmse_mean_across_seeds": 0.6161616161616162
+    },
+    "D-B": {
+      "difference_direction": "first minus second",
+      "seeds": 3,
+      "clusters": 132,
+      "per_seed_rmse_differences": [
+        -0.0014380411460769987,
+        -0.0012723917648222033,
+        -0.0024731082871853327
+      ],
+      "mean_rmse_difference": -0.0017278470660281782,
+      "sd_of_paired_seed_differences": 0.0006507078032404514,
+      "rmse_ci95": [
+        -0.004480090098593491,
+        0.0008034759748243602
+      ],
+      "site_equal_rmse_difference": -0.002056925941228724,
+      "site_equal_rmse_ci95": [
+        -0.003916835861058257,
+        -0.00022137670309487094
+      ],
+      "anomaly_r_difference": 0.09291337623860084,
+      "anomaly_r_ci95": [
+        0.06407749820641172,
+        0.11994580569211509
+      ],
+      "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+      "per_seed": {
+        "42": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0014380411460769987
+          ],
+          "mean_rmse_difference": -0.0014380411460769987,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005186993987542444,
+            0.002153998108989378
+          ],
+          "site_equal_rmse_difference": -0.0032957828284156123,
+          "site_equal_rmse_ci95": [
+            -0.005998017115502208,
+            -0.0005633650777663975
+          ],
+          "anomaly_r_difference": 0.08464271257121087,
+          "anomaly_r_ci95": [
+            0.041213826892819265,
+            0.1254267856067022
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "7": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0012723917648222033
+          ],
+          "mean_rmse_difference": -0.0012723917648222033,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0062456828217282686,
+            0.003767648635784776
+          ],
+          "site_equal_rmse_difference": -0.002472439821013298,
+          "site_equal_rmse_ci95": [
+            -0.005913913801128307,
+            0.0009123216535195676
+          ],
+          "anomaly_r_difference": 0.11968747029701593,
+          "anomaly_r_ci95": [
+            0.08294619408974586,
+            0.1510704013176017
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "555": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0024731082871853327
+          ],
+          "mean_rmse_difference": -0.0024731082871853327,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.008621629867788225,
+            0.003718317796904546
+          ],
+          "site_equal_rmse_difference": -0.000402555174257263,
+          "site_equal_rmse_ci95": [
+            -0.004109040119248438,
+            0.0031637064272530655
+          ],
+          "anomaly_r_difference": 0.07440994584757571,
+          "anomaly_r_ci95": [
+            0.034792748532844156,
+            0.11489135635717677
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        }
+      },
+      "fraction_sites_with_lower_rmse_mean_across_seeds": 0.5681818181818182,
+      "fraction_sites_with_lower_ubrmse_mean_across_seeds": 0.6919191919191919
+    },
+    "D-C": {
+      "difference_direction": "first minus second",
+      "seeds": 3,
+      "clusters": 132,
+      "per_seed_rmse_differences": [
+        -0.0009054523792340619,
+        -0.0008985568950801159,
+        -0.0006010389517948633
+      ],
+      "mean_rmse_difference": -0.000801682742036347,
+      "sd_of_paired_seed_differences": 0.00017379682059025337,
+      "rmse_ci95": [
+        -0.003837764033792584,
+        0.0018669553884095571
+      ],
+      "site_equal_rmse_difference": -0.00012031886401511927,
+      "site_equal_rmse_ci95": [
+        -0.001942033742259009,
+        0.0015660677021593103
+      ],
+      "anomaly_r_difference": 0.02052001330845743,
+      "anomaly_r_ci95": [
+        0.005293952880391705,
+        0.03702463071084871
+      ],
+      "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds",
+      "per_seed": {
+        "42": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0009054523792340619
+          ],
+          "mean_rmse_difference": -0.0009054523792340619,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.004716604609703478,
+            0.0026372069031914145
+          ],
+          "site_equal_rmse_difference": -3.054932492548638e-05,
+          "site_equal_rmse_ci95": [
+            -0.0023656239398236307,
+            0.002239648029694481
+          ],
+          "anomaly_r_difference": -0.011012450802893814,
+          "anomaly_r_ci95": [
+            -0.03268335453712566,
+            0.010676185242692088
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "7": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0008985568950801159
+          ],
+          "mean_rmse_difference": -0.0008985568950801159,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.0053414965478771675,
+            0.0035730322782426276
+          ],
+          "site_equal_rmse_difference": 0.0014451739388977793,
+          "site_equal_rmse_ci95": [
+            -0.001615042733017467,
+            0.00439851164885616
+          ],
+          "anomaly_r_difference": 0.02965948193316209,
+          "anomaly_r_ci95": [
+            0.0015410215993903855,
+            0.057762661631966666
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        },
+        "555": {
+          "difference_direction": "first minus second",
+          "seeds": 1,
+          "clusters": 132,
+          "per_seed_rmse_differences": [
+            -0.0006010389517948633
+          ],
+          "mean_rmse_difference": -0.0006010389517948633,
+          "sd_of_paired_seed_differences": null,
+          "rmse_ci95": [
+            -0.005190723634177911,
+            0.003901463096501633
+          ],
+          "site_equal_rmse_difference": -0.0017755812060176507,
+          "site_equal_rmse_ci95": [
+            -0.0052341737306106665,
+            0.0016958492371754225
+          ],
+          "anomaly_r_difference": 0.04291300879510401,
+          "anomaly_r_ci95": [
+            0.011505780964470212,
+            0.0725064615909764
+          ],
+          "bootstrap_method": "2000 percentile spatial-site cluster resamples; all records retained with sampled-site multiplicity; identical draws across models and seeds"
+        }
+      },
+      "fraction_sites_with_lower_rmse_mean_across_seeds": 0.5176767676767676,
+      "fraction_sites_with_lower_ubrmse_mean_across_seeds": 0.6035353535353535
+    }
+  },
+  "rmse_interaction": {
+    "definition": "(C-A)-(D-B): direct-precipitation effect with cascade minus effect without cascade",
+    "mean_difference": 0.0017666470556255143,
+    "per_seed": {
+      "42": 0.0014672985386415816,
+      "7": 0.001418599953361535,
+      "555": 0.002414042674873426
+    },
+    "ci95": [
+      -0.0022678892968121906,
+      0.005836350500168015
+    ],
+    "interpretation": "Contrast of predictive errors, not a physical causal interaction."
+  },
+  "ranking_by_mean_seed_rmse": [
+    "D",
+    "A",
+    "C",
+    "B"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "strategy": "warmup_floor10",
+  "depth": 50,
+  "seed": 7,
+  "fold": 3,
+  "source_reference": "models\\50cm\\ma_seed7\\outer3",
+  "identity_reuse": true,
+  "selected_epochs": 10,
+  "fitted_epochs": 10,
+  "additional_training_seconds": 0
+}

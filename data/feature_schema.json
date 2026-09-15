@@ -1,0 +1,66 @@
+{
+  "version": "oasm10_public_release",
+  "base_numeric": [
+    "VV",
+    "VH",
+    "VH_minus_VV",
+    "angle",
+    "s2_lag",
+    "landsat_lag",
+    "DSM",
+    "Slope",
+    "TWI_proxy",
+    "Aspect_sin",
+    "Aspect_cos",
+    "Sentinel2_B2",
+    "Sentinel2_B3",
+    "Sentinel2_B4",
+    "Sentinel2_B5",
+    "Sentinel2_B6",
+    "Sentinel2_B7",
+    "Sentinel2_B8",
+    "Sentinel2_B8A",
+    "Sentinel2_B11",
+    "Sentinel2_B12",
+    "Landsat_B2",
+    "Landsat_B3",
+    "Landsat_B4",
+    "Landsat_B5",
+    "Landsat_B6",
+    "Landsat_B7",
+    "Landsat_B10",
+    "NDVI_Best",
+    "NDMI_Best",
+    "Day_sin",
+    "Day_cos"
+  ],
+  "precipitation_columns": [
+    "precip_7d",
+    "precip_30d",
+    "precip_90d"
+  ],
+  "soil_properties": [
+    "clay",
+    "sand",
+    "soc",
+    "bdod"
+  ],
+  "soil_layers": {
+    "5": "0-5cm",
+    "20": "15-30cm",
+    "50": "30-60cm"
+  },
+  "categorical": [
+    "BeckKG_band1",
+    "Soil_Texture_USDA",
+    "LandCover"
+  ],
+  "input_scale": "before legacy standardization; fitted transforms are training-only",
+  "index_definition": "Landsat DN normalized differences; historical storage names NDVI_Best and NDMI_Best",
+  "wetness_epsilon": 0.001,
+  "precipitation_encoding": "ln(1+P_mm), complete rolling 7/30/90 calendar days ending on target_time date",
+  "target_time": "retained matched observation timestamp; S1 time stored separately where available",
+  "record_key": "record_id (depth, source station, observation timestamp)",
+  "site_split": "union of all legacy test spatial groups; shared outer group folds, seed 42",
+  "spatial_groups": "coordinates rounded to 6 decimals, plus normalized station names within 30 m; used conservatively to group co-located sensors, not to identify identical measurements"
+}

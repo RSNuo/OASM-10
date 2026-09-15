@@ -1,0 +1,56 @@
+{
+  "candidate_seeds": [
+    42,
+    7,
+    555
+  ],
+  "selected_slots": [
+    42,
+    7,
+    42,
+    42
+  ],
+  "selection": "greedy development OOF RMSE only; improvement at least 1e-6; maximum 50 slots",
+  "metrics": {
+    "oof": {
+      "records": 75169,
+      "sites": 278,
+      "rmse": 0.09232181614230207,
+      "mse": 0.008523317735813028,
+      "bias": 0.008374777912789394,
+      "ubrmse": 0.09194118136463378,
+      "r2": 0.39004241407167095,
+      "range_violation_fraction": 0.0
+    },
+    "oof_equal": {
+      "records": 75169,
+      "sites": 278,
+      "rmse": 0.09422172368652977,
+      "mse": 0.008877733214460766,
+      "bias": 0.014958264471208458,
+      "ubrmse": 0.09302678935914185,
+      "r2": 0.36467923784473344,
+      "range_violation_fraction": 0.0
+    },
+    "test": {
+      "records": 38081,
+      "sites": 134,
+      "rmse": 0.083797956386973,
+      "mse": 0.007022097494633029,
+      "bias": 0.0023180926007640157,
+      "ubrmse": 0.08376588769497588,
+      "r2": 0.3602257131406936,
+      "range_violation_fraction": 0.0
+    },
+    "test_equal": {
+      "records": 38081,
+      "sites": 134,
+      "rmse": 0.08423825859742856,
+      "mse": 0.007096084211527247,
+      "bias": 0.00967572096220689,
+      "ubrmse": 0.08368073037078941,
+      "r2": 0.35348487835817477,
+      "range_violation_fraction": 0.0
+    }
+  }
+}

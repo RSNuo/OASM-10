@@ -1,0 +1,114 @@
+[
+  {
+    "key": "US_drought",
+    "label": "US Corn Belt",
+    "target_time": "2023-10-18T00:00:00",
+    "bounds": [
+      -93.54039374234357,
+      42.067242372644436,
+      -93.50446113097878,
+      42.09239520059978
+    ],
+    "selection_cropland_fraction": 0.9661640703158496,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\US_drought\\US_drought_20231018_for_pred.pkl"
+  },
+  {
+    "key": "EastEuropeanPlain",
+    "label": "East European Plain",
+    "target_time": "2024-08-14T00:00:00",
+    "bounds": [
+      34.26760195197101,
+      49.510799597845725,
+      34.30353456333579,
+      49.53595242580107
+    ],
+    "selection_cropland_fraction": 0.9461785714285714,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\EastEuropeanPlain\\EastEuropeanPlain_20240814_for_pred.pkl"
+  },
+  {
+    "key": "China",
+    "label": "North China Plain",
+    "target_time": "2024-10-27T00:00:00",
+    "bounds": [
+      115.31508012230019,
+      36.34899846527594,
+      115.35101273366497,
+      36.374151293231286
+    ],
+    "selection_cropland_fraction": 0.9746428571428571,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\China\\China_20241027_for_pred.pkl"
+  },
+  {
+    "key": "Australia",
+    "label": "Murray-Darling Basin",
+    "target_time": "2024-12-19T00:00:00",
+    "bounds": [
+      146.0959027399962,
+      -34.380008143472885,
+      146.131835351361,
+      -34.35485531551754
+    ],
+    "selection_cropland_fraction": 0.813950177935943,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\Australia\\Australia_20241219_for_pred.pkl"
+  },
+  {
+    "key": "India",
+    "label": "Indo-Gangetic Plain",
+    "target_time": "2024-11-03T00:00:00",
+    "bounds": [
+      77.17679032465647,
+      29.55685456835392,
+      77.21272293602125,
+      29.582007396309265
+    ],
+    "selection_cropland_fraction": 0.9244285714285714,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\India\\India_20241103_for_pred.pkl"
+  },
+  {
+    "key": "SouthAfrica",
+    "label": "Western Cape",
+    "target_time": "2025-01-30T00:00:00",
+    "bounds": [
+      18.735227632985374,
+      -33.88946511627374,
+      18.771160244350156,
+      -33.864312288318395
+    ],
+    "selection_cropland_fraction": 0.3832857142857143,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\SouthAfrica\\SouthAfrica_20250130_for_pred.pkl"
+  },
+  {
+    "key": "Pampas",
+    "label": "The Pampas",
+    "target_time": "2024-07-01T00:00:00",
+    "bounds": [
+      -60.51321697571974,
+      -33.77638069673235,
+      -60.477284364354965,
+      -33.75122786877701
+    ],
+    "selection_cropland_fraction": 0.9938571428571429,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\Pampas\\Pampas_20240701_for_pred.pkl"
+  },
+  {
+    "key": "centralvalley",
+    "label": "US Central Valley",
+    "target_time": "2023-07-17T00:00:00",
+    "bounds": [
+      -122.09665983148096,
+      39.46237059382453,
+      -122.06072722011618,
+      39.487523421779876
+    ],
+    "selection_cropland_fraction": 0.9645714285714285,
+    "selection_basis": "fixed 400x280-cell window maximizing WorldCover class40 fraction on a fixed21x21 search of every fourth source-grid record; no prediction-based selection",
+    "selection_source": "legacy_archive/application\\centralvalley\\centralvalley_20230717_for_pred.pkl"
+  }
+]

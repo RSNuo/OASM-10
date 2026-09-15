@@ -1,0 +1,61 @@
+{
+  "checked_utc": "2026-09-13T15:49:36.371021+00:00",
+  "selection": "Fixed record availability, independent of prediction error",
+  "interpretation": "Flags transcribed only; no inferred network M semantics and no retrospective record exclusion",
+  "depths": {
+    "20": {
+      "source_file": "ISMN/HOAL/Hoal-19/HOAL_HOAL_Hoal-19_sm_0.200000_0.200000_SPADE-Time-Domain-Transmissivity_19500101_20260307.stm",
+      "archived_source": "analysis/reference_sources/HOAL_HOAL_Hoal-19_sm_0.200000_0.200000_SPADE-Time-Domain-Transmissivity_19500101_20260307.stm",
+      "sha256": "bb2c6cdc8f782ca7c5c1b0c83ef131638f41f23a8618c6c3a01f3e1c498834dd",
+      "source_2018_rows": 8070,
+      "source_2018_zero_rows": 8070,
+      "source_flag_pairs": [
+        [
+          "D03",
+          "M"
+        ],
+        [
+          "G",
+          "M"
+        ]
+      ],
+      "retained_example_rows": 78,
+      "retained_flag_pair_counts": {
+        "('G', 'M')": 78
+      },
+      "all_retained_targets_exact_zero": true,
+      "all_retained_timestamps_verified_in_raw_source": true,
+      "representative_lines": [
+        "2018/01/01 00:00 0.0 G M",
+        "2018/01/01 01:00 0.0 G M",
+        "2018/01/01 02:00 0.0 G M",
+        "2018/01/01 03:00 0.0 G M"
+      ]
+    },
+    "50": {
+      "source_file": "ISMN/HOAL/Hoal-19/HOAL_HOAL_Hoal-19_sm_0.500000_0.500000_SPADE-Time-Domain-Transmissivity_19500101_20260307.stm",
+      "archived_source": "analysis/reference_sources/HOAL_HOAL_Hoal-19_sm_0.500000_0.500000_SPADE-Time-Domain-Transmissivity_19500101_20260307.stm",
+      "sha256": "a6c7bc9344a4f5ef73a7b909eb5a950c0158b51580d43344418bd57412d20cf0",
+      "source_2018_rows": 8070,
+      "source_2018_zero_rows": 8070,
+      "source_flag_pairs": [
+        [
+          "G",
+          "M"
+        ]
+      ],
+      "retained_example_rows": 78,
+      "retained_flag_pair_counts": {
+        "('G', 'M')": 78
+      },
+      "all_retained_targets_exact_zero": true,
+      "all_retained_timestamps_verified_in_raw_source": true,
+      "representative_lines": [
+        "2018/01/01 00:00 0.0 G M",
+        "2018/01/01 01:00 0.0 G M",
+        "2018/01/01 02:00 0.0 G M",
+        "2018/01/01 03:00 0.0 G M"
+      ]
+    }
+  }
+}

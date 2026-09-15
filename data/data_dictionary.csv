@@ -1,0 +1,232 @@
+depth_cm,column,dtype,description,model_scale,missing_rows
+5,record_id,object,"Unique SHA256-derived key of depth, original station and complete observation timestamp; primary merge key",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,physical_site_id,object,"Spatial grouping for exclusion, not necessarily identical sensor identity",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,source_station,object,Original station identifier,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,depth_cm,int64,Nominal target sensor depth (cm),pre-standardization; logarithmic rainfall explicitly encoded,0
+5,split,object,Shared development/test role,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,outer_fold,int64,Shared development fold0-4; test=-1,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,legacy_split,object,"Original train/test role, retained only as provenance",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,latitude,float64,Latitude WGS84 decimal degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,longitude,float64,Longitude WGS84 decimal degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,y,float64,"Observed volumetric soil moisture, m3/m3",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,observation_time,datetime64[ns],UTC matched reference-observation timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,target_time,datetime64[ns],UTC timestamp anchoring predictor matching; same as retained observation_time,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,s1_time,datetime64[ns],Original Sentinel-1 acquisition timestamp when preserved; missing source provenance is not imputed,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,s1_time_available,bool,Boolean availability of original S1 acquisition time,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,s2_closest_datetime,datetime64[ns],Retained Sentinel-2 acquisition timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_closest_datetime,datetime64[ns],Retained Landsat acquisition timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,angle,float64,"Sentinel-1 approximate ellipsoid-referenced incidence angle, degrees",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,VV,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,VH,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,VH_minus_VV,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,s2_lag,float64,"Absolute acquisition offset from target_time, fractional days; recomputed from original timestamps",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,landsat_lag,float64,"Absolute acquisition offset from target_time, fractional days; recomputed from original timestamps",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,DSM,float64,"Elevation from GLO-30/ALOS gapfill, m",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Slope,float64,Terrain slope in degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,TWI_proxy,float64,"Historical name; -ln(tan(slope radians)+0.001), dimensionless slope-only transform, not area-based TWI",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Aspect_sin,float64,"Sine/cosine of aspect angle, dimensionless",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Aspect_cos,float64,"Sine/cosine of aspect angle, dimensionless",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B2,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B3,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B4,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B5,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B6,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B7,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B8,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B8A,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B11,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Sentinel2_B12,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B2,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B3,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B4,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B5,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B6,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B7,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Landsat_B10,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,NDVI_Best,float64,Historical name: Landsat DN contrast (B5-B4)/(B5+B4); no reflectance offset and no sensor switching,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,NDMI_Best,float64,Historical name: Landsat DN contrast (B5-B6)/(B5+B6); no reflectance offset and no sensor switching,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Day_sin,float64,"Sine/cosine(2*pi*day_of_year/365), dimensionless, derived from target_time",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Day_cos,float64,"Sine/cosine(2*pi*day_of_year/365), dimensionless, derived from target_time",pre-standardization; logarithmic rainfall explicitly encoded,0
+5,BeckKG_band1,uint8,Beck Koppen-Geiger class integer; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,Soil_Texture_USDA,float64,OpenLandMap surface USDA texture class; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,LandCover,int64,ESA WorldCover v200 class; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,precip_7d,float64,"ln(1+P_mm), complete7dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,1972
+5,precip_30d,float64,"ln(1+P_mm), complete30dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,1972
+5,precip_90d,float64,"ln(1+P_mm), complete90dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,1972
+5,clay_0-5cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,clay_15-30cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,clay_30-60cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sand_0-5cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sand_15-30cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sand_30-60cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,soc_0-5cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,soc_15-30cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,soc_30-60cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,bdod_0-5cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,bdod_15-30cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,bdod_30-60cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sg_clay,float64,SoilGrids raw mean g/kg; target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sg_sand,float64,SoilGrids raw mean g/kg; target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sg_soc,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,sg_bdod,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,10908
+5,precip_7d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,precip_30d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,precip_90d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,sg_clay_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,sg_sand_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,sg_soc_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+5,sg_bdod_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,record_id,object,"Unique SHA256-derived key of depth, original station and complete observation timestamp; primary merge key",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,physical_site_id,object,"Spatial grouping for exclusion, not necessarily identical sensor identity",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,source_station,object,Original station identifier,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,depth_cm,int64,Nominal target sensor depth (cm),pre-standardization; logarithmic rainfall explicitly encoded,0
+20,split,object,Shared development/test role,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,outer_fold,int64,Shared development fold0-4; test=-1,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,legacy_split,object,"Original train/test role, retained only as provenance",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,latitude,float64,Latitude WGS84 decimal degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,longitude,float64,Longitude WGS84 decimal degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,y,float64,"Observed volumetric soil moisture, m3/m3",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,observation_time,datetime64[ns],UTC matched reference-observation timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,target_time,datetime64[ns],UTC timestamp anchoring predictor matching; same as retained observation_time,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,s1_time,datetime64[ns],Original Sentinel-1 acquisition timestamp when preserved; missing source provenance is not imputed,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,s1_time_available,bool,Boolean availability of original S1 acquisition time,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,s2_closest_datetime,datetime64[ns],Retained Sentinel-2 acquisition timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_closest_datetime,datetime64[ns],Retained Landsat acquisition timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,angle,float64,"Sentinel-1 approximate ellipsoid-referenced incidence angle, degrees",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,VV,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,VH,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,VH_minus_VV,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,s2_lag,float64,"Absolute acquisition offset from target_time, fractional days; recomputed from original timestamps",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,landsat_lag,float64,"Absolute acquisition offset from target_time, fractional days; recomputed from original timestamps",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,DSM,float64,"Elevation from GLO-30/ALOS gapfill, m",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Slope,float64,Terrain slope in degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,TWI_proxy,float64,"Historical name; -ln(tan(slope radians)+0.001), dimensionless slope-only transform, not area-based TWI",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Aspect_sin,float64,"Sine/cosine of aspect angle, dimensionless",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Aspect_cos,float64,"Sine/cosine of aspect angle, dimensionless",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B2,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B3,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B4,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B5,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B6,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B7,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B8,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B8A,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B11,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Sentinel2_B12,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B2,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B3,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B4,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B5,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B6,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B7,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Landsat_B10,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,NDVI_Best,float64,Historical name: Landsat DN contrast (B5-B4)/(B5+B4); no reflectance offset and no sensor switching,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,NDMI_Best,float64,Historical name: Landsat DN contrast (B5-B6)/(B5+B6); no reflectance offset and no sensor switching,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Day_sin,float64,"Sine/cosine(2*pi*day_of_year/365), dimensionless, derived from target_time",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Day_cos,float64,"Sine/cosine(2*pi*day_of_year/365), dimensionless, derived from target_time",pre-standardization; logarithmic rainfall explicitly encoded,0
+20,BeckKG_band1,uint8,Beck Koppen-Geiger class integer; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,Soil_Texture_USDA,float64,OpenLandMap surface USDA texture class; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,LandCover,int64,ESA WorldCover v200 class; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,precip_7d,float64,"ln(1+P_mm), complete7dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,2250
+20,precip_30d,float64,"ln(1+P_mm), complete30dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,2250
+20,precip_90d,float64,"ln(1+P_mm), complete90dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,2250
+20,clay_0-5cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,clay_15-30cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,clay_30-60cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sand_0-5cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sand_15-30cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sand_30-60cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,soc_0-5cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,soc_15-30cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,soc_30-60cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,bdod_0-5cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,bdod_15-30cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,bdod_30-60cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sg_clay,float64,SoilGrids raw mean g/kg; target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sg_sand,float64,SoilGrids raw mean g/kg; target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sg_soc,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,sg_bdod,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,785
+20,precip_7d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,precip_30d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,precip_90d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,sg_clay_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,sg_sand_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,sg_soc_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+20,sg_bdod_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,record_id,object,"Unique SHA256-derived key of depth, original station and complete observation timestamp; primary merge key",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,physical_site_id,object,"Spatial grouping for exclusion, not necessarily identical sensor identity",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,source_station,object,Original station identifier,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,depth_cm,int64,Nominal target sensor depth (cm),pre-standardization; logarithmic rainfall explicitly encoded,0
+50,split,object,Shared development/test role,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,outer_fold,int64,Shared development fold0-4; test=-1,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,legacy_split,object,"Original train/test role, retained only as provenance",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,latitude,float64,Latitude WGS84 decimal degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,longitude,float64,Longitude WGS84 decimal degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,y,float64,"Observed volumetric soil moisture, m3/m3",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,observation_time,datetime64[ns],UTC matched reference-observation timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,target_time,datetime64[ns],UTC timestamp anchoring predictor matching; same as retained observation_time,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,s1_time,datetime64[ns],Original Sentinel-1 acquisition timestamp when preserved; missing source provenance is not imputed,pre-standardization; logarithmic rainfall explicitly encoded,55354
+50,s1_time_available,bool,Boolean availability of original S1 acquisition time,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,s2_closest_datetime,datetime64[ns],Retained Sentinel-2 acquisition timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_closest_datetime,datetime64[ns],Retained Landsat acquisition timestamp,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,angle,float64,"Sentinel-1 approximate ellipsoid-referenced incidence angle, degrees",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,VV,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,VH,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,VH_minus_VV,float64,"Sentinel-1 backscatter or polarization difference, dB; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,s2_lag,float64,"Absolute acquisition offset from target_time, fractional days; recomputed from original timestamps",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,landsat_lag,float64,"Absolute acquisition offset from target_time, fractional days; recomputed from original timestamps",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,DSM,float64,"Elevation from GLO-30/ALOS gapfill, m",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Slope,float64,Terrain slope in degrees,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,TWI_proxy,float64,"Historical name; -ln(tan(slope radians)+0.001), dimensionless slope-only transform, not area-based TWI",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Aspect_sin,float64,"Sine/cosine of aspect angle, dimensionless",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Aspect_cos,float64,"Sine/cosine of aspect angle, dimensionless",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B2,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B3,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B4,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B5,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B6,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B7,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B8,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B8A,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B11,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Sentinel2_B12,float64,"Sentinel-2 reflectance = DN*1e-4, dimensionless; before model standardization",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B2,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B3,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B4,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B5,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B6,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B7,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Landsat_B10,float64,Landsat Collection2 L2 DN*1e-4 empirical input; not calibrated reflectance/Kelvin; before model standardization,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,NDVI_Best,float64,Historical name: Landsat DN contrast (B5-B4)/(B5+B4); no reflectance offset and no sensor switching,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,NDMI_Best,float64,Historical name: Landsat DN contrast (B5-B6)/(B5+B6); no reflectance offset and no sensor switching,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Day_sin,float64,"Sine/cosine(2*pi*day_of_year/365), dimensionless, derived from target_time",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Day_cos,float64,"Sine/cosine(2*pi*day_of_year/365), dimensionless, derived from target_time",pre-standardization; logarithmic rainfall explicitly encoded,0
+50,BeckKG_band1,uint8,Beck Koppen-Geiger class integer; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,Soil_Texture_USDA,int64,OpenLandMap surface USDA texture class; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,LandCover,int64,ESA WorldCover v200 class; categorical,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,precip_7d,float64,"ln(1+P_mm), complete7dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,1179
+50,precip_30d,float64,"ln(1+P_mm), complete30dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,1179
+50,precip_90d,float64,"ln(1+P_mm), complete90dcalendar-day ERA5-Land total ending on target date; expm1 recovers mm; NaN means incomplete/unmatched",pre-standardization; logarithmic rainfall explicitly encoded,1179
+50,clay_0-5cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,clay_15-30cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,clay_30-60cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sand_0-5cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sand_15-30cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sand_30-60cm_mean,float64,SoilGrids raw mean g/kg; interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,soc_0-5cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,soc_15-30cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,soc_30-60cm_mean,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,bdod_0-5cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,bdod_15-30cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,bdod_30-60cm_mean,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); interval encoded in column name; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sg_clay,float64,SoilGrids raw mean g/kg; target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sg_sand,float64,SoilGrids raw mean g/kg; target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sg_soc,float64,SoilGrids raw mean dg/kg (divide10 for g/kg); target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,sg_bdod,float64,SoilGrids raw mean cg/cm3 (divide100 for g/cm3); target-depth layer alias; NaN retains missing source value,pre-standardization; logarithmic rainfall explicitly encoded,624
+50,precip_7d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,precip_30d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,precip_90d_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,sg_clay_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,sg_sand_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,sg_soc_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0
+50,sg_bdod_missing,bool,Boolean missing-input provenance before permitted-training imputation,pre-standardization; logarithmic rainfall explicitly encoded,0

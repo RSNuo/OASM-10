@@ -1,197 +1,68 @@
-# On-demand AI-driven Surface Soil Moisture at 10 m (OASSM-10)
+# OASM-10: on-demand soil moisture at 5, 20 and 50 cm on a nominal 10 m grid
 
-A deep-learning pipeline for **surface soil moisture (SSM) estimation** at 10 m resolution, powered by a modality-aware Transformer that fuses multi-source remote sensing data through cross-attention. The project includes model training, batch inference, and an interactive web tool for on-demand prediction.
+This repository contains the code, metadata, evaluation records and example outputs of the OASM-10 reference product.
+The observation tables, fitted model weights and cascade inputs are large and are distributed through the accompanying
+Zenodo archive (see `ZENODO_CONTENTS.md`); extract that archive into this folder and every path below resolves.
 
----
+Archived release: this code tree, the model manifests and the fitted product reference weights are deposited at Zenodo, https://doi.org/10.5281/zenodo.22779714 (access restricted while the accompanying Data Descriptor is under peer review; opened on publication).
 
-## Overview
+Frozen experiment records (protocol, freeze and verification files under `training_strategy_review/`,
+`depth50_input_factorial/` and the per-fold model manifests) are kept byte-identical to the verified originals so that
+their SHA-256 chains remain checkable; inside them the implementation is labelled by its working name `v6_site_isolated`,
+which denotes exactly the code and data released here.
 
-This project predicts volumetric soil moisture (m³/m³) by combining:
+## Layout
 
-- **Sentinel-1** SAR backscatter (VV, VH)
-- **Sentinel-2** multispectral imagery (Bands 2–8A, 11, 12)
-- **Landsat 8/9** optical & thermal bands (Bands 2–7, 10)
-- **Topographic features** derived from the Copernicus DEM (elevation, slope, TWI, aspect)
-- **Ancillary context** including climate zone (Beck–Köppen–Geiger), USDA soil texture, and ESA WorldCover land-cover class
-
-The core model is a modality-aware Transformer with the following design:
-
-| Component | Description |
+| Path | Contents |
 |---|---|
-| **Modality-specific tokenizers** | Per-feature MLP projections with learnable scaling, grouped into SAR, optical-thermal, and temporal streams |
-| **Shared dynamic encoder** | Pre-norm Transformer encoder with multi-head self-attention across all dynamic tokens |
-| **Static context branch** | Categorical embeddings + quantile-transformed topographic features, projected into the same latent space |
-| **Cross-attention fusion** | Static query attends to dynamic key/value tokens for information integration |
-| **Training strategy** | 5-fold GroupKFold (by station), weighted Huber loss with cosine-annealed δ, quantile-based sample weighting for dry/wet tails, warmup + cosine LR schedule |
+| `oasm/` | Python package: feature definitions, Google Earth Engine extraction, preprocessing, models, training, inference |
+| `training_5cm.ipynb`, `training_20cm.ipynb`, `training_50cm.ipynb` | Depth-explicit training entry points (same package) |
+| `prediction_5cm.ipynb`, `prediction_multidepth.ipynb` | Region/time request, GEE feature extraction and fold-paired prediction |
+| `run_campaign.py` | Reference fits, nested upstream inputs and all matched comparison fits (`--stage all`) |
+| `analyze_results.py`, `compare_products.py`, `quality_summary.py`, `validate_map_product.py`, `run_spatial.py`, `benchmark_cost.py` | Evaluation, external-product matching, site diagnostics, map-pathway check, spatial-block diagnostic, cost |
+| `data/` | Site registry, station aliases, shared split and fold assignments, field dictionary, schema, counts; small ancillary layers |
+| `models/` | `product_reference.json` (which run serves each depth) and every fitted run's manifest and metrics (weights on Zenodo) |
+| `analysis/`, `validation/` | Result JSON files, per-site tables, matched benchmark records and map-pathway checks |
+| `product/example_geotiffs/` | Eight regional examples: three moisture layers, a true-colour reflectance raster, quality table and manifest |
+| `figures/` | Figure files used in the descriptor and the companion methods study |
+| `training_strategy_review/`, `depth50_input_factorial/`, `reference_50cm_floor10/` | Frozen protocols, results and verification of the fitting-policy experiment, the 50 cm input factorial and the 50 cm reference decision |
 
-Ground-truth labels come from the **International Soil Moisture Network (ISMN)**.
+Directory paths cited in the data descriptor are relative to this folder.
 
----
+## Product reference
 
-## Repository Structure
+`models/product_reference.json` maps each depth to its released run: `5cm/ma_seed42`, `20cm/ma_seed42` and `50cm/ma_floor10_seed42`.
+For every outer fold k, the 5 cm model of fold k predicts the surface input for the 20 and 50 cm models of fold k; the five
+depth-specific outputs are averaged. `oasm.inference.predict_product` implements this route and applies each fold's stored
+training-only transformations and imputation values. Predictions are not clipped; validity and missing-input flags accompany them.
 
-```
-.
-├── training.ipynb                 # Model training (5-fold CV)
-├── prediction.ipynb   # Batch inference pipeline (GEE → GeoTIFF)
-├── requirements.txt               # Python dependencies
-├── data/
-│   ├── train_set.zip             # Training data (ISMN-matched pixels)
-│   ├── test_se1.zip              # Hold-out test data
-│   ├── label_encoders.pkl         # Fitted LabelEncoders for categorical features
-│   └── cat_dims.pkl               # Category cardinalities
-├── model/
-│   ├── transformer_fold_{1..5}.pth   # Model checkpoints (state dict + metadata)
-│   └── transformer_fold_{1..5}.pkl   # Fold-specific preprocessors (scalers)
-├── images/
-│   ├── webtool.png
-│   ├── webtool1.png
-│   └── webtool2.png
-└── figures/                       # Output directory for SHAP plots
-```
+## Running
 
----
+1. Create the environment from `requirements.txt` (versions in `runtime.json`; PyTorch with CUDA is optional).
+2. Extract the Zenodo archive into this folder (adds `data/tables/`, `data/all_*.parquet`, `data/cascade/`, the precipitation tables under `data/ancillary/` and the fitted weights under `models/`).
+3. Authenticate Google Earth Engine with your own account for map requests.
+4. Open `prediction_multidepth.ipynb`, set the bounds and target time, and run. Outputs are written to `outputs/<date>/` with a quality table and manifest.
+5. To retrain, run the depth-explicit notebooks or `python run_campaign.py --stage all`.
 
-## Setup
+Inputs are pre-standardization values; rainfall descriptors are stored as ln(1 + P). Do not apply any global scaler.
+Landsat bands are empirical DN x 1e-4 inputs, and the two derived vegetation contrasts are Landsat DN differences, not
+calibrated reflectance indices. `data/data_dictionary.csv` gives units, keys and missing-value meanings.
 
-### 1. Create environment & install dependencies
+## Evaluation conventions
 
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
+Physical sites (co-located sensors grouped within 30 m) are the unit of exclusion. Sites in the external holdout are excluded at
+every depth from preprocessing, gradient fitting and epoch selection; the same holdout had been used in earlier exploratory work and
+is disclosed as such. Selection of fold, ensemble, policy and input configurations uses development out-of-fold results only.
+The nominal 10 m grid is a sampling lattice; it is not a validated effective resolution.
 
-> **Note:** The default `pip install torch` installs the CPU-only build. For GPU support, install PyTorch separately first:
-> ```bash
-> pip install torch --index-url https://download.pytorch.org/whl/cu121
-> ```
+## Provenance scripts
 
-### 2. Prepare data
+`prepare_data.py`, `extract_maps_and_check.py`, `extract_era5_benchmark.py` and `audit_zero_reference.py` rebuild the canonical tables,
+the regional example windows, the ERA5-Land benchmark and one source-quality check from the authors' archives. They read those archives
+from the folders named by the environment variables `OASM10_LEGACY_ARCHIVE` and `OASM10_ISMN_ROOT`; they document how the released
+files were produced and are not needed for inference or retraining.
 
-Unzip the data archives in `./data/`:
+## Citation and licence
 
-```bash
-cd data
-unzip train_set1.zip
-unzip test_set1.zip
-```
-
-Each `.pkl` file is a pandas DataFrame with pre-processed, station-matched samples. The columns include:
-
-**Numeric features (32):**
-
-| Group | Features |
-|---|---|
-| SAR | `angle`, `VV`, `VH`, `VH_minus_VV` |
-| Sentinel-2 | `Sentinel2_B2` – `B8A`, `B11`, `B12` |
-| Landsat | `Landsat_B2` – `B7`, `B10` |
-| Spectral indices | `NDVI_Best`, `NDMI_Best` |
-| Temporal / lag | `s2_lag`, `landsat_lag`, `Day_sin`, `Day_cos` |
-| Topography | `DSM`, `Slope`, `TWI_proxy`, `Aspect_sin`, `Aspect_cos` |
-
-**Categorical features (3):** `BeckKG_band1` (climate zone), `Soil_Texture_USDA`, `LandCover`
-
-**Target:** `soil_moisture` (m³/m³), sourced from the ISMN.
-
----
-
-## Usage Instructions
-
-### 1. Train the Model
-
-Open `training.ipynb` and run all cells sequentially. The notebook will:
-
-1. Load and augment the training data (including urban sample synthesis)
-2. Label-encode categorical features and save encoders to `./data/`
-3. Run 5-fold GroupKFold cross-validation with station-level grouping
-4. For each fold: fit modality-specific preprocessors (Yeo–Johnson for SAR/optical, RobustScaler for temporal, QuantileTransformer for static), train the Transformer with early stopping, and save the best checkpoint
-5. Report OOF and test-set metrics (RMSE, ubRMSE, Bias, R²)
-6. Save stacking-ready prediction CSVs
-
-**Outputs** (saved to `./model/`):
-- `transformer_fold_{1..5}.pth` — model weights + architecture metadata
-- `transformer_fold_{1..5}.pkl` — fold-specific preprocessing pipelines
-
-### 2. Feature Importance Analysis
-
-Run the standalone script after training:
-
-```bash
-python feature_importance.py
-```
-
-This loads the 5 trained checkpoints (no retraining), computes SHAP values via `GradientExplainer` averaged across folds, and generates three publication-ready figures in `./figures/`: a beeswarm plot, a combined bar + beeswarm plot, and a color-coded bar chart grouped by physical modality.
-
-Edit the paths at the top of the script (`MODEL_DIR`, `DATA_DIR`, etc.) to match your directory layout.
-
-### 3. Batch Inference (Make Predictions)
-
-The inference pipeline in `prediction.ipynb` produces spatially explicit soil moisture maps from raw satellite imagery. It relies on the **Google Earth Engine (GEE) Python API** for data acquisition.
-
-**Install and authenticate GEE before running:**
-
-```bash
-pip install earthengine-api
-earthengine authenticate
-```
-
-Follow the browser-based sign-in flow and paste the authorization token when prompted. For details, see the [GEE Python API introduction](https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api).
-
-The notebook proceeds through the following steps:
-
-
-| Cell | Stage | Description |
-|---|---|---|
-| 1 | **Configuration** | Sets target date, ROI center, file paths, model hyperparameters, and feature column definitions. Initializes GEE and PyTorch device. |
-| 2 | **GEE data export** | Queries Sentinel-1 (same-day), Sentinel-2, Landsat 8/9 (closest within ±14 days with pixel-level cloud masking), Copernicus/ALOS DEM terrain, ESA WorldCover, and USDA soil texture for the target ROI. Composites all bands into a single multi-band image and exports as GeoTIFF to Google Drive. |
-| 3 | **GeoTIFF → DataFrame & feature engineering** | Reads the exported `.tif` with `rasterio`, reshapes the pixel grid into a tabular DataFrame with longitude/latitude coordinates. Computes temporal lag features (`s2_lag`, `landsat_lag`), day-of-year cyclical encodings (`Day_sin`, `Day_cos`), spectral indices (`NDVI_Best`, `NDMI_Best`) with best-source selection logic, and samples the Beck–Köppen–Geiger climate classification raster at each pixel location. |
-| 4 | **Standardization** | Loads the training-time standardizer (`standardizer.joblib`) and applies the same transformations to ensure feature distributions match training. |
-| 5 | **Model definition & inference** | Defines the Transformer V4 architecture (must match training exactly). Loads all 5 fold checkpoints with fold-specific preprocessors, runs batched forward passes on GPU/CPU, and averages predictions across folds. |
-| 6 | **Export to GeoTIFF** | Pivots predictions back to a regular lat/lon grid and writes a georeferenced single-band GeoTIFF (EPSG:4326) with `rasterio`. |
-
-### 4. Web Tool
-
-The interactive web tool provides a point-and-click interface for on-demand soil moisture prediction:
-
-1. **Select location** — Click any point on the map or manually enter longitude/latitude coordinates.
-2. **Check available dates** — Choose a start and end date, then click **"Check Available Dates"** to query Sentinel-1 overpasses.
-
-   ![Web Interface](./images/webtool.png)
-
-3. **Run prediction** — Select a valid date from the returned list and click **"Run Prediction"**.
-
-   ![Run Prediction](./images/webtool1.png)
-
-4. **Run time series prediction** — Click **"Run Time Series Prediction"** to perform long-term time series analysis for the selected coordinate point, allowing you to examine temporal variations in predicted soil moisture over an extended period.
-
-   ![Time Series Prediction](./images/webtool2.png)
----
-
-## Key Dependencies
-
-| Package | Purpose |
-|---|---|
-| `torch` | Model training & inference |
-| `shap` | Gradient-based feature importance |
-| `scikit-learn` | Preprocessing, cross-validation, metrics |
-| `earthengine-api` | Satellite data acquisition via GEE |
-| `rasterio` | GeoTIFF I/O |
-| `pandas` / `numpy` | Data manipulation |
-| `matplotlib` | Visualization |
-| `joblib` | Serialization of preprocessors |
-| `tqdm` | Progress bars |
-
-See `requirements.txt` for pinned versions.
-
----
-
-## Citation
-
-If you use this code or model in your research, please cite the associated publication (forthcoming).
-
----
-
-## License
-
-This project is provided for academic and research purposes.
+Companion manuscripts: a Scientific Data descriptor and an ISPRS Journal of Photogrammetry and Remote Sensing methods study
+(Xu, Daccache and Ahmadi, in preparation). Add a licence file before publishing this repository.
