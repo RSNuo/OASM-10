@@ -1,9 +1,14 @@
+import sys as _sys
+from pathlib import Path as _Path
+REV = _Path(__file__).resolve().parents[1]   # repository root
+HERE = _Path(__file__).resolve().parent
+_sys.path.insert(0, str(REV))
 """Record the already-declared corrected protocol and its immutable training inputs."""
 from pathlib import Path
 import hashlib,json,sys
 import pandas as pd
 
-REV=Path(__file__).resolve().parent
+REV=_Path(__file__).resolve().parents[1]
 def sha(p):
     h=hashlib.sha256()
     with p.open('rb') as f:
@@ -14,7 +19,7 @@ def main():
     records={}
     for p in [REV/f'data/all_{d}cm.parquet' for d in [5,20,50]]+[REV/f'oasm/{n}.py' for n in ['features','models','preprocessing','training']]+[REV/'run_campaign.py']:
         records[str(p.relative_to(REV))]=sha(p)
-    path=REV/'training_input_integrity.json'
+    path=HERE/'training_input_integrity.json'
     if path.exists():
         old=json.loads(path.read_text());assert old['sha256']==records,'Training source or input tables changed since freezing'
     else:

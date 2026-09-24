@@ -4,7 +4,7 @@ The Zenodo record holds the archives below. Every archive unpacks into the same 
 
 | Archive | Contents |
 |---|---|
-| `OASM10_repository.zip` | Public code repository: package, scripts, notebooks, protocols, frozen experiment records, model manifests, analysis and validation summaries, figures and the eight example GeoTIFF sets (identical to the GitHub tree) |
+| `OASM10_repository.zip` | Public code repository: package, scripts, notebooks, protocols, frozen experiment records, model manifests, analysis and validation summaries, verification records and the eight example GeoTIFF sets (identical to the GitHub tree) |
 | `OASM10_models_reference.zip` | Product reference models for inference: the five outer-fold weights (model.pt) and training-only preprocessing transforms (preprocessor.joblib) of models/5cm/ma_seed42, models/20cm/ma_seed42 and models/50cm/ma_floor10_seed42 |
 | `OASM10_models_training_extras.zip` | Weights and transforms needed only to reproduce training: the nested upstream surface fits (models/upstream_nested) that generate the deep-training cascade inputs, and the 50 cm selected-duration anchor fit (models/50cm/ma_seed42) used by the companion comparisons |
 

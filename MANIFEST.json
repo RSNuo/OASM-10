@@ -8,23 +8,13 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 112,
-      "sha256": "c26aed8e95b5682d28ab15deff1dfb866e828f97df54f346067cedbd779c8631"
+      "bytes": 114,
+      "sha256": "f6fa0cc6dbdcedf078bdd24c46e8e9aeddb7d0c0f4525f0823aeb5c65583c701"
     },
     {
       "path": ".gitignore",
       "bytes": 564,
       "sha256": "f77f9616b44531b0a5cea709a5d9c94fdaa2b7f1d37fc9babc322ceaeb946e7a"
-    },
-    {
-      "path": "README.md",
-      "bytes": 5624,
-      "sha256": "2c9eb6d4f855b35446c50a6e31e806d1ddf870f298f406704ee63603d7529e8e"
-    },
-    {
-      "path": "ZENODO_CONTENTS.md",
-      "bytes": 3423,
-      "sha256": "0a0b37f4ecd3cf042b905d90940b90f8ec3d291251532381cc08d8572b855728"
     },
     {
       "path": "analysis/20cm_concat_seed42_oof_sites.csv",
@@ -602,21 +592,6 @@
       "sha256": "a1f6a1c3719a72a6d0557fd2b825d3a24adaaa4b5c28789ba1e9eadd8dd0069e"
     },
     {
-      "path": "audit_zero_reference.py",
-      "bytes": 2038,
-      "sha256": "70948dc7c17b0b14df989efd02413c5dec2313764fec0997ee2f06f63d21e0ab"
-    },
-    {
-      "path": "benchmark_cost.py",
-      "bytes": 6209,
-      "sha256": "8709a51a382208cbed4a9cbfd7e3ff96fdfc18fbd530d3b4f11b12cf2d49e13d"
-    },
-    {
-      "path": "compare_products.py",
-      "bytes": 6155,
-      "sha256": "c9431a29411e188fc4905b3410e4a8b4fc89ae8b88733890873623e3d8cd5469"
-    },
-    {
       "path": "data/ancillary/Beck_KG_V1_present_0p0083.tif",
       "bytes": 23094320,
       "sha256": "a343fdfdb4c4a427c774bedd75ae4f2a6420c3f465de7d51892e8712dfaa2d27"
@@ -670,16 +645,6 @@
       "path": "data/station_aliases.csv",
       "bytes": 16569,
       "sha256": "dc19348724f561c21516508f5d755f499c4f378409af3901a4dc6eeee0aa5042"
-    },
-    {
-      "path": "depth50_input_factorial/MODEL_INDEX.csv",
-      "bytes": 22575,
-      "sha256": "25f14d9c5ed0346eb9dc10c1f65290357bcb974359a01c5d5d60c824f4183582"
-    },
-    {
-      "path": "depth50_input_factorial/README.md",
-      "bytes": 3142,
-      "sha256": "23980bb5fdc6b2fe025873ffc2f658399c0c5b7f9bb1c9f9e31009381b72a463"
     },
     {
       "path": "depth50_input_factorial/analysis_complete.json",
@@ -760,6 +725,11 @@
       "path": "depth50_input_factorial/metric_code_check.json",
       "bytes": 189,
       "sha256": "c69cdaf383041b6017ed7dac387fec44cee826d687eaea285ae6d3911cfc0856"
+    },
+    {
+      "path": "depth50_input_factorial/MODEL_INDEX.csv",
+      "bytes": 22575,
+      "sha256": "25f14d9c5ed0346eb9dc10c1f65290357bcb974359a01c5d5d60c824f4183582"
     },
     {
       "path": "depth50_input_factorial/models/A_seed42/outer0/manifest.json",
@@ -1147,6 +1117,11 @@
       "sha256": "173ee2e76eb5bf099d77d2e144e1fad4c98031b25c21a2f6fe18fc9ee074eed4"
     },
     {
+      "path": "depth50_input_factorial/README.md",
+      "bytes": 3142,
+      "sha256": "23980bb5fdc6b2fe025873ffc2f658399c0c5b7f9bb1c9f9e31009381b72a463"
+    },
+    {
       "path": "depth50_input_factorial/results.json",
       "bytes": 111359,
       "sha256": "4c17aa181d35a9926a0a8b13945c47ae37d00ad7d30b59e175332afe7e15af4b"
@@ -1225,106 +1200,6 @@
       "path": "depth50_input_factorial/workers.json",
       "bytes": 202,
       "sha256": "3f7a98de018a0d12a1fbe52bf6716fc73a2a47c5d982852c2365f191996b3141"
-    },
-    {
-      "path": "draw_diagrams.py",
-      "bytes": 7520,
-      "sha256": "9584d031fdbb43a3d7163ae72ff4e995e54d2d029e02eb9724a2e6d2a63e836d"
-    },
-    {
-      "path": "extract_era5_benchmark.py",
-      "bytes": 3735,
-      "sha256": "f8ad910c8f25e93cfa540863175d0aa084d8c7e86a899317b679b245372375c9"
-    },
-    {
-      "path": "extract_maps_and_check.py",
-      "bytes": 5596,
-      "sha256": "35a4e9908155cc6783a96f7687975c4ed606e29d9451a9f133dac95b2af3819c"
-    },
-    {
-      "path": "figures/isprs_fig1_isolation.png",
-      "bytes": 204836,
-      "sha256": "d78f7fa2901f86cebfd7a3eb35c97a12b31b79b2853c67208bf3f75c66230040"
-    },
-    {
-      "path": "figures/isprs_fig2_architecture.png",
-      "bytes": 253846,
-      "sha256": "b8826a30698ef62071699ee3ddb20a5558d981de2c6cff16bc61a4782ad2adb5"
-    },
-    {
-      "path": "figures/isprs_fig3_paired.png",
-      "bytes": 74083,
-      "sha256": "458737b38599ec510b1c6be31bf06413d042e9f84c369da88c508292ae4af6be"
-    },
-    {
-      "path": "figures/isprs_fig4_error_structure.png",
-      "bytes": 265566,
-      "sha256": "65d41ce3968400f9217caf157ee47880be1026310b5c0368022e6d111de71c14"
-    },
-    {
-      "path": "figures/scidata_fig1_sites.png",
-      "bytes": 297598,
-      "sha256": "dd2d028b1907a415bf9c21c92e4bdfc44faf6a39b29112e81a668cc72dff4724"
-    },
-    {
-      "path": "figures/scidata_fig2_product_pipeline.png",
-      "bytes": 252985,
-      "sha256": "6497d491f9e208ca8370ab08a1fee2e30854ac0d1dab04e860c23c16430d0433"
-    },
-    {
-      "path": "figures/scidata_fig3_regions1.png",
-      "bytes": 3597786,
-      "sha256": "616d50564866d8f6dd53559ba308162901f30fca65241910f8a4f2961b75d7b6"
-    },
-    {
-      "path": "figures/scidata_fig3_regions2.png",
-      "bytes": 3588812,
-      "sha256": "81361cdd5c7746fe90d2156a9a71b70456b201e5b75d66d5067e305c6d348c62"
-    },
-    {
-      "path": "figures/scidata_fig4_20cm.png",
-      "bytes": 85561,
-      "sha256": "171f00b52ab0a2160fd3a0fba592940936de6f30f651e5fa19cdcc6e6d135cf5"
-    },
-    {
-      "path": "figures/scidata_fig4_50cm.png",
-      "bytes": 84624,
-      "sha256": "72d4254d063c2d6582e673f26c2db5b02cb05bf6b9487fbc5199f91a4dfc0721"
-    },
-    {
-      "path": "figures/scidata_fig4_5cm.png",
-      "bytes": 86654,
-      "sha256": "0c0b89a19cdebfd6abcd34b4053c5a90651022f5ed37bab0f7c8dcb8b5bf8a0e"
-    },
-    {
-      "path": "figures/scidata_fig5_site_quality.png",
-      "bytes": 661835,
-      "sha256": "f91526a65f24ec17fee8b52344d9e1311ba9b3cefbddd62f9d996c13705979b2"
-    },
-    {
-      "path": "figures/scidata_fig6_common_quality.png",
-      "bytes": 105055,
-      "sha256": "df8017620c3ab7834beed7d25b5cb1c0b16bfe2afbba690ceeffad4f08e2834b"
-    },
-    {
-      "path": "figures/scidata_fig6_temporal.png",
-      "bytes": 165798,
-      "sha256": "eb5e71c833847f77789b9e6705c850a997114d17a0f93f1b26139a2936557855"
-    },
-    {
-      "path": "figures/scidata_supp_fig1_temporal.png",
-      "bytes": 189581,
-      "sha256": "7346af01acb4db088768b8b8bad839561ddab3b0aa118673a84e454609858ced"
-    },
-    {
-      "path": "freeze_protocol.py",
-      "bytes": 2125,
-      "sha256": "508270ab761efaee5839aa4c1d5e47c382dc8feb38de14a4cbee21d2b119a12a"
-    },
-    {
-      "path": "make_figures.py",
-      "bytes": 12954,
-      "sha256": "94ca983a9424c21bacd0eafeb2154efb9198bac5214f27b5f67f5f9e85d93c8f"
     },
     {
       "path": "models/20cm/concat_seed42/metrics.json",
@@ -3012,6 +2887,31 @@
       "sha256": "ef69bd3ee0549b3873cf4406e410994035d99cf74ab940ac453cce13ed6813dd"
     },
     {
+      "path": "notebooks/prediction_5cm.ipynb",
+      "bytes": 3779,
+      "sha256": "9046102bea40d734bf5394a97b2c94b5d7fc3c6c00be3dcde84ebf50a7df049b"
+    },
+    {
+      "path": "notebooks/prediction_multidepth.ipynb",
+      "bytes": 3787,
+      "sha256": "1b1167b95368583d30f88b906da16f8320cd1c3fdc1505116250ee5db72418a2"
+    },
+    {
+      "path": "notebooks/training_20cm.ipynb",
+      "bytes": 2288,
+      "sha256": "e55bef2aac85ae732d7e91ed7f36dab5ef900698188d073aa499dd3590db7c89"
+    },
+    {
+      "path": "notebooks/training_50cm.ipynb",
+      "bytes": 2288,
+      "sha256": "3b10cb2ec5d460f6d76288d47a9e6ffe8eed7b22edf10f17553f29c3558b7fa5"
+    },
+    {
+      "path": "notebooks/training_5cm.ipynb",
+      "bytes": 2131,
+      "sha256": "78b44efeb661d7fd92241916d2d1c7c787f29ae3fbb2792f5d5465586d02ec16"
+    },
+    {
       "path": "oasm/__init__.py",
       "bytes": 71,
       "sha256": "dc26668ca7e5ad3414a31454fc13db064c0a8d2e2f8958305dbde5684783f840"
@@ -3047,24 +2947,9 @@
       "sha256": "c71fc665d95bcce3b1009e79af3ef5d494f65f975a66971157a4fd0990ea9fe7"
     },
     {
-      "path": "plot_regions.py",
-      "bytes": 5523,
-      "sha256": "f06e01199841db0c35220246075ed8e6732bd4c3672adb69c4b8a5d32ca62049"
-    },
-    {
-      "path": "prediction_5cm.ipynb",
-      "bytes": 3779,
-      "sha256": "9046102bea40d734bf5394a97b2c94b5d7fc3c6c00be3dcde84ebf50a7df049b"
-    },
-    {
-      "path": "prediction_multidepth.ipynb",
-      "bytes": 3787,
-      "sha256": "1b1167b95368583d30f88b906da16f8320cd1c3fdc1505116250ee5db72418a2"
-    },
-    {
-      "path": "prepare_data.py",
-      "bytes": 11804,
-      "sha256": "91d088f2fe862b2f382bb53065759b9fd805764345554a291427f2166b9ff9b8"
+      "path": "product/example_geotiffs/Australia/manifest.json",
+      "bytes": 5291,
+      "sha256": "53f044983476bea68ceeadf3c825deb3fd9685d95a603c6a7a5f05061c945924"
     },
     {
       "path": "product/example_geotiffs/Australia/OASM10_20cm_20241219.tif",
@@ -3082,199 +2967,19 @@
       "sha256": "7b965113a6ce069e10e0bf5dcc7aba2e675d2222ade03f9af35204af916685de"
     },
     {
-      "path": "product/example_geotiffs/Australia/S2_true_color_reflectance.tif",
-      "bytes": 1204194,
-      "sha256": "ac9b326bb1d81c270546dc70ec58707d1a46df770390012e7a96b1a82e7add33"
-    },
-    {
-      "path": "product/example_geotiffs/Australia/manifest.json",
-      "bytes": 5291,
-      "sha256": "53f044983476bea68ceeadf3c825deb3fd9685d95a603c6a7a5f05061c945924"
-    },
-    {
       "path": "product/example_geotiffs/Australia/quality_and_predictions.parquet",
       "bytes": 2696801,
       "sha256": "5949367cf2f55c4c07adfde69a34529bccbf5e29c888981a078669c1fae034eb"
     },
     {
-      "path": "product/example_geotiffs/China/OASM10_20cm_20241027.tif",
-      "bytes": 379410,
-      "sha256": "386ad843d95aad13f63137f5661cff1d774c7155ed18b0d7b420025646cbd5f5"
+      "path": "product/example_geotiffs/Australia/S2_true_color_reflectance.tif",
+      "bytes": 1204194,
+      "sha256": "ac9b326bb1d81c270546dc70ec58707d1a46df770390012e7a96b1a82e7add33"
     },
     {
-      "path": "product/example_geotiffs/China/OASM10_50cm_20241027.tif",
-      "bytes": 385836,
-      "sha256": "2222446f565b5fe9addf92aff3e89cbd79f423c8b9f0f978fe90a9c548bc9cc4"
-    },
-    {
-      "path": "product/example_geotiffs/China/OASM10_5cm_20241027.tif",
-      "bytes": 387080,
-      "sha256": "cd1e65e333491bcabe1a762d845de4ef84e5292eae5e49ece1244eea997b0479"
-    },
-    {
-      "path": "product/example_geotiffs/China/S2_true_color_reflectance.tif",
-      "bytes": 1178796,
-      "sha256": "dbf93bb56d63aff1ab096ce76e964641a1992b45c6b69a9a03625bfaa15101af"
-    },
-    {
-      "path": "product/example_geotiffs/China/manifest.json",
-      "bytes": 4307,
-      "sha256": "7bfa154985fcf3f3027023eaae4c1350985333619fd981d2dd9cc4d7427c48c9"
-    },
-    {
-      "path": "product/example_geotiffs/China/quality_and_predictions.parquet",
-      "bytes": 2682736,
-      "sha256": "e5d8124c6ea2c9ba70a815637b6a4a4b198e5bd5eba48bd563ae743a91fa6272"
-    },
-    {
-      "path": "product/example_geotiffs/EastEuropeanPlain/OASM10_20cm_20240814.tif",
-      "bytes": 386160,
-      "sha256": "894ceb9b262b2335fe24b2df2fa48b6b1daf0ea0d0ed3c0a9f8a482d1cfbf04f"
-    },
-    {
-      "path": "product/example_geotiffs/EastEuropeanPlain/OASM10_50cm_20240814.tif",
-      "bytes": 382476,
-      "sha256": "37bb43e41942459d2260a7b0b2dd3a5a4b1eb0ece4b25c04e0b425e7b5f6023e"
-    },
-    {
-      "path": "product/example_geotiffs/EastEuropeanPlain/OASM10_5cm_20240814.tif",
-      "bytes": 388298,
-      "sha256": "1eca51cf12b51eceaed0b3b9bc041d0774555aa38a92aa5bbbfe39ea3182dd81"
-    },
-    {
-      "path": "product/example_geotiffs/EastEuropeanPlain/S2_true_color_reflectance.tif",
-      "bytes": 1196178,
-      "sha256": "3c0b7577861b5d634450bacac7cd2fa2ae674e23f632fd2da15926ed0a8f8de8"
-    },
-    {
-      "path": "product/example_geotiffs/EastEuropeanPlain/manifest.json",
-      "bytes": 4684,
-      "sha256": "6c5d20538deaea6eccb35403eb89c7d4068361a535aca675d4c60b50d3cc651a"
-    },
-    {
-      "path": "product/example_geotiffs/EastEuropeanPlain/quality_and_predictions.parquet",
-      "bytes": 2715284,
-      "sha256": "ad966843582eee1e9f7352a9e0ba02e62aabbf32284ab948b5c3f957d90c00fe"
-    },
-    {
-      "path": "product/example_geotiffs/India/OASM10_20cm_20241103.tif",
-      "bytes": 374044,
-      "sha256": "de7069a19d693341ffde3788f6e31cbc81fd064a54da0c070f2dad2dbcbbd56c"
-    },
-    {
-      "path": "product/example_geotiffs/India/OASM10_50cm_20241103.tif",
-      "bytes": 374368,
-      "sha256": "f9e7bcb15fdb5c6fa971250860003a9c1dc106d5da066215f3906b925497dad8"
-    },
-    {
-      "path": "product/example_geotiffs/India/OASM10_5cm_20241103.tif",
-      "bytes": 382482,
-      "sha256": "ac5101e6109a9d6b0203b2875dde8d58f6efa580a8c578b15c33dab4833681de"
-    },
-    {
-      "path": "product/example_geotiffs/India/S2_true_color_reflectance.tif",
-      "bytes": 1186626,
-      "sha256": "1e5985a73e1cdf6daa0ec4d6ec187319ef8624ccbb1e935ad7e01f273065ba08"
-    },
-    {
-      "path": "product/example_geotiffs/India/manifest.json",
-      "bytes": 4525,
-      "sha256": "e593f1d41ab7c01f7d90dc8980a4c6adc1a844c4ba82270bcb2e6870b4d3dd82"
-    },
-    {
-      "path": "product/example_geotiffs/India/quality_and_predictions.parquet",
-      "bytes": 2644498,
-      "sha256": "c56904f4a380e007818b3dfc50a6797e4540cdab5c8dbf84c64518723274c967"
-    },
-    {
-      "path": "product/example_geotiffs/Pampas/OASM10_20cm_20240701.tif",
-      "bytes": 381580,
-      "sha256": "7d58fb41d89f1a4b027cb054ae4e80e7cd5eae779515fc168643857f8eb7f5d7"
-    },
-    {
-      "path": "product/example_geotiffs/Pampas/OASM10_50cm_20240701.tif",
-      "bytes": 377696,
-      "sha256": "98b0d6b0e89dfcef7fc6f203279752f760ac4622288c0151e0c41b510d58f6be"
-    },
-    {
-      "path": "product/example_geotiffs/Pampas/OASM10_5cm_20240701.tif",
-      "bytes": 384518,
-      "sha256": "c78eb4cead79d197ecad5db18003e80f8a76c2708a695af57c27a20dc3e81a0a"
-    },
-    {
-      "path": "product/example_geotiffs/Pampas/S2_true_color_reflectance.tif",
-      "bytes": 1190030,
-      "sha256": "d5b34807ff982ed5d2c42e6876f87dbc1159794da8cd7874ccdfdab64009dd42"
-    },
-    {
-      "path": "product/example_geotiffs/Pampas/manifest.json",
-      "bytes": 4477,
-      "sha256": "a559147819ca1bb07400f8e00edb523e758746806b8fee26612d73df00030a16"
-    },
-    {
-      "path": "product/example_geotiffs/Pampas/quality_and_predictions.parquet",
-      "bytes": 2701072,
-      "sha256": "cb1fab9247c36352bfd5c5ec1effad05f6ad8b7ca6622ec74a22e91f030c62d2"
-    },
-    {
-      "path": "product/example_geotiffs/SouthAfrica/OASM10_20cm_20250130.tif",
-      "bytes": 375324,
-      "sha256": "0797eb71c1c600eb6333e03fe292caf68218332362f74abfa4f23639e0f898d3"
-    },
-    {
-      "path": "product/example_geotiffs/SouthAfrica/OASM10_50cm_20250130.tif",
-      "bytes": 378458,
-      "sha256": "bbc73ecbc2c7a1a1c1dfe0861c6c400b521faa9b3b0f6354f4a02c0aaf4ae765"
-    },
-    {
-      "path": "product/example_geotiffs/SouthAfrica/OASM10_5cm_20250130.tif",
-      "bytes": 366918,
-      "sha256": "44fca5a05f705bb1929c6118452070f10c0e425012246f21552961eae440e465"
-    },
-    {
-      "path": "product/example_geotiffs/SouthAfrica/S2_true_color_reflectance.tif",
-      "bytes": 1207936,
-      "sha256": "5296dd9332e4dd4fae0194fed66ee50acddcfc10632f53b1c005510b37301cd5"
-    },
-    {
-      "path": "product/example_geotiffs/SouthAfrica/manifest.json",
-      "bytes": 4415,
-      "sha256": "9957f3880d00223334e59f9e3e0f0e537dc48031cd5f3a604864535788f6feef"
-    },
-    {
-      "path": "product/example_geotiffs/SouthAfrica/quality_and_predictions.parquet",
-      "bytes": 2600772,
-      "sha256": "ee3a6f7653402b36c477661c2fa069db481645d1ba9127e5d10260e0814d83da"
-    },
-    {
-      "path": "product/example_geotiffs/US_drought/OASM10_20cm_20231018.tif",
-      "bytes": 378802,
-      "sha256": "b3ce76c10b259036800435946373df4085682867d9cde3a91dff5abe710bdf0c"
-    },
-    {
-      "path": "product/example_geotiffs/US_drought/OASM10_50cm_20231018.tif",
-      "bytes": 373430,
-      "sha256": "97bf9d02b54d5554aae7376b58984cfb111826fa93c2694054a771fa5f9cf2b7"
-    },
-    {
-      "path": "product/example_geotiffs/US_drought/OASM10_5cm_20231018.tif",
-      "bytes": 369174,
-      "sha256": "3fddab1b248e4a523256c5ef10ca4f6571dcfad1b7b30def1e34c968442a88fe"
-    },
-    {
-      "path": "product/example_geotiffs/US_drought/S2_true_color_reflectance.tif",
-      "bytes": 1197270,
-      "sha256": "49879a48adc716a9174d9545a2356636600807cf3ed6052db31ed31dbbe02935"
-    },
-    {
-      "path": "product/example_geotiffs/US_drought/manifest.json",
-      "bytes": 4364,
-      "sha256": "f4ab3129a911f03ae4a0175fe9a85bc1c405250e15ca65bd112d4731f75f5b8c"
-    },
-    {
-      "path": "product/example_geotiffs/US_drought/quality_and_predictions.parquet",
-      "bytes": 2657459,
-      "sha256": "fef9ce507e150bb02dcfa88ca2aeb2d905d5f9eabce55cb6d34c21e631dd0a5f"
+      "path": "product/example_geotiffs/centralvalley/manifest.json",
+      "bytes": 4736,
+      "sha256": "a30cc25b82faf8b16881bd30526a5148d17a0454bf597e63fe933e63c2bad440"
     },
     {
       "path": "product/example_geotiffs/centralvalley/OASM10_20cm_20230717.tif",
@@ -3292,19 +2997,104 @@
       "sha256": "b422f64c2809e84b6093c81f14b11fab54f2a7e3dc2b21008150e8d131723c95"
     },
     {
+      "path": "product/example_geotiffs/centralvalley/quality_and_predictions.parquet",
+      "bytes": 2690742,
+      "sha256": "cec93647ccd86bf6227bd815da7ae3a096d21473078292c3fad2dc9f6c6e17f7"
+    },
+    {
       "path": "product/example_geotiffs/centralvalley/S2_true_color_reflectance.tif",
       "bytes": 1184956,
       "sha256": "21f6d156874f830ea35a2bc82b4517ba9d698a1cd9249770ecb333bb59237a80"
     },
     {
-      "path": "product/example_geotiffs/centralvalley/manifest.json",
-      "bytes": 4736,
-      "sha256": "a30cc25b82faf8b16881bd30526a5148d17a0454bf597e63fe933e63c2bad440"
+      "path": "product/example_geotiffs/China/manifest.json",
+      "bytes": 4307,
+      "sha256": "7bfa154985fcf3f3027023eaae4c1350985333619fd981d2dd9cc4d7427c48c9"
     },
     {
-      "path": "product/example_geotiffs/centralvalley/quality_and_predictions.parquet",
-      "bytes": 2690742,
-      "sha256": "cec93647ccd86bf6227bd815da7ae3a096d21473078292c3fad2dc9f6c6e17f7"
+      "path": "product/example_geotiffs/China/OASM10_20cm_20241027.tif",
+      "bytes": 379410,
+      "sha256": "386ad843d95aad13f63137f5661cff1d774c7155ed18b0d7b420025646cbd5f5"
+    },
+    {
+      "path": "product/example_geotiffs/China/OASM10_50cm_20241027.tif",
+      "bytes": 385836,
+      "sha256": "2222446f565b5fe9addf92aff3e89cbd79f423c8b9f0f978fe90a9c548bc9cc4"
+    },
+    {
+      "path": "product/example_geotiffs/China/OASM10_5cm_20241027.tif",
+      "bytes": 387080,
+      "sha256": "cd1e65e333491bcabe1a762d845de4ef84e5292eae5e49ece1244eea997b0479"
+    },
+    {
+      "path": "product/example_geotiffs/China/quality_and_predictions.parquet",
+      "bytes": 2682736,
+      "sha256": "e5d8124c6ea2c9ba70a815637b6a4a4b198e5bd5eba48bd563ae743a91fa6272"
+    },
+    {
+      "path": "product/example_geotiffs/China/S2_true_color_reflectance.tif",
+      "bytes": 1178796,
+      "sha256": "dbf93bb56d63aff1ab096ce76e964641a1992b45c6b69a9a03625bfaa15101af"
+    },
+    {
+      "path": "product/example_geotiffs/EastEuropeanPlain/manifest.json",
+      "bytes": 4684,
+      "sha256": "6c5d20538deaea6eccb35403eb89c7d4068361a535aca675d4c60b50d3cc651a"
+    },
+    {
+      "path": "product/example_geotiffs/EastEuropeanPlain/OASM10_20cm_20240814.tif",
+      "bytes": 386160,
+      "sha256": "894ceb9b262b2335fe24b2df2fa48b6b1daf0ea0d0ed3c0a9f8a482d1cfbf04f"
+    },
+    {
+      "path": "product/example_geotiffs/EastEuropeanPlain/OASM10_50cm_20240814.tif",
+      "bytes": 382476,
+      "sha256": "37bb43e41942459d2260a7b0b2dd3a5a4b1eb0ece4b25c04e0b425e7b5f6023e"
+    },
+    {
+      "path": "product/example_geotiffs/EastEuropeanPlain/OASM10_5cm_20240814.tif",
+      "bytes": 388298,
+      "sha256": "1eca51cf12b51eceaed0b3b9bc041d0774555aa38a92aa5bbbfe39ea3182dd81"
+    },
+    {
+      "path": "product/example_geotiffs/EastEuropeanPlain/quality_and_predictions.parquet",
+      "bytes": 2715284,
+      "sha256": "ad966843582eee1e9f7352a9e0ba02e62aabbf32284ab948b5c3f957d90c00fe"
+    },
+    {
+      "path": "product/example_geotiffs/EastEuropeanPlain/S2_true_color_reflectance.tif",
+      "bytes": 1196178,
+      "sha256": "3c0b7577861b5d634450bacac7cd2fa2ae674e23f632fd2da15926ed0a8f8de8"
+    },
+    {
+      "path": "product/example_geotiffs/India/manifest.json",
+      "bytes": 4525,
+      "sha256": "e593f1d41ab7c01f7d90dc8980a4c6adc1a844c4ba82270bcb2e6870b4d3dd82"
+    },
+    {
+      "path": "product/example_geotiffs/India/OASM10_20cm_20241103.tif",
+      "bytes": 374044,
+      "sha256": "de7069a19d693341ffde3788f6e31cbc81fd064a54da0c070f2dad2dbcbbd56c"
+    },
+    {
+      "path": "product/example_geotiffs/India/OASM10_50cm_20241103.tif",
+      "bytes": 374368,
+      "sha256": "f9e7bcb15fdb5c6fa971250860003a9c1dc106d5da066215f3906b925497dad8"
+    },
+    {
+      "path": "product/example_geotiffs/India/OASM10_5cm_20241103.tif",
+      "bytes": 382482,
+      "sha256": "ac5101e6109a9d6b0203b2875dde8d58f6efa580a8c578b15c33dab4833681de"
+    },
+    {
+      "path": "product/example_geotiffs/India/quality_and_predictions.parquet",
+      "bytes": 2644498,
+      "sha256": "c56904f4a380e007818b3dfc50a6797e4540cdab5c8dbf84c64518723274c967"
+    },
+    {
+      "path": "product/example_geotiffs/India/S2_true_color_reflectance.tif",
+      "bytes": 1186626,
+      "sha256": "1e5985a73e1cdf6daa0ec4d6ec187319ef8624ccbb1e935ad7e01f273065ba08"
     },
     {
       "path": "product/example_geotiffs/manifest.json",
@@ -3312,9 +3102,99 @@
       "sha256": "605b1eca2b2626b675782a822e9332aa8fe17cbacf4ce4822337e342ff24588c"
     },
     {
-      "path": "quality_summary.py",
-      "bytes": 5110,
-      "sha256": "050fbc351f01eae9c5d7c03c022b329cc2d82702bece5b0b01e3e363566742cf"
+      "path": "product/example_geotiffs/Pampas/manifest.json",
+      "bytes": 4477,
+      "sha256": "a559147819ca1bb07400f8e00edb523e758746806b8fee26612d73df00030a16"
+    },
+    {
+      "path": "product/example_geotiffs/Pampas/OASM10_20cm_20240701.tif",
+      "bytes": 381580,
+      "sha256": "7d58fb41d89f1a4b027cb054ae4e80e7cd5eae779515fc168643857f8eb7f5d7"
+    },
+    {
+      "path": "product/example_geotiffs/Pampas/OASM10_50cm_20240701.tif",
+      "bytes": 377696,
+      "sha256": "98b0d6b0e89dfcef7fc6f203279752f760ac4622288c0151e0c41b510d58f6be"
+    },
+    {
+      "path": "product/example_geotiffs/Pampas/OASM10_5cm_20240701.tif",
+      "bytes": 384518,
+      "sha256": "c78eb4cead79d197ecad5db18003e80f8a76c2708a695af57c27a20dc3e81a0a"
+    },
+    {
+      "path": "product/example_geotiffs/Pampas/quality_and_predictions.parquet",
+      "bytes": 2701072,
+      "sha256": "cb1fab9247c36352bfd5c5ec1effad05f6ad8b7ca6622ec74a22e91f030c62d2"
+    },
+    {
+      "path": "product/example_geotiffs/Pampas/S2_true_color_reflectance.tif",
+      "bytes": 1190030,
+      "sha256": "d5b34807ff982ed5d2c42e6876f87dbc1159794da8cd7874ccdfdab64009dd42"
+    },
+    {
+      "path": "product/example_geotiffs/SouthAfrica/manifest.json",
+      "bytes": 4415,
+      "sha256": "9957f3880d00223334e59f9e3e0f0e537dc48031cd5f3a604864535788f6feef"
+    },
+    {
+      "path": "product/example_geotiffs/SouthAfrica/OASM10_20cm_20250130.tif",
+      "bytes": 375324,
+      "sha256": "0797eb71c1c600eb6333e03fe292caf68218332362f74abfa4f23639e0f898d3"
+    },
+    {
+      "path": "product/example_geotiffs/SouthAfrica/OASM10_50cm_20250130.tif",
+      "bytes": 378458,
+      "sha256": "bbc73ecbc2c7a1a1c1dfe0861c6c400b521faa9b3b0f6354f4a02c0aaf4ae765"
+    },
+    {
+      "path": "product/example_geotiffs/SouthAfrica/OASM10_5cm_20250130.tif",
+      "bytes": 366918,
+      "sha256": "44fca5a05f705bb1929c6118452070f10c0e425012246f21552961eae440e465"
+    },
+    {
+      "path": "product/example_geotiffs/SouthAfrica/quality_and_predictions.parquet",
+      "bytes": 2600772,
+      "sha256": "ee3a6f7653402b36c477661c2fa069db481645d1ba9127e5d10260e0814d83da"
+    },
+    {
+      "path": "product/example_geotiffs/SouthAfrica/S2_true_color_reflectance.tif",
+      "bytes": 1207936,
+      "sha256": "5296dd9332e4dd4fae0194fed66ee50acddcfc10632f53b1c005510b37301cd5"
+    },
+    {
+      "path": "product/example_geotiffs/US_drought/manifest.json",
+      "bytes": 4364,
+      "sha256": "f4ab3129a911f03ae4a0175fe9a85bc1c405250e15ca65bd112d4731f75f5b8c"
+    },
+    {
+      "path": "product/example_geotiffs/US_drought/OASM10_20cm_20231018.tif",
+      "bytes": 378802,
+      "sha256": "b3ce76c10b259036800435946373df4085682867d9cde3a91dff5abe710bdf0c"
+    },
+    {
+      "path": "product/example_geotiffs/US_drought/OASM10_50cm_20231018.tif",
+      "bytes": 373430,
+      "sha256": "97bf9d02b54d5554aae7376b58984cfb111826fa93c2694054a771fa5f9cf2b7"
+    },
+    {
+      "path": "product/example_geotiffs/US_drought/OASM10_5cm_20231018.tif",
+      "bytes": 369174,
+      "sha256": "3fddab1b248e4a523256c5ef10ca4f6571dcfad1b7b30def1e34c968442a88fe"
+    },
+    {
+      "path": "product/example_geotiffs/US_drought/quality_and_predictions.parquet",
+      "bytes": 2657459,
+      "sha256": "fef9ce507e150bb02dcfa88ca2aeb2d905d5f9eabce55cb6d34c21e631dd0a5f"
+    },
+    {
+      "path": "product/example_geotiffs/US_drought/S2_true_color_reflectance.tif",
+      "bytes": 1197270,
+      "sha256": "49879a48adc716a9174d9545a2356636600807cf3ed6052db31ed31dbbe02935"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5500,
+      "sha256": "1269063a85b6cab5000fea19895c4af47f26a90eb539777e5e5c085d1e9a6aef"
     },
     {
       "path": "reference_50cm_floor10/adopt_reference.py",
@@ -3347,34 +3227,9 @@
       "sha256": "d5a82aa73349d00d4cdb9e797fb04c68d3935aab2ff24e014936cad3a35d816d"
     },
     {
-      "path": "run_spatial.py",
-      "bytes": 2688,
-      "sha256": "ff2c0e2115e124482df39ca4d018df098afd207e2a3baaf7e48298ea2b72cf13"
-    },
-    {
       "path": "runtime.json",
       "bytes": 462,
       "sha256": "feb608cb6a46dfac86256fbd64c4d121be0b6fe8234cf159fd68a129794f6d5c"
-    },
-    {
-      "path": "training_20cm.ipynb",
-      "bytes": 2288,
-      "sha256": "e55bef2aac85ae732d7e91ed7f36dab5ef900698188d073aa499dd3590db7c89"
-    },
-    {
-      "path": "training_50cm.ipynb",
-      "bytes": 2288,
-      "sha256": "3b10cb2ec5d460f6d76288d47a9e6ffe8eed7b22edf10f17553f29c3558b7fa5"
-    },
-    {
-      "path": "training_5cm.ipynb",
-      "bytes": 2131,
-      "sha256": "78b44efeb661d7fd92241916d2d1c7c787f29ae3fbb2792f5d5465586d02ec16"
-    },
-    {
-      "path": "training_input_integrity.json",
-      "bytes": 1532,
-      "sha256": "49f6443b699272f918bf9ea7c85ea7610f75ac8eb0e99e0a45e921f3a332ce32"
     },
     {
       "path": "training_strategy_review/20cm_baseline_seed42_oof_sites.csv",
@@ -4182,11 +4037,6 @@
       "sha256": "87d1c84c8e5f0e04ec023f7721e044def58d51db2ab5681bb860f36b436125a0"
     },
     {
-      "path": "validate_map_product.py",
-      "bytes": 6517,
-      "sha256": "d04c4510e6081671755304b763c3035e9f4117eddbbc84c0c98d309c6fb2830c"
-    },
-    {
       "path": "validation/era5_depth_test_native_grid.parquet",
       "bytes": 5424756,
       "sha256": "7a8fa9003df34cb246181768561131de5b872ad241350f7d6c71c16fac06f32a"
@@ -4282,34 +4132,49 @@
       "sha256": "03c7851ecde610efc965be21ca63758be3d00c6161828c5fc3d362c0e4ad8643"
     },
     {
-      "path": "verification_analysis.json",
+      "path": "verification/freeze_protocol.py",
+      "bytes": 2322,
+      "sha256": "35f78ddc397427a0a881978969e184ae6b1fd7ab2636a2fc21bd4e9d28328bbe"
+    },
+    {
+      "path": "verification/training_input_integrity.json",
+      "bytes": 1532,
+      "sha256": "49f6443b699272f918bf9ea7c85ea7610f75ac8eb0e99e0a45e921f3a332ce32"
+    },
+    {
+      "path": "verification/verification_analysis.json",
       "bytes": 1787,
       "sha256": "2ee11cc5a6ae803864f941fb3daf8b5c4363c26d701ae760e86427dded878177"
     },
     {
-      "path": "verification_final_models.json",
+      "path": "verification/verification_final_models.json",
       "bytes": 11810,
       "sha256": "bd64deed4ae56ee65e80a83bb945fca18e337bdb99111d6f98dfbb4451832bdb"
     },
     {
-      "path": "verification_initial.json",
+      "path": "verification/verification_initial.json",
       "bytes": 233,
       "sha256": "5f14b03653af7b8a54a6a8044d59c11cd80e2742dbecd660750466aa26613bc6"
     },
     {
-      "path": "verify_analysis.py",
-      "bytes": 3076,
-      "sha256": "2099a0c268967eef156c65de07fb80b841a47eb38d4c04f290d0e3b3fb0baa0a"
+      "path": "verification/verify_analysis.py",
+      "bytes": 3324,
+      "sha256": "d66656b9624f114d3eab9901c806b0019c0aa7f3e0469e0ee6a9608f134a83de"
     },
     {
-      "path": "verify_final_models.py",
-      "bytes": 4263,
-      "sha256": "7ca65d19227f49739cf2ba9b9d98674a5691f5129d9a0dd2ea6f39fe6cf93986"
+      "path": "verification/verify_final_models.py",
+      "bytes": 4524,
+      "sha256": "1335e5e37a3dde951fa3f01793eb5a43137caae734971e600f6b52101367190c"
     },
     {
-      "path": "verify_pipeline.py",
-      "bytes": 1982,
-      "sha256": "1213c4c4d14a6716378e0035b13e8ae0a21b2cc60aa12d2b0520360bcdfae82d"
+      "path": "verification/verify_pipeline.py",
+      "bytes": 2213,
+      "sha256": "1fb95c9a28b40aa2f3df78bd50ef5eb0ba0e0222e6fc275aa9d8ab8c2fd5be4b"
+    },
+    {
+      "path": "ZENODO_CONTENTS.md",
+      "bytes": 3436,
+      "sha256": "e5905e86e9a8989cd55250168c1a9dc64d4d2bc88510b512a3920798fcfa4cec"
     }
   ]
 }

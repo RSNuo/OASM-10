@@ -16,18 +16,21 @@ which denotes exactly the code and data released here.
 | Path | Contents |
 |---|---|
 | `oasm/` | Python package: feature definitions, Google Earth Engine extraction, preprocessing, models, training, inference |
-| `training_5cm.ipynb`, `training_20cm.ipynb`, `training_50cm.ipynb` | Depth-explicit training entry points (same package) |
-| `prediction_5cm.ipynb`, `prediction_multidepth.ipynb` | Region/time request, GEE feature extraction and fold-paired prediction |
+| `notebooks/` | `prediction_multidepth.ipynb` and `prediction_5cm.ipynb`: region/time request, GEE feature extraction and fold-paired prediction; `training_5cm.ipynb`, `training_20cm.ipynb`, `training_50cm.ipynb`: depth-explicit training entry points |
 | `run_campaign.py` | Reference fits, nested upstream inputs and all matched comparison fits (`--stage all`) |
-| `analyze_results.py`, `compare_products.py`, `quality_summary.py`, `validate_map_product.py`, `run_spatial.py`, `benchmark_cost.py` | Evaluation, external-product matching, site diagnostics, map-pathway check, spatial-block diagnostic, cost |
+| `analyze_results.py` | Evaluation of the fitted runs (site-grouped statistics, paired bootstrap); also imported by the frozen record scripts |
 | `data/` | Site registry, station aliases, shared split and fold assignments, field dictionary, schema, counts; small ancillary layers |
 | `models/` | `product_reference.json` (which run serves each depth) and every fitted run's manifest and metrics (weights on Zenodo) |
-| `analysis/`, `validation/` | Result JSON files, per-site tables, matched benchmark records and map-pathway checks |
 | `product/example_geotiffs/` | Eight regional examples: three moisture layers, a true-colour reflectance raster, quality table and manifest |
-| `figures/` | Figure files used in the descriptor and the companion methods study |
+| `analysis/`, `validation/` | Result JSON files, per-site tables, matched benchmark records and map-pathway checks |
 | `training_strategy_review/`, `depth50_input_factorial/`, `reference_50cm_floor10/` | Frozen protocols, results and verification of the fitting-policy experiment, the 50 cm input factorial and the 50 cm reference decision |
+| `verification/` | Integrity and self-check records (`training_input_integrity.json`, `verification_*.json`) and the scripts that produced them |
+| `MANIFEST.json`, `ZENODO_CONTENTS.md` | SHA-256 digest of every repository file; what the Zenodo record adds |
 
-Directory paths cited in the data descriptor are relative to this folder.
+Directory paths cited in the data descriptor are relative to this folder. The preprocessing pipeline that built the
+canonical tables from the ISMN and Google Earth Engine archives, the figure scripts and the external-product comparison
+scripts are not part of this repository; the tables and comparison records they produced are included under `data/`,
+`analysis/` and `validation/`.
 
 ## Product reference
 
@@ -41,8 +44,8 @@ training-only transformations and imputation values. Predictions are not clipped
 1. Create the environment from `requirements.txt` (versions in `runtime.json`; PyTorch with CUDA is optional).
 2. Extract the Zenodo archive into this folder (adds `data/tables/`, `data/all_*.parquet`, `data/cascade/`, the precipitation tables under `data/ancillary/` and the fitted weights under `models/`).
 3. Authenticate Google Earth Engine with your own account for map requests.
-4. Open `prediction_multidepth.ipynb`, set the bounds and target time, and run. Outputs are written to `outputs/<date>/` with a quality table and manifest.
-5. To retrain, run the depth-explicit notebooks or `python run_campaign.py --stage all`.
+4. Open `notebooks/prediction_multidepth.ipynb`, set the bounds and target time, and run. Outputs are written to `outputs/<date>/` with a quality table and manifest.
+5. To retrain, run the training notebooks under `notebooks/` or `python run_campaign.py --stage all`.
 
 Inputs are pre-standardization values; rainfall descriptors are stored as ln(1 + P). Do not apply any global scaler.
 Landsat bands are empirical DN x 1e-4 inputs, and the two derived vegetation contrasts are Landsat DN differences, not
@@ -50,19 +53,12 @@ calibrated reflectance indices. `data/data_dictionary.csv` gives units, keys and
 
 ## Evaluation conventions
 
-Physical sites (co-located sensors grouped within 30 m) are the unit of exclusion. Sites in the external holdout are excluded at
-every depth from preprocessing, gradient fitting and epoch selection; the same holdout had been used in earlier exploratory work and
-is disclosed as such. Selection of fold, ensemble, policy and input configurations uses development out-of-fold results only.
+Physical sites (co-located sensors grouped within 30 m) are the unit of exclusion. Sites in the test set are excluded at
+every depth from preprocessing, gradient fitting and epoch selection; the same test sites had been used in earlier exploratory work and
+this is disclosed as such. Selection of fold, ensemble, policy and input configurations uses training-set out-of-fold results only.
 The nominal 10 m grid is a sampling lattice; it is not a validated effective resolution.
-
-## Provenance scripts
-
-`prepare_data.py`, `extract_maps_and_check.py`, `extract_era5_benchmark.py` and `audit_zero_reference.py` rebuild the canonical tables,
-the regional example windows, the ERA5-Land benchmark and one source-quality check from the authors' archives. They read those archives
-from the folders named by the environment variables `OASM10_LEGACY_ARCHIVE` and `OASM10_ISMN_ROOT`; they document how the released
-files were produced and are not needed for inference or retraining.
 
 ## Citation and licence
 
-Companion manuscripts: a Scientific Data descriptor and an ISPRS Journal of Photogrammetry and Remote Sensing methods study
-(Xu, Daccache and Ahmadi, in preparation). Add a licence file before publishing this repository.
+Companion manuscripts: a Scientific Data descriptor and an IEEE Transactions on Geoscience and Remote Sensing methods study
+(Xu, Daccache and Ahmadi, under review). Licence: see `LICENSE`.
