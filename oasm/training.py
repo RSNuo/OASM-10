@@ -91,11 +91,15 @@ def fit_loop(model,data,seed,epochs,max_epochs,monitor=None,patience=PATIENCE):
         if (epoch+1)%20==0:print(f'    epoch {epoch+1}'+(f' internal RMSE={score:.5f}' if monitor is not None else ' refit'),flush=True)
     return selected,trace,best_state
 
-def fit_neural(train,evals,directory,depth,variant,seed,forbidden_sites,max_epochs=EPOCHS):
+def fit_neural(train,evals,directory,depth,variant,seed,forbidden_sites,max_epochs=EPOCHS,min_refit_epochs=0):
+    if max_epochs < 1 or not 0 <= min_refit_epochs <= max_epochs:
+        raise ValueError('Require 0 <= min_refit_epochs <= max_epochs and max_epochs >= 1')
     directory=Path(directory);directory.mkdir(parents=True,exist_ok=True)
     num,cat=feature_names(depth,variant)
     arch=variant if variant in ['concat','ft','no_modality','no_static','static_only'] else 'ma'
     config={'depth':depth,'variant':variant,'architecture':arch,'seed':seed,'model':model_config(depth),'numeric':num,'categorical':cat,'max_epochs':max_epochs,'patience':PATIENCE,'batch_size':BATCH,'epoch_selection':'internal group holdout, then refit all permitted sites'}
+    if min_refit_epochs:
+        config['min_refit_epochs']=min_refit_epochs
     digest=fingerprint(train,evals,config);manifest=directory/'manifest.json'
     expected=['model.pt','preprocessor.joblib']+[f'{name}_predictions.parquet' for name in evals]
     if manifest.exists():
@@ -116,7 +120,8 @@ def fit_neural(train,evals,directory,depth,variant,seed,forbidden_sites,max_epoc
     # Refit the same fixed architecture using all allowed records for the selected epoch count.
     prep=Preprocessor(num,cat).fit(train);assert_excluded(prep,forbidden_sites)
     seed_everything(seed);model=new_model(config,prep)
-    _,refit_trace,_=fit_loop(model,tensors(prep,train,True),seed,selected,max_epochs)
+    refit_epochs=max(selected,min_refit_epochs)
+    _,refit_trace,_=fit_loop(model,tensors(prep,train,True),seed,refit_epochs,max_epochs)
     training_seconds=time.perf_counter()-start
     joblib.dump(prep,directory/'preprocessor.joblib')
     torch.save({'state_dict':{k:v.detach().cpu() for k,v in model.state_dict().items()},'config':config,'cat_dims':prep.cat_dims},directory/'model.pt')
@@ -124,6 +129,7 @@ def fit_neural(train,evals,directory,depth,variant,seed,forbidden_sites,max_epoc
         out=df[['record_id','source_station','physical_site_id','target_time','y']].copy()
         out['prediction']=predict_tensors(model,tensors(prep,df));out.to_parquet(directory/f'{name}_predictions.parquet',index=False)
     meta={**config,'input_sha256':digest,'selected_epochs':selected,'training_seconds':training_seconds,'parameter_count':sum(p.numel() for p in model.parameters()),'gradient_site_ids':sorted(allowed),'early_stopping_site_ids':sorted(set(mondf.physical_site_id)),'selection_gradient_site_ids':sorted(set(fitdf.physical_site_id)),'forbidden_site_ids':sorted(forbidden_sites),'evaluation_site_ids':{n:sorted(set(f.physical_site_id)) for n,f in evals.items()},'selection_trace':trace,'refit_trace':refit_trace,'hardware':{'device':DEVICE,'gpu':torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,'torch':torch.__version__,'float32_matmul_precision':torch.get_float32_matmul_precision()}}
+    meta['refit_epochs']=refit_epochs
     manifest.write_text(json.dumps(meta,indent=2),encoding='utf-8')
     del model;torch.cuda.empty_cache()
     print(f'COMPLETE depth={depth} variant={variant} seed={seed} epochs={selected} elapsed={training_seconds/60:.1f}min {directory}',flush=True)

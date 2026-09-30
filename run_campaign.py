@@ -1,6 +1,6 @@
-"""Resume-safe, nested cross-depth evaluation; all paths are package-relative."""
+"""Train the seed-42 reference product with nested, site-isolated inputs."""
 from pathlib import Path
-import argparse,hashlib,json,sys,time
+import argparse,json,sys
 import numpy as np
 import pandas as pd
 import torch
@@ -8,10 +8,27 @@ from sklearn.model_selection import GroupKFold
 from oasm.features import soil_for_depth
 from oasm.training import fit_neural,fit_tree,predict_frame
 
-REV=Path(__file__).resolve().parent;DATA=REV/'data';MODELS=REV/'models'
+REV=Path(__file__).resolve().parent
+DATA=REV/'data'
+MODELS=REV/'outputs/retrained/models'
+CASCADE=REV/'outputs/retrained/cascade'
 
-def load_data():return {d:pd.read_parquet(DATA/f'all_{d}cm.parquet') for d in [5,20,50]}
-def outer_path(d,v,s,k):return MODELS/f'{d}cm/{v}_seed{s}/outer{k}'
+def configure(data_dir='data',output_dir='outputs/retrained'):
+    """Relative paths resolve from this repository, regardless of working directory."""
+    global DATA,MODELS,CASCADE
+    DATA=(REV/Path(data_dir)).resolve()
+    output=(REV/Path(output_dir)).resolve()
+    MODELS=output/'models';CASCADE=output/'cascade'
+
+def load_data(depths=(5,20,50)):
+    missing=[f'all_{d}cm.parquet' for d in depths if not (DATA/f'all_{d}cm.parquet').is_file()]
+    if missing:
+        raise FileNotFoundError('Missing canonical training tables: '+', '.join(missing)+'. See ZENODO_CONTENTS.md; these tables are not supplied by the current documented archive.')
+    return {d:pd.read_parquet(DATA/f'all_{d}cm.parquet') for d in depths}
+
+def outer_path(d,v,s,k):
+    name='ma_floor10' if d==50 and v=='ma' else v
+    return MODELS/f'{d}cm/{name}_seed{s}/outer{k}'
 
 def fit_surface(frames,variant='ma',seed=42,epochs=150):
     f=frames[5];test=f[f.split=='test'];dev=f[f.split=='development']
@@ -44,7 +61,7 @@ def nested_inputs(frames,epochs=150):
         nested=pd.concat([pd.read_parquet(MODELS/f'upstream_nested/outer{k}/inner{j}/cascade_training_predictions.parquet') for j in range(5)],ignore_index=True)
         assert not nested.record_id.duplicated().any()
         for d in [20,50]:
-            out=DATA/f'cascade/{d}cm/outer{k}';out.mkdir(parents=True,exist_ok=True)
+            out=CASCADE/f'{d}cm/outer{k}';out.mkdir(parents=True,exist_ok=True)
             f=frames[d]
             train=f[(f.split=='development')&(f.outer_fold!=k)].copy()
             train=train.merge(nested[['record_id','prediction']],on='record_id',validate='one_to_one')
@@ -58,18 +75,21 @@ def nested_inputs(frames,epochs=150):
         print(f'NESTED INPUTS READY outer={k}',flush=True)
 
 def fit_depth(d,variant,seed,epochs=150):
+    if d not in (20,50):raise ValueError('Deep training supports depths 20 and 50 cm')
+    if d==50 and variant=='ma' and epochs<10:raise ValueError('The 50 cm reference requires at least 10 epochs')
     for k in range(5):
-        p=DATA/f'cascade/{d}cm/outer{k}'
+        p=CASCADE/f'{d}cm/outer{k}'
         train=pd.read_parquet(p/'train.parquet');evals={n:pd.read_parquet(p/f'{n}.parquet') for n in ['oof','test']}
         forbidden=set(json.loads((p/'provenance.json').read_text())['forbidden_sites'])
         func=fit_tree if variant in ['rf','xgb'] else fit_neural
         kwargs={} if variant in ['rf','xgb'] else {'max_epochs':epochs}
+        if d==50 and variant=='ma':kwargs['min_refit_epochs']=10
         func(train,evals,outer_path(d,variant,seed,k),d,variant,seed,forbidden,**kwargs)
 
 def summarize():
     for depth in [5,20,50]:
         for run in (MODELS/f'{depth}cm').glob('*'):
-            if not all((run/f'outer{k}/manifest.json').exists() for k in range(5)):continue
+            if not all((run/f'outer{k}/{name}').is_file() for k in range(5) for name in ['manifest.json','oof_predictions.parquet','test_predictions.parquet']):continue
             vals=[];tests=[]
             for k in range(5):
                 vals.append(pd.read_parquet(run/f'outer{k}/oof_predictions.parquet'))
@@ -83,26 +103,33 @@ def summarize():
             (run/'metrics.json').write_text(json.dumps(metrics,indent=2),encoding='utf-8')
             print(f'RESULT depth={depth} run={run.name} OOF={metrics["oof"]["rmse"]:.5f} Test={metrics["test"]["rmse"]:.5f}',flush=True)
 
+    MODELS.mkdir(parents=True,exist_ok=True)
+    (MODELS/'product_reference.json').write_text(json.dumps({'runs':{'5cm':'ma_seed42','20cm':'ma_seed42','50cm':'ma_floor10_seed42'},'policy_50cm':'refit for max(selected_epochs, 10); internal selection is unchanged'},indent=2),encoding='utf-8')
+
+
 def main():
-    sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
     torch.set_num_threads(8);torch.set_float32_matmul_precision('high')
-    parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['surface','nested','depth','summarize','all'],default='all');parser.add_argument('--variant',default=None);parser.add_argument('--seed',type=int,default=42);parser.add_argument('--depth',type=int,default=20);parser.add_argument('--epochs',type=int,default=150)
-    args=parser.parse_args();frames=load_data()
-    if args.stage=='surface':fit_surface(frames,args.variant or 'ma',args.seed,args.epochs)
-    elif args.stage=='nested':nested_inputs(frames,args.epochs)
-    elif args.stage=='depth':fit_depth(args.depth,args.variant or 'ma',args.seed,args.epochs)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--stage',choices=['surface','nested','depth','summarize','all'],default='all')
+    parser.add_argument('--depth',type=int,choices=[20,50],default=20)
+    parser.add_argument('--epochs',type=int,default=150)
+    parser.add_argument('--data-dir',default='data')
+    parser.add_argument('--output-dir',default='outputs/retrained')
+    args=parser.parse_args()
+    if args.epochs<1:parser.error('--epochs must be positive')
+    if args.epochs<10 and (args.stage=='all' or (args.stage=='depth' and args.depth==50)):
+        parser.error('The 50 cm reference requires --epochs >= 10')
+    configure(args.data_dir,args.output_dir)
+    if args.stage=='surface':fit_surface(load_data((5,)),epochs=args.epochs)
+    elif args.stage=='nested':nested_inputs(load_data(),args.epochs)
+    elif args.stage=='depth':fit_depth(args.depth,'ma',42,args.epochs)
     elif args.stage=='summarize':summarize()
     else:
-        # Fixed suite, declared before revised outcomes. No metric controls this list.
+        frames=load_data()
         fit_surface(frames,'ma',42,args.epochs)
         nested_inputs(frames,args.epochs)
-        for d in [20,50]:
-            for variant in ['ma','concat','ft','no_cascade']:
-                for seed in [42,7,555]:fit_depth(d,variant,seed,args.epochs)
-            for variant in ['rf','xgb']:fit_depth(d,variant,42,args.epochs)
-        for variant in ['ma','concat','ft','no_modality','static_forcing']:
-            for seed in [42,7,555]:fit_surface(frames,variant,seed,args.epochs)
-        for variant in ['no_static','static_only','rf','xgb']:fit_surface(frames,variant,42,args.epochs)
-        summarize();print('V6 CORE CAMPAIGN COMPLETE',flush=True)
+        for d in [20,50]:fit_depth(d,'ma',42,args.epochs)
+        summarize();print('REFERENCE TRAINING COMPLETE',flush=True)
 
 if __name__=='__main__':main()

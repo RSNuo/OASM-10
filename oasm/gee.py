@@ -18,15 +18,15 @@ S2B=['B2','B3','B4','B5','B6','B7','B8','B8A','B11','B12']
 LSB=['SR_B2','SR_B3','SR_B4','SR_B5','SR_B6','SR_B7','ST_B10']
 LSN=['Landsat_B2','Landsat_B3','Landsat_B4','Landsat_B5','Landsat_B6','Landsat_B7','Landsat_B10']
 
-def initialize():
-    ee.Initialize();ee.data.setDeadline(120000)
+def initialize(project=None):
+    ee.Initialize(project=project);ee.data.setDeadline(120000)
 
 def _stamp(img,name):
     return ee.Image.constant(ee.Number(img.get('system:time_start')).divide(1000)).rename(name).toDouble()
 
-def build_image(bounds,target_time,s1_window_hours=24):
+def build_image(bounds,target_time,s1_window_hours=24,project=None):
     """Select one S1 orbit around the requested observation time; retain provenance."""
-    initialize();roi=ee.Geometry.Rectangle(list(bounds),geodesic=False)
+    initialize(project);roi=ee.Geometry.Rectangle(list(bounds),geodesic=False)
     target=pd.Timestamp(target_time)
     if target.tzinfo is not None:target=target.tz_convert('UTC').tz_localize(None)
     date=ee.Date(target.isoformat());start=date.advance(-14,'day');end=date.advance(14,'day').advance(1,'second')
@@ -94,7 +94,7 @@ def build_image(bounds,target_time,s1_window_hours=24):
           'categorical_resampling':'nearest','protocol':'oasm-feature-grid-1'}
     return composite,meta
 
-def fetch_feature_grid(bounds,target_time,cache_path,tile_size=192):
+def fetch_feature_grid(bounds,target_time,cache_path,tile_size=192,climate_raster=None,project=None):
     import rasterio
     from rasterio.transform import Affine
     out=Path(cache_path);out.mkdir(parents=True,exist_ok=True)
@@ -103,14 +103,19 @@ def fetch_feature_grid(bounds,target_time,cache_path,tile_size=192):
     width=math.ceil((east-west)/ANGULAR_STEP);height=math.ceil((north-south)/ANGULAR_STEP)
     if width*height>4_000_000:raise ValueError('Use smaller regions (at most 4 million grid cells per request)')
     transform=Affine(ANGULAR_STEP,0,west,0,-ANGULAR_STEP,north)
-    request={'bounds':list(bounds),'target_time':str(target_time),'step':ANGULAR_STEP,'protocol':'oasm-feature-grid-1'}
+    beck=Path(climate_raster) if climate_raster is not None else REV/'data/ancillary/Beck_KG_V1_present_0p0083.tif'
+    if not beck.is_absolute():beck=REV/beck
+    if not beck.is_file():
+        raise FileNotFoundError('Missing Beck climate raster. See ZENODO_CONTENTS.md or pass climate_raster explicitly.')
+    with beck.open('rb') as src:climate_sha256=hashlib.file_digest(src,'sha256').hexdigest()
+    request={'bounds':list(bounds),'target_time':str(target_time),'step':ANGULAR_STEP,'protocol':'oasm-feature-grid-2','climate_sha256':climate_sha256}
     fingerprint=hashlib.sha256(json.dumps(request,sort_keys=True).encode()).hexdigest()
     record=out/'grid.json';parquet=out/'features.parquet'
     if record.exists():
         old=json.loads(record.read_text())
         if old.get('fingerprint')!=fingerprint:raise ValueError('Cache belongs to a different extraction request')
         if parquet.exists():return pd.read_parquet(parquet),old
-    im,meta=build_image(bounds,target_time);names=im.bandNames().getInfo()
+    im,meta=build_image(bounds,target_time,project=project);names=im.bandNames().getInfo()
     arr=np.full((len(names),height,width),np.nan,dtype=np.float64)
     for row in range(0,height,tile_size):
         for col in range(0,width,tile_size):
@@ -138,8 +143,6 @@ def fetch_feature_grid(bounds,target_time,cache_path,tile_size=192):
     f['target_time']=pd.Timestamp(target_time)
     for old,new in [('s1_seconds','s1_acquisition_time'),('s2_seconds','s2_closest_datetime'),('ls_seconds','Landsat_closest_datetime')]:
         f[new]=pd.to_datetime(f.pop(old),unit='s',errors='coerce')
-    candidates=[REV/'data/ancillary/Beck_KG_V1_present_0p0083.tif',REV.parent/'5cm/data/Beck_KG_V1_present_0p0083.tif']
-    beck=next((p for p in candidates if p.exists()),candidates[0])
     with rasterio.open(beck) as ds:
         if ds.crs.to_epsg()!=4326:raise ValueError('Expected WGS84 Beck classification raster')
         f['BeckKG_band1']=[v[0] for v in ds.sample(zip(f.longitude,f.latitude))]

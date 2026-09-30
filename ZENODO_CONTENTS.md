@@ -1,27 +1,72 @@
-# Files distributed through the Zenodo record
+# External inputs and availability
 
-The Zenodo record holds the archives below. Every archive unpacks into the same top-level folder `OASM10/`; extract them into one directory; `OASM10_repository.zip` is identical to this repository.
+The original repository identifies [Zenodo record 22779714](https://doi.org/10.5281/zenodo.22779714)
+as the model archive and describes access as restricted during peer review.
+The contents below come from that repository's release inventory; current
+archive download access has not been independently confirmed.
+This reduced tree is not byte-identical to `OASM10_repository.zip`.
 
-| Archive | Contents |
-|---|---|
-| `OASM10_repository.zip` | Public code repository: package, scripts, notebooks, protocols, frozen experiment records, model manifests, analysis and validation summaries, verification records and the eight example GeoTIFF sets (identical to the GitHub tree) |
-| `OASM10_models_reference.zip` | Product reference models for inference: the five outer-fold weights (model.pt) and training-only preprocessing transforms (preprocessor.joblib) of models/5cm/ma_seed42, models/20cm/ma_seed42 and models/50cm/ma_floor10_seed42 |
-| `OASM10_models_training_extras.zip` | Weights and transforms needed only to reproduce training: the nested upstream surface fits (models/upstream_nested) that generate the deep-training cascade inputs, and the 50 cm selected-duration anchor fit (models/50cm/ma_seed42) used by the companion comparisons |
+## Released-model inference
 
-Paths that this repository omits because of size. Items marked "not in this record version" are not deposited in the current version of the Zenodo record:
+`OASM10_models_reference.zip` is documented to contain `model.pt` and
+`preprocessor.joblib` for every fold (`outer0` through `outer4`) under:
 
-| Path | Contents | Supplied by |
-|---|---|---|
-| `data/tables/train_{5,20,50}cm.parquet` (+ `.csv.gz`), `data/tables/test_{5,20,50}cm.parquet` (+ `.csv.gz`) | Compact observation/predictor tables (77 columns) | not in this record version |
-| `data/all_{5,20,50}cm.parquet` | Canonical tables with provenance fields and frozen hashes | not in this record version |
-| `data/cascade/{20,50}cm/outer{0..4}/{train,oof,test}.parquet` + `provenance.json` | Fold-specific deep-training inputs with nested surface predictions | not in this record version |
-| `data/ancillary/era5land_precip_daily_all_stations.parquet`, `data/ancillary/precip_daily_by_site.parquet` | Daily ERA5-Land rainfall by station and by site | not in this record version |
-| `models/5cm/ma_seed42/`, `models/20cm/ma_seed42/`, `models/50cm/ma_floor10_seed42/` (`outer{0..4}/model.pt`, `preprocessor.joblib`) | Product reference weights and training-only transforms (inference) | `OASM10_models_reference.zip` |
-| `models/upstream_nested/outer{k}/inner{j}/` and `models/50cm/ma_seed42/` (`model.pt`, `preprocessor.joblib`) | Nested upstream surface fits for deep-training inputs; 50 cm selected-duration anchor | `OASM10_models_training_extras.zip` |
-| `oof_predictions.parquet`, `test_predictions.parquet`, `cascade_training_predictions.parquet` of the runs above | Reference, anchor and upstream prediction tables | not in this record version |
-| other `models/{5,20,50}cm/<run>/` directories | Weights and predictions of the comparison runs | not in this record version |
-| `models/spatial5cm/` | Spatial-block diagnostic fits | not in this record version |
-| `training_strategy_review/models/`, `depth50_input_factorial/models/` | Alternative-policy and input-factorial checkpoints and predictions | not in this record version |
-| `validation/map_pipeline/regions/`, `validation/map_pipeline/checks/`, `validation/era5_site_pieces/` | Cached feature grids, station-pixel extractions and ERA5-Land pieces | not in this record version |
+```text
+models/5cm/ma_seed42/
+models/20cm/ma_seed42/
+models/50cm/ma_floor10_seed42/
+```
 
-`ZENODO_MANIFEST.json` in the record lists every file with its SHA-256 digest and archive; `MANIFEST.json` here covers the repository files.
+This code tree keeps the original fold manifests and `product_reference.json`.
+Place each weight and preprocessor alongside its fold manifest. Archives may
+have an `OASM10/` wrapper: merge its contents into the repository root.
+Do not overwrite this reduced tree with the old repository archive's code.
+
+Map extraction also needs `Beck_KG_V1_present_0p0083.tif`. Download the exact
+[historical raster](https://raw.githubusercontent.com/RSNuo/OASM-10/e11551c5d061790ba6f8a24d1904af774be2ab9c/data/ancillary/Beck_KG_V1_present_0p0083.tif)
+and save it as `data/ancillary/Beck_KG_V1_present_0p0083.tif`, or supply its location
+via `climate_raster` / the notebook's `CLIMATE_RASTER`. Its SHA-256 is:
+
+```text
+a343fdfdb4c4a427c774bedd75ae4f2a6420c3f465de7d51892e8712dfaa2d27
+```
+
+The cleanup deliverables also include it in `OASM-10-climate-data.zip`.
+It is runtime data, not source code. The original Git commit must stay reachable
+for the historical download link to work.
+
+## Training from scratch
+
+The required canonical inputs are:
+
+```text
+data/all_5cm.parquet
+data/all_20cm.parquet
+data/all_50cm.parquet
+```
+
+**These tables were explicitly marked "not in this record version" in the
+original inventory.** The public tree alone cannot reproduce training.
+The data owner needs to provide these exact tables and their checksums.
+The original raw-data preparation pipeline is also absent; training starts
+from canonical tables.
+
+Each table needs raw predictors from `data/feature_schema.json`, depth-specific
+SoilGrids fields for upstream pairing, and the metadata columns `record_id`,
+`source_station`, `physical_site_id`, `target_time`, `y`, `split`, `outer_fold`.
+Preserve original row order, values and site assignments in `data/shared_split.csv`
+and `data/site_registry.csv`. Split values are `development` and `test`;
+development folds are 0 through 4. Targets are observed moisture in m3/m3.
+Do not substitute synthetic targets or independently split each depth.
+
+The reduced training command regenerates nested upstream models and cascade
+tables. Old cascade files, ancillary station soil/precipitation tables,
+prediction tables and `OASM10_models_training_extras.zip` are unnecessary when
+canonical inputs are available and training is run from scratch.
+
+## Generated files
+
+Keep checkpoints, datasets, cached grids and GeoTIFFs in versioned external
+archives with checksums. These files are ignored by Git. Keep old experiment
+protocols and hash chains in the original release; they do not verify this
+modified code tree.

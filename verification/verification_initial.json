@@ -1,8 +1,0 @@
-{
-  "schema_finite": true,
-  "unknown_category_reserved_zero": true,
-  "shared_feature_reconstruction": true,
-  "outer_early_stopping_exclusion": true,
-  "smoke_train_seconds": 33.78155810000317,
-  "smoke_selected_epochs": 3
-}

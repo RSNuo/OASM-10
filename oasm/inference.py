@@ -14,8 +14,8 @@ def valid_satellite_rows(frame):
     return valid
 
 def reference_runs(model_root):
-    """Run directory per depth for the deployed product; models/product_reference.json overrides the seed-42 default."""
-    runs={5:'ma_seed42',20:'ma_seed42',50:'ma_seed42'};path=Path(model_root)/'product_reference.json'
+    """Run directories for the released product, optionally overridden by its manifest."""
+    runs={5:'ma_seed42',20:'ma_seed42',50:'ma_floor10_seed42'};path=Path(model_root)/'product_reference.json'
     if path.exists():
         spec=json.loads(path.read_text(encoding='utf-8')).get('runs',{})
         for d in runs:runs[d]=spec.get(f'{d}cm',runs[d])

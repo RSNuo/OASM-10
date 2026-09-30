@@ -1,2 +1,2 @@
-# Files are distributed byte-for-byte: recorded SHA-256 digests must stay verifiable on every platform.
+# Preserve the original bytes of the released model and data metadata.
 * -text
